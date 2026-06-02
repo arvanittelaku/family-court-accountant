@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2c3e50;
+  --accent: #16a085;
+  --highlight: #e67e22;
+  --background: #ffffff;
+  --section-alt: #f8f9f7;
+  --border: #d5dbdb;
+  --heading: #2c3e50;
+  --body: #374151;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-section-alt: var(--section-alt);
+  --color-border: var(--border);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --font-sans: var(--font-inter);
+  --radius-card: 10px;
+  --radius-sm: 4px;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--background);
+  color: var(--body);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+.prose-content {
+  overflow-wrap: anywhere;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose-content h2 {
+  color: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-content h3 {
+  color: var(--heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.prose-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.prose-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-content a:hover {
+  color: var(--primary);
+}
+
+.prose-content table {
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.prose-content th,
+.prose-content td {
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.prose-content th {
+  background: var(--section-alt);
+  font-weight: 600;
+  color: var(--heading);
+}
