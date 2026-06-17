@@ -9,9 +9,13 @@ export function PageBottomCta() {
           Need a Family Court Accountant?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
-          Submit your case details and we will match you with a qualified UK family
-          court accountant. Solicitors and individuals welcome. Response within 1
-          business day.
+          Submit your case details for England or Wales family proceedings and we
+          will match you with a qualified family court accountant. Solicitors and
+          individuals welcome. Response within 1 business day.
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-sm text-white/75">
+          UK-only: English and Welsh family courts. Not Scotland, Northern Ireland,
+          or jurisdictions outside the United Kingdom.
         </p>
         <p className="mt-4 text-sm text-white/90">
           Or email us at{" "}

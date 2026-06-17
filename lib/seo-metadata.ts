@@ -19,7 +19,6 @@ export function buildAlternates(path: string): NonNullable<Metadata["alternates"
     canonical: pageUrl,
     languages: {
       "en-GB": pageUrl,
-      "en-US": pageUrl,
       "x-default": pageUrl,
     },
   };

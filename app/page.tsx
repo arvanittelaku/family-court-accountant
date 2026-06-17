@@ -72,7 +72,12 @@ export default function HomePage() {
           Whether you&apos;re a family law solicitor needing a forensic accountant
           expert witness for financial remedy proceedings, or an individual going
           through divorce who suspects hidden assets or needs a business valued,
-          we connect you with qualified family court accountants across the UK.
+          we connect you with qualified family court accountants in England and
+          Wales.
+        </p>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/70">
+          UK-only service: English and Welsh family courts (FPR, Form E, financial
+          remedy). We do not cover Scotland, Northern Ireland, or other countries.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <Link

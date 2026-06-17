@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { PUBLIC_SITE_URL, SITE_EMAIL } from "@/lib/site";
+import { PUBLIC_SITE_URL, SITE_EMAIL, SITE_UK_SCOPE } from "@/lib/site";
 
 const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
 
@@ -22,6 +22,7 @@ export function ContactForm() {
 
   return (
     <div>
+      <p className="mb-6 text-sm leading-relaxed text-body">{SITE_UK_SCOPE}</p>
       {error ? (
         <div
           role="alert"

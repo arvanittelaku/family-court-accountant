@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
-import { SITE_EMAIL, SITE_NAME } from "@/lib/site";
+import { SITE_EMAIL, SITE_NAME, SITE_UK_SCOPE } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -25,11 +25,11 @@ export default function TermsPage() {
 
         <h2>About this service</h2>
         <p>
-          {SITE_NAME}.com is a referral service connecting family law
-          solicitors, barristers, and individuals with independent family court
-          accountants and forensic accounting expert witnesses. We are not a law
-          firm, we are not regulated as solicitors, and we do not provide legal
-          advice.
+          {SITE_NAME}.com is a UK referral service connecting family law
+          solicitors, barristers, and individuals in England and Wales with
+          independent family court accountants and forensic accounting expert
+          witnesses. We are not a law firm, we are not regulated as solicitors,
+          and we do not provide legal advice. {SITE_UK_SCOPE}
         </p>
 
         <h2>No client relationship with us</h2>
@@ -61,7 +61,7 @@ export default function TermsPage() {
         <p>
           We may receive a referral fee or introduction arrangement with
           experts where permitted. Expert fees are agreed separately between you
-          and the expert. See our fees page for indicative ranges.
+          and the expert. Contact us for indicative fee ranges when you enquire.
         </p>
 
         <h2>Acceptable use</h2>

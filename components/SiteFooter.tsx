@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ContactEmail } from "@/components/ContactEmail";
 import { FooterLegal } from "@/components/FooterLegal";
-import { SITE_NAME } from "@/lib/site";
+import { SITE_NAME, SITE_REFERRAL_NOTICE, SITE_UK_SCOPE } from "@/lib/site";
 
 const col1 = [
   { href: "/services/business-valuation", label: "Business Valuation" },
@@ -101,9 +101,11 @@ export function SiteFooter() {
         <p className="mx-auto max-w-7xl text-center text-sm text-body">
           Email: <ContactEmail />
         </p>
-        <p className="mx-auto mt-3 max-w-7xl text-center text-xs leading-relaxed text-body">
-          FamilyCourtAccountant.com connects solicitors and individuals with family
-          court accountants. We are not a law firm and do not provide legal advice.
+        <p className="mx-auto mt-3 max-w-3xl text-center text-xs leading-relaxed text-body">
+          {SITE_REFERRAL_NOTICE}
+        </p>
+        <p className="mx-auto mt-2 max-w-3xl text-center text-xs leading-relaxed text-body/80">
+          {SITE_UK_SCOPE}
         </p>
         <p className="mx-auto mt-2 max-w-7xl text-center text-xs text-body/70">
           © 2025 {SITE_NAME}. England and Wales.

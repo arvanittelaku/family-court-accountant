@@ -20,7 +20,7 @@ export default function WhoWeHelpPage() {
     <PageShell
       breadcrumbs={breadcrumbs}
       title="Who We Help"
-      subtitle="FamilyCourtAccountant.com serves UK family law solicitors and barristers who need forensic accountant expert witnesses, and individuals going through divorce or separation who need independent financial analysis."
+      subtitle="FamilyCourtAccountant.com serves family law solicitors and barristers in England and Wales who need forensic accountant expert witnesses, and individuals going through UK divorce or separation who need independent financial analysis."
     >
       <div className="grid gap-5 md:grid-cols-2">
         <ContentCard

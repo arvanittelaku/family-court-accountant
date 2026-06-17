@@ -8,15 +8,24 @@ export function buildOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     email: SITE_EMAIL,
+    description:
+      "Referral service for family court accountants in England and Wales, United Kingdom only.",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
       email: SITE_EMAIL,
       areaServed: "GB",
-      availableLanguage: "English",
+      availableLanguage: ["en-GB"],
     },
-    address: { "@type": "PostalAddress", addressCountry: "GB" },
-    areaServed: { "@type": "Country", name: "United Kingdom" },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "GB",
+      addressRegion: "England and Wales",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "England and Wales",
+    },
     sameAs: [LINKEDIN_URL],
   };
 }

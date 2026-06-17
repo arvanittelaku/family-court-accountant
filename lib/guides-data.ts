@@ -69,7 +69,7 @@ export const GUIDES: Guide[] = [
         heading: "Working with your solicitor and expert costs",
         paragraphs: [
           "Solicitors remain responsible for case strategy, court applications, and settlement structure. The accountant's role is technical: value, liquidity, and adjustments. Fee ranges for matrimonial business valuations typically run from £2,000 for straightforward owner-managed companies to £15,000 or more for multiple entities or urgent timetables, often shared in SJE appointments.",
-          "Individuals should discuss funding with their solicitor: Legal Aid, private costs, or contribution from the other party via court order may apply. Transparent scoping in the joint letter avoids scope creep and repeated supplemental reports. Our fees page sets out indicative ranges; early contact helps match the right expert to the size and complexity of the business interests involved.",
+          "Individuals should discuss funding with their solicitor: Legal Aid, private costs, or contribution from the other party via court order may apply. Transparent scoping in the joint letter avoids scope creep and repeated supplemental reports. Contact us for indicative fee ranges; early contact helps match the right expert to the size and complexity of the business interests involved.",
         ],
       },
     ],

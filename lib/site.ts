@@ -1,8 +1,15 @@
 export const SITE_URL = "https://www.familycourtaccountant.com";
 export const SITE_NAME = "FamilyCourtAccountant";
-export const SITE_EMAIL = "info@familycourtaccountant.com";
+export const SITE_EMAIL = "contact@familycourtaccountant.com";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/familycourtaccountant";
+
+/** Woven into footer and key pages (not a banner). */
+export const SITE_UK_SCOPE =
+  "This website is for England and Wales family courts only. Law, procedure, and experts referenced follow UK family procedure (FPR, Form E, financial remedy). We do not cover Scotland, Northern Ireland, or jurisdictions outside the United Kingdom.";
+
+export const SITE_REFERRAL_NOTICE =
+  "FamilyCourtAccountant.com is a referral service connecting you with independent family court accountants. We are not a law firm and do not provide legal advice.";
 
 export const PUBLIC_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL;

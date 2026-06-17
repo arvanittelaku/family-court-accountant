@@ -22,13 +22,14 @@ export default function ServicesPage() {
         { name: "Services", href: "/services" },
       ]}
       title="Family Court Accountant Services UK"
-      subtitle="Independent forensic accounting and FPR Part 25 expert evidence for financial remedy, Schedule 1, TOLATA, and nuptial agreement proceedings."
+      subtitle="Independent forensic accounting and FPR Part 25 expert evidence for England and Wales: financial remedy, Schedule 1, TOLATA, and nuptial agreement proceedings."
     >
       <JsonLd data={buildServicesGraph()} />
       <p className="text-body leading-relaxed">
         Family court accountants provide specialist financial analysis and expert
-        witness evidence across UK family proceedings. Select a service below for
-        methodology, related proceedings, and service-specific FAQs. See{" "}
+        witness evidence in England and Wales family proceedings only. Select a
+        service below for methodology, related proceedings, and service-specific
+        FAQs. See{" "}
         <Link href="/how-it-works" className="font-semibold text-accent">
           how it works
         </Link>{" "}

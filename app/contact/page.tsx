@@ -4,6 +4,7 @@ import { ContactEmail } from "@/components/ContactEmail";
 import { ContactForm } from "@/components/ContactForm";
 import { PageShell } from "@/components/PageShell";
 import { buildPageMetadata } from "@/lib/seo-metadata";
+import { SITE_REFERRAL_NOTICE, SITE_UK_SCOPE } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Instruct a Family Court Accountant | FamilyCourtAccountant.com UK",
@@ -27,7 +28,7 @@ export default function ContactPage() {
         { name: "Contact", href: "/contact" },
       ]}
       title="Instruct a Family Court Accountant"
-      subtitle="Tell us about your matter. We help solicitors instruct experts and guide individuals who need forensic accounting support alongside their family lawyer."
+      subtitle="Tell us about your matter in England or Wales. We help solicitors instruct experts and guide individuals who need forensic accounting support alongside their UK family lawyer."
     >
       <div className="mb-10 grid gap-6 sm:grid-cols-2">
         <div className="rounded-[var(--radius-card)] border border-border bg-section-alt p-5 sm:p-6">
@@ -90,9 +91,7 @@ export default function ContactPage() {
             ))}
           </ul>
           <p className="mt-8 text-xs leading-relaxed text-body/70">
-            FamilyCourtAccountant.com is a referral service connecting you with
-            independent forensic accountants. We are not a law firm and do not
-            provide legal advice.
+            {SITE_REFERRAL_NOTICE} {SITE_UK_SCOPE}
           </p>
         </aside>
       </div>

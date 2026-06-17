@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Find a qualified family court accountant in the UK. Forensic accountants for divorce, financial remedy, hidden assets, and business valuation.",
+    "UK-only referral service for family court accountants in England and Wales. Forensic accountants for divorce, financial remedy, hidden assets, and business valuation.",
   alternates: {
     canonical: SITE_URL,
-    languages: { "en-GB": SITE_URL, "en-US": SITE_URL, "x-default": SITE_URL },
+    languages: { "en-GB": SITE_URL, "x-default": SITE_URL },
   },
   openGraph: {
     type: "website",

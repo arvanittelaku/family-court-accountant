@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
-import { SITE_EMAIL, SITE_NAME } from "@/lib/site";
+import { SITE_EMAIL, SITE_NAME, SITE_UK_SCOPE } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -26,11 +26,11 @@ export default function PrivacyPage() {
 
         <h2>Who we are</h2>
         <p>
-          {SITE_NAME} ({SITE_EMAIL}) operates a referral service connecting
-          family law solicitors, barristers, and individuals with independent
-          family court accountants and forensic accounting experts. We are the
-          data controller for personal information submitted through this
-          website.
+          {SITE_NAME} ({SITE_EMAIL}) operates a UK referral service connecting
+          family law solicitors, barristers, and individuals in England and Wales
+          with independent family court accountants and forensic accounting experts.
+          We are the data controller for personal information submitted through
+          this website. {SITE_UK_SCOPE}
         </p>
 
         <h2>What we collect</h2>

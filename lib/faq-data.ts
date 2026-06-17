@@ -50,7 +50,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How much does a family court accountant cost?",
     answer:
-      "Business valuation reports typically range from £2,000 to £15,000+ depending on complexity. Hourly rates for forensic accountants range from £150 to £500 per hour, with leading specialists charging more. In SJE appointments, both parties typically share the expert's fees equally. See our fees page for detailed ranges.",
+      "Business valuation reports typically range from £2,000 to £15,000+ depending on complexity. Hourly rates for forensic accountants range from £150 to £500 per hour, with leading specialists charging more. In SJE appointments, both parties typically share the expert's fees equally. Contact us for indicative expert fee ranges.",
   },
   {
     question: "Do I need a solicitor to instruct a family court accountant?",
