@@ -52,8 +52,6 @@ export const APP_STATIC_PATHS = [
 
   "/how-to-instruct",
 
-  "/faq",
-
   "/guides",
 
   "/glossary",
@@ -211,8 +209,6 @@ export function getSitemapPriority(path: string): number {
   if (path === "/what-is-a-family-court-accountant") return 0.9;
 
   if (path === "/qualifications" || path === "/how-to-instruct") return 0.88;
-
-  if (path === "/faq") return 0.85;
 
   if (path.startsWith("/services/")) return 0.9;
 

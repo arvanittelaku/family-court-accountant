@@ -119,11 +119,6 @@ export const PAGE_SEO_MANIFEST: Record<
     description:
       "How solicitors and individuals instruct a family court accountant in the UK — SJE vs party-appointed, FPR Part 25, letter of instruction, and documents needed.",
   },
-  "/faq": {
-    title: "Family Court Accountant FAQ UK | Common Questions Answered",
-    description:
-      "Answers to common questions about family court accountants — Form E, hidden assets, business valuation, SJE, FPR Part 25, add-backs, and fees.",
-  },
   "/guides": {
     title:
       "Guides: Family Court Accountants UK | Divorce Finance, Hidden Assets & Business Valuation",

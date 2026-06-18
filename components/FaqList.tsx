@@ -1,4 +1,4 @@
-import type { FaqItem } from "@/lib/faq-data";
+type FaqItem = { question: string; answer: string };
 
 type FaqListProps = {
   items: FaqItem[];

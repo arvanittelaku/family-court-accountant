@@ -210,11 +210,6 @@ export default function HomePage() {
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="font-semibold text-accent hover:underline">
-                Family court accountant FAQ
-              </Link>
-            </li>
-            <li>
               <Link href="/contact" className="font-semibold text-accent hover:underline">
                 Contact us
               </Link>

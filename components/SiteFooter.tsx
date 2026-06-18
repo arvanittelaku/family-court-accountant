@@ -24,7 +24,6 @@ const col2 = [
 
 const col3 = [
   { href: "/guides", label: "Solicitor Guides" },
-  { href: "/faq", label: "FAQ" },
   { href: "/glossary", label: "Glossary" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/how-to-instruct", label: "How to Instruct" },

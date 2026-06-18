@@ -23,7 +23,6 @@ const qualifications: ClusterLink = {
   label: "Expert qualifications",
 };
 const guidesHub: ClusterLink = { href: "/guides", label: "Solicitor guides" };
-const faq: ClusterLink = { href: "/faq", label: "Family court accountant FAQ" };
 const solicitors: ClusterLink = {
   href: "/who-we-help/solicitors-barristers",
   label: "For solicitors and barristers",
@@ -56,7 +55,6 @@ export const howItWorksClusterLinks: ClusterLink[] = [
   howToInstruct,
   qualifications,
   guidesHub,
-  faq,
   contact,
 ];
 
@@ -200,7 +198,6 @@ export function getServiceClusterLinks(slug: ServiceSlug): ClusterLink[] {
     ...service.relatedCaseTypes,
     howItWorks,
     howToInstruct,
-    faq,
     contact,
   ]);
 }

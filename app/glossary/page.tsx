@@ -127,8 +127,8 @@ export default function GlossaryPage() {
           how a family court accountant works
         </Link>{" "}
         and our{" "}
-        <Link href="/faq" className="font-medium text-accent hover:underline">
-          FAQ
+        <Link href="/services" className="font-medium text-accent hover:underline">
+          services
         </Link>
         .
       </p>
