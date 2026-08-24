@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useRef, useState } from "react";
-import { navItemClasses } from "@/components/nav-classes";
+import { useEffect, useRef, useState } from "react";
+import { navLinkClasses, navTriggerClasses } from "@/components/nav-classes";
 import type { NavLink } from "@/lib/nav-data";
 
 function pathMatches(pathname: string | null, href: string): boolean {
@@ -21,82 +21,103 @@ function groupIsActive(pathname: string | null, items: NavLink[]): boolean {
 type NavDropdownProps = {
   label: string;
   items: NavLink[];
+  panelId: string;
+  triggerId: string;
+  open: boolean;
+  onToggle: () => void;
+  onClose: () => void;
 };
 
-export function NavDropdown({ label, items }: NavDropdownProps) {
+export function NavDropdown({
+  label,
+  items,
+  panelId,
+  triggerId,
+  open,
+  onToggle,
+  onClose,
+}: NavDropdownProps) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const menuId = useId();
   const active = groupIsActive(pathname, items);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+    onClose();
+  }, [pathname, onClose]);
 
   useEffect(() => {
     function onPointerDown(event: MouseEvent) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        setOpen(false);
+        onClose();
       }
     }
     document.addEventListener("mousedown", onPointerDown);
     return () => document.removeEventListener("mousedown", onPointerDown);
-  }, []);
+  }, [onClose]);
 
   return (
-    <div
-      ref={ref}
-      className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
+    <div ref={ref} className="relative">
       <button
+        id={triggerId}
         type="button"
         aria-expanded={open}
         aria-haspopup="true"
-        aria-controls={menuId}
-        className={navItemClasses(active)}
-        onClick={() => setOpen((value) => !value)}
+        aria-controls={panelId}
+        className={navTriggerClasses(active, open)}
+        onClick={onToggle}
       >
         {label}
-        <svg
-          aria-hidden
-          className={`h-3.5 w-3.5 shrink-0 transition ${open ? "rotate-180" : ""}`}
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <span className="text-muted text-xs" aria-hidden>
+          {open ? "−" : "+"}
+        </span>
       </button>
-      {open ? (
-        <ul
-          id={menuId}
-          role="menu"
-          className="absolute left-0 top-full z-50 mt-0 min-w-[15rem] rounded-md border border-border bg-white py-1 shadow-lg"
-        >
-          {items.map((item) => (
-            <li key={item.href} role="none">
-              <Link
-                href={item.href}
-                role="menuitem"
-                className={`block px-4 py-2.5 text-sm transition hover:bg-section-alt ${
-                  pathMatches(pathname, item.href)
-                    ? "font-semibold text-heading"
-                    : "text-body hover:text-heading"
-                }`}
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : null}
     </div>
   );
 }
+
+export function NavDropdownPanel({
+  id,
+  labelledBy,
+  items,
+  open,
+  onNavigate,
+}: {
+  id: string;
+  labelledBy: string;
+  items: NavLink[];
+  open: boolean;
+  onNavigate?: () => void;
+}) {
+  const pathname = usePathname();
+
+  if (!open) return null;
+
+  return (
+    <div
+      id={id}
+      role="region"
+      aria-labelledby={labelledBy}
+      className="border-t border-border bg-section-alt/80"
+    >
+      <ul className="mx-auto grid max-w-[var(--max-width-content)] gap-x-8 gap-y-1 px-4 py-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">
+        {items.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className={`block py-2 text-sm transition hover:text-accent ${
+                pathMatches(pathname, item.href)
+                  ? "font-semibold text-heading"
+                  : "text-body"
+              }`}
+              onClick={onNavigate}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export { navLinkClasses, pathMatches };

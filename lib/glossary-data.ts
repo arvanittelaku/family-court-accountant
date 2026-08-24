@@ -42,17 +42,17 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Capital Gains Tax (on divorce transfers)",
     fragmentId: "capital-gains-tax-on-divorce-transfers",
     definition:
-      "Capital gains tax may arise when assets are transferred between spouses or former spouses as part of a financial settlement, subject to reliefs and timing rules in UK tax legislation. Family court accountants flag CGT consequences when valuing businesses, property, and investments so solicitors can structure orders with tax advice where appropriate. The court's focus is fair division of net value; expert schedules often show gross values alongside estimated tax liabilities to avoid unrealistic settlement figures.",
+      "Capital gains tax may arise when assets are transferred between spouses or former spouses as part of a financial settlement, subject to reliefs and timing rules in tax legislation. Family court accountants flag CGT consequences when valuing businesses, property, and investments so solicitors can structure orders with tax advice where appropriate. The court's focus is fair division of net value; expert schedules often show gross values alongside estimated tax liabilities to avoid unrealistic settlement figures.",
     internalLink: {
       href: "/proceedings/financial-remedy-divorce",
       label: "Financial remedy (divorce)",
     },
   },
   {
-    term: "Children Act 1989 Schedule 1",
+    term: "child support statutes Schedule 1",
     fragmentId: "children-act-1989-schedule-1",
     definition:
-      "Schedule 1 of the Children Act 1989 allows applications for financial provision for children, including lump sums, property orders, and periodical payments, typically where parents were not married. Family court accountants assess the respondent parent's true income, business value, and capital available to fund orders that reflect the child's needs and standard of living. Schedule 1 does not divide a matrimonial pot between adults; it targets provision for the child, often requiring lifestyle analysis and business valuation evidence.",
+      "Schedule 1 of the child support statutes allows applications for financial provision for children, including lump sums, property orders, and periodical payments, typically where parents were not married. Family court accountants assess the respondent parent's true income, business value, and capital available to fund orders that reflect the child's needs and standard of living. Schedule 1 does not divide a matrimonial pot between adults; it targets provision for the child, often requiring lifestyle analysis and business valuation evidence.",
     internalLink: {
       href: "/proceedings/schedule-1-children-act",
       label: "Schedule 1 Children Act proceedings",
@@ -72,7 +72,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Cohabitation",
     fragmentId: "cohabitation",
     definition:
-      "Cohabitation is living together as a couple without marriage or civil partnership, which does not create the same automatic financial claims as divorce under the Matrimonial Causes Act 1973. Separating cohabitants often rely on TOLATA for property disputes and Schedule 1 for child provision, each with different rules and expert frameworks. Family court accountants are instructed to reconstruct contributions, value businesses linked to the household, and analyse income where cohabitation disputes involve children or jointly held assets.",
+      "Cohabitation is living together as a couple without marriage or civil partnership, which does not create the same automatic financial claims as divorce under the equitable distribution statutes. Separating cohabitants often rely on TOLATA for property disputes and Schedule 1 for child provision, each with different rules and expert frameworks. Family court accountants are instructed to reconstruct contributions, value businesses linked to the household, and analyse income where cohabitation disputes involve children or jointly held assets.",
     internalLink: {
       href: "/proceedings/tolata-cohabitation",
       label: "TOLATA and cohabitation",
@@ -82,7 +82,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "CPR Part 35 (TOLATA context)",
     fragmentId: "cpr-part-35-tolata-context",
     definition:
-      "CPR Part 35 governs expert evidence in civil proceedings in England and Wales, including TOLATA claims in the County Court or High Court, rather than FPR Part 25 which applies in family proceedings. Experts owe an overriding duty to the court to help on matters within their expertise, and reports must meet CPR practice direction requirements. Family court accountants working on TOLATA must be familiar with civil procedure, joint instruction under CPR, and how expert evidence interacts with trust and land law issues.",
+      "CPR Part 35 governs expert evidence in civil proceedings in state family courts, including TOLATA claims in the County Court or High Court, rather than expert witness standards which applies in family proceedings. Experts owe an overriding duty to the court to help on matters within their expertise, and reports must meet CPR practice direction requirements. Family court accountants working on TOLATA must be familiar with civil procedure, joint instruction under CPR, and how expert evidence interacts with trust and land law issues.",
     internalLink: {
       href: "/proceedings/tolata-cohabitation",
       label: "TOLATA cohabitation proceedings",
@@ -102,14 +102,14 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Divorce Petition",
     fragmentId: "divorce-petition",
     definition:
-      "The divorce petition is the application that starts dissolution of a marriage or civil partnership and leads, where contested, to financial remedy proceedings for division of assets and income. Financial disclosure and expert evidence come later through Form E and court directions, not in the petition itself. Family court accountants are usually instructed after conditional order stages when parties exchange Form E and identify needs for valuation or investigation.",
+      "The divorce petition is the application that starts dissolution of a marriage or civil partnership and leads, where contested, to financial remedy proceedings for division of assets and income. Financial disclosure and expert evidence come later through financial affidavit and court directions, not in the petition itself. Family court accountants are usually instructed after conditional order stages when parties exchange financial affidavit and identify needs for valuation or investigation.",
     internalLink: {
       href: "/proceedings/financial-remedy-divorce",
       label: "Financial remedy (divorce)",
     },
   },
   {
-    term: "Financial Dispute Resolution (FDR) Hearing",
+    term: "settlement conference (FDR) Hearing",
     fragmentId: "financial-dispute-resolution-fdr-hearing",
     definition:
       "An FDR hearing is a without-prejudice court appointment where a judge gives an indication of likely outcome to encourage settlement before final hearing. Family court accountants may attend or have their reports relied on to explain business value, lifestyle gaps, or add-backs at the FDR. Clear, defensible expert analysis at this stage often narrows the issues and reduces the cost of a contested final hearing.",
@@ -122,30 +122,30 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Financial Remedy Order",
     fragmentId: "financial-remedy-order",
     definition:
-      "A financial remedy order is the court's binding decision on division of matrimonial assets, pensions, maintenance, and costs following divorce or dissolution. It reflects Section 25 Matrimonial Causes Act 1973 factors and the evidence before the court, including expert valuations and lifestyle analysis. Accountants ensure the figures underpinning negotiations and orders reflect maintainable business value, liquidity, and any adjustments for add-backs or undisclosed resources.",
+      "A financial remedy order is the court's binding decision on division of matrimonial assets, pensions, maintenance, and costs following divorce or dissolution. It reflects equitable distribution factors equitable distribution statutes factors and the evidence before the court, including expert valuations and lifestyle analysis. Accountants ensure the figures underpinning negotiations and orders reflect maintainable business value, liquidity, and any adjustments for add-backs or undisclosed resources.",
     internalLink: {
       href: "/proceedings/financial-remedy-divorce",
       label: "Financial remedy (divorce)",
     },
   },
   {
-    term: "Form E",
+    term: "financial affidavit",
     fragmentId: "form-e",
     definition:
-      "Form E is the standard financial statement each party must complete in financial remedy proceedings, disclosing assets, income, pensions, liabilities, and expenditure with supporting exhibits. Family court accountants review Form E against bank statements, business accounts, and tax returns to test completeness and consistency. Gaps between declared figures and evidenced lifestyle often drive questionnaire requests and further expert investigation.",
+      "financial affidavit is the standard financial statement each party must complete in financial remedy proceedings, disclosing assets, income, pensions, liabilities, and expenditure with supporting exhibits. Family court accountants review financial affidavit against bank statements, business accounts, and tax returns to test completeness and consistency. Gaps between declared figures and evidenced lifestyle often drive questionnaire requests and further expert investigation.",
     internalLink: {
       href: "/guides/form-e-financial-disclosure-guide",
-      label: "Form E financial disclosure guide",
+      label: "financial affidavit financial disclosure guide",
     },
   },
   {
-    term: "FPR Part 25",
+    term: "expert witness standards",
     fragmentId: "fpr-part-25",
     definition:
-      "FPR Part 25 is the part of the Family Procedure Rules 2010 that governs expert evidence in family proceedings, including the expert's duty to the court under FPR 25.3. Reports must comply with the Part 25 practice direction, include a statement of truth, and address the questions in the letter of instruction. Solicitors appointing family court accountants rely on Part 25 for permission, Single Joint Expert procedure, written questions, and hearing attendance.",
+      "expert witness standards is the part of the Family Procedure Rules 2010 that governs expert evidence in family proceedings, including the expert's duty to the court under FPR 25.3. Reports must comply with the Part 25 practice direction, include a statement of truth, and address the questions in the letter of instruction. Solicitors appointing family court accountants rely on Part 25 for permission, court-appointed joint expert procedure, written questions, and hearing attendance.",
     internalLink: {
       href: "/guides/fpr-part-25-expert-appointment",
-      label: "FPR Part 25 expert appointment guide",
+      label: "expert witness standards expert appointment guide",
     },
   },
   {
@@ -162,17 +162,17 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Hidden Assets",
     fragmentId: "hidden-assets",
     definition:
-      "Hidden assets are property, income, or interests that a party has not fully disclosed in Form E or proceedings, whether by omission, undervaluation, or deliberate concealment. Forensic accountants cross-reference disclosure with bank analysis, lifestyle expenditure, company records, and public registers to identify undisclosed accounts, trusts, or transfers. Courts may draw adverse inferences and adjust orders where non-disclosure is established.",
+      "Hidden assets are property, income, or interests that a party has not fully disclosed in financial affidavit or proceedings, whether by omission, undervaluation, or deliberate concealment. Forensic accountants cross-reference disclosure with bank analysis, lifestyle expenditure, company records, and public registers to identify undisclosed accounts, trusts, or transfers. Courts may draw adverse inferences and adjust orders where non-disclosure is established.",
     internalLink: {
       href: "/guides/hidden-assets-divorce-guide",
       label: "Hidden assets in divorce guide",
     },
   },
   {
-    term: "The Ikarian Reefer Duties",
+    term: "The Daubert Duties",
     fragmentId: "the-ikarian-reefer-duties",
     definition:
-      "The Ikarian Reefer duties require expert witnesses to provide independent opinion within their expertise, based on sufficient data, and with transparency about assumptions and instructions. UK family and civil courts apply these principles to forensic accountants under FPR Part 25 and CPR Part 35. Experts must state when a question falls outside their competence and avoid acting as advocate for the instructing party.",
+      "The Daubert duties require expert witnesses to provide independent opinion within their expertise, based on sufficient data, and with transparency about assumptions and instructions. family and civil courts apply these principles to forensic accountants under expert witness standards and CPR Part 35. Experts must state when a question falls outside their competence and avoid acting as advocate for the instructing party.",
     internalLink: {
       href: "/qualifications",
       label: "Family court accountant qualifications",
@@ -182,7 +182,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Joint Letter of Instruction",
     fragmentId: "joint-letter-of-instruction",
     definition:
-      "A joint letter of instruction is the document both parties sign when appointing a Single Joint Expert, setting out agreed questions, documents, timetable, and fee arrangements. It defines the scope of the accountant's report and reduces disputes about what the expert was asked to do. Poorly drafted letters are a common source of permission disputes and wasted costs; solicitors often agree a draft before filing court directions.",
+      "A joint letter of instruction is the document both parties sign when appointing a court-appointed joint expert, setting out agreed questions, documents, timetable, and fee arrangements. It defines the scope of the accountant's report and reduces disputes about what the expert was asked to do. Poorly drafted letters are a common source of permission disputes and wasted costs; solicitors often agree a draft before filing court directions.",
     internalLink: {
       href: "/how-to-instruct",
       label: "How to instruct a family court accountant",
@@ -192,7 +192,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Lifestyle Analysis",
     fragmentId: "lifestyle-analysis",
     definition:
-      "Lifestyle analysis compares evidenced expenditure during the marriage to declared income to identify gaps suggesting undisclosed resources or inadequate Form E disclosure. Experts build schedules from bank and card statements, cash withdrawals, and known major purchases. Courts use lifestyle evidence to challenge self-employed or director spouses whose declared earnings do not support the standard of living the family enjoyed.",
+      "Lifestyle analysis compares evidenced expenditure during the marriage to declared income to identify gaps suggesting undisclosed resources or inadequate financial affidavit disclosure. Experts build schedules from bank and card statements, cash withdrawals, and known major purchases. Courts use lifestyle evidence to challenge self-employed or director spouses whose declared earnings do not support the standard of living the family enjoyed.",
     internalLink: {
       href: "/case-types/lifestyle-analysis-income",
       label: "Lifestyle analysis and income",
@@ -219,13 +219,13 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     },
   },
   {
-    term: "Matrimonial Causes Act 1973 Section 25",
+    term: "equitable distribution statutes equitable distribution factors",
     fragmentId: "matrimonial-causes-act-1973-section-25",
     definition:
-      "Section 25 of the Matrimonial Causes Act 1973 sets out the factors the court must consider when making financial remedy orders, including resources, needs, standard of living, duration, contributions, and conduct. Accounting evidence informs factors such as earning capacity, value of business interests, and true financial resources. The statutory framework is the anchor for how valuations, lifestyle analysis, and add-backs are weighed in final orders.",
+      "equitable distribution factors of the equitable distribution statutes sets out the factors the court must consider when making financial remedy orders, including resources, needs, standard of living, duration, contributions, and conduct. Accounting evidence informs factors such as earning capacity, value of business interests, and true financial resources. The statutory framework is the anchor for how valuations, lifestyle analysis, and add-backs are weighed in final orders.",
     internalLink: {
       href: "/glossary#section-25-factors",
-      label: "Section 25 factors",
+      label: "equitable distribution factors factors",
     },
   },
   {
@@ -252,7 +252,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Party-Appointed Expert (PAE)",
     fragmentId: "party-appointed-expert-pae",
     definition:
-      "A party-appointed expert is instructed by one side only, producing a report for that party subject to FPR Part 25 or CPR Part 35 duties to the court. PAE appointments are less common than Single Joint Experts in family finance but may be permitted in high-value or highly divergent cases. Each party's expert may give separate opinions, with the court weighing evidence at final hearing or encouraging narrow issues for joint discussion.",
+      "A party-appointed expert is instructed by one side only, producing a report for that party subject to expert witness standards or CPR Part 35 duties to the court. PAE appointments are less common than court-appointed joint experts in family finance but may be permitted in high-value or highly divergent cases. Each party's expert may give separate opinions, with the court weighing evidence at final hearing or encouraging narrow issues for joint discussion.",
     internalLink: {
       href: "/how-to-instruct",
       label: "How to instruct a family court accountant",
@@ -282,27 +282,27 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Radmacher v Granatino [2010]",
     fragmentId: "radmacher-v-granatino-2010",
     definition:
-      "Radmacher v Granatino [2010] UKSC 42 held that courts should give effect to a nuptial agreement that was freely entered into with full understanding of its implications unless it would be unfair to hold the parties to it. Full financial disclosure and credible valuations at the time of signing are central to fairness arguments. Family court accountants support solicitors by documenting assets and income when agreements are made or when their validity is challenged later.",
+      "Radmacher v Granatino [2010]SC 42 held that courts should give effect to a nuptial agreement that was freely entered into with full understanding of its implications unless it would be unfair to hold the parties to it. Full financial disclosure and credible valuations at the time of signing are central to fairness arguments. Family court accountants support solicitors by documenting assets and income when agreements are made or when their validity is challenged later.",
     internalLink: {
       href: "/proceedings/nuptial-agreements",
       label: "Nuptial agreements",
     },
   },
   {
-    term: "Section 25 Factors",
+    term: "equitable distribution factors Factors",
     fragmentId: "section-25-factors",
     definition:
-      "Section 25 factors are the statutory criteria under the Matrimonial Causes Act 1973 that guide fair financial remedy outcomes, including income, capital, needs, children, standard of living, and conduct where relevant. Expert reports translate financial data into evidence that assists the court on resources and needs. Accountants do not decide outcomes but provide clear figures and assumptions for judges and negotiators.",
+      "equitable distribution factors factors are the statutory criteria under the equitable distribution statutes that guide fair financial remedy outcomes, including income, capital, needs, children, standard of living, and conduct where relevant. Expert reports translate financial data into evidence that assists the court on resources and needs. Accountants do not decide outcomes but provide clear figures and assumptions for judges and negotiators.",
     internalLink: {
       href: "/proceedings/financial-remedy-divorce",
       label: "Financial remedy (divorce)",
     },
   },
   {
-    term: "Single Joint Expert (SJE)",
+    term: "court-appointed joint expert (joint expert)",
     fragmentId: "single-joint-expert-sje",
     definition:
-      "A Single Joint Expert is one forensic accountant instructed jointly by both parties, usually with court approval, to produce a single report for the family court. The SJE owes duties to the court and must remain independent, with costs typically shared equally. SJE appointment is the default approach in most financial remedy cases below the highest value, reducing duelling experts and overall expense.",
+      "A court-appointed joint expert is one forensic accountant instructed jointly by both parties, usually with court approval, to produce a single report for the family court. The joint expert owes duties to the court and must remain independent, with costs typically shared equally. joint expert appointment is the default approach in most financial remedy cases below the highest value, reducing duelling experts and overall expense.",
     internalLink: {
       href: "/how-to-instruct",
       label: "How to instruct a family court accountant",
@@ -339,13 +339,13 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     },
   },
   {
-    term: "Written Questions (FPR Part 25)",
+    term: "Written Questions (expert witness standards)",
     fragmentId: "written-questions-fpr-part-25",
     definition:
-      "Written questions are formal questions put to an expert after the report is served, allowing parties to clarify methodology, assumptions, or arithmetic under FPR Part 25 procedure. Answers become part of the evidence bundle before FDR or final hearing. Effective questions focus on discrete technical points rather than re-arguing the case through the expert.",
+      "Written questions are formal questions put to an expert after the report is served, allowing parties to clarify methodology, assumptions, or arithmetic under expert witness standards procedure. Answers become part of the evidence bundle before FDR or final hearing. Effective questions focus on discrete technical points rather than re-arguing the case through the expert.",
     internalLink: {
       href: "/guides/fpr-part-25-expert-appointment",
-      label: "FPR Part 25 expert appointment guide",
+      label: "expert witness standards expert appointment guide",
     },
   },
 ];

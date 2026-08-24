@@ -16,17 +16,17 @@ const nextSteps = [
   {
     href: "/how-to-instruct",
     label: "How to instruct a family court accountant",
-    description: "SJE appointments, FPR Part 25, and documents needed",
+    description: "joint expert appointments, expert witness standards, and documents needed",
   },
   {
     href: "/how-it-works",
     label: "How it works",
-    description: "From Form E disclosure to expert report and hearing",
+    description: "From financial affidavit disclosure to expert report and hearing",
   },
   {
     href: "/qualifications",
     label: "Expert qualifications",
-    description: "ACA, ICAEW, FPR Part 25 standards, and what to look for",
+    description: "CPA, CFF, expert witness standards standards, and what to look for",
   },
 ] as const;
 

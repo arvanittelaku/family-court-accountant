@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Guides: Family Court Accountants UK | Divorce Finance, Hidden Assets & Business Valuation",
+    "Guides: Family Court Accountants | Divorce Finance, Hidden Assets & Business Valuation",
   description:
-    "In-depth guides on family court accountants for UK solicitors and individuals — Form E analysis, hidden assets, business valuation in divorce, and more.",
+    "In-depth guides on family court accountants for solicitors and individuals — financial affidavit analysis, hidden assets, business valuation in divorce, and more.",
   path: "/guides",
 });
 
@@ -21,8 +21,8 @@ export default function GuidesHubPage() {
   return (
     <PageShell
       breadcrumbs={breadcrumbs}
-      title="Guides: Family Court Accountants for UK Solicitors & Individuals"
-      subtitle="In-depth guides on divorce finance, hidden assets, Form E disclosure, Schedule 1, TOLATA, and FPR Part 25 expert appointment."
+      title="Guides: Family Court Accountants for Solicitors & Individuals"
+      subtitle="In-depth guides on divorce finance, hidden assets, financial affidavit disclosure, Schedule 1, TOLATA, and expert witness standards expert appointment."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {GUIDES.map((guide) => (

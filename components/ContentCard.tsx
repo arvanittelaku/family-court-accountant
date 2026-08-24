@@ -15,15 +15,15 @@ export function ContentCard({
   return (
     <Link
       href={href}
-      className="flex min-h-[44px] flex-col rounded-[var(--radius-card)] border border-border bg-white p-5 shadow-[var(--shadow-card)] transition hover:border-primary/30 hover:shadow-md"
+      className="group flex min-h-[44px] flex-col border-l-2 border-accent bg-surface py-4 pl-5 pr-4 transition hover:border-primary hover:bg-section-alt/50"
     >
-      <h3 className="text-lg font-semibold text-heading">{title}</h3>
+      <h3 className="font-serif text-lg font-medium text-heading">{title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-body">
         {description}
       </p>
       {children ? <div className="mt-3">{children}</div> : null}
-      <span className="mt-4 text-sm font-semibold text-accent">
-        Read more
+      <span className="mt-3 text-xs font-semibold uppercase tracking-wider text-accent group-hover:text-primary">
+        Read more →
       </span>
     </Link>
   );

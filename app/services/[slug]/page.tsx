@@ -62,7 +62,7 @@ export default async function ServicePage({
           name: service.title,
           description: service.shortDescription,
           provider: { "@id": `${SITE_URL}/#organization` },
-          areaServed: { "@type": "Country", name: "United Kingdom" },
+          areaServed: { "@type": "Country", name: "" },
         }}
       />
       <JsonLd data={buildFaqSchema(service.faqs)} />

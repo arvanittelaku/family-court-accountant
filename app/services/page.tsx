@@ -8,9 +8,9 @@ import { buildServicesGraph } from "@/lib/seo/schema";
 import { SERVICES } from "@/lib/services-data";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Family Court Accountant Services UK | Full Service List",
+  title: "Family Court Accountant Services | Full Service List",
   description:
-    "UK family court accountant services: business valuation, hidden asset investigation, Form E analysis, income assessment, lifestyle analysis, add-backs, and FPR Part 25 compliant expert reports.",
+    "UK family court accountant services: business valuation, hidden asset investigation, financial affidavit analysis, income assessment, lifestyle analysis, add-backs, and expert witness standards compliant expert reports.",
   path: "/services",
 });
 
@@ -21,13 +21,13 @@ export default function ServicesPage() {
         { name: "Home", href: "/" },
         { name: "Services", href: "/services" },
       ]}
-      title="Family Court Accountant Services UK"
-      subtitle="Independent forensic accounting and FPR Part 25 expert evidence for England and Wales: financial remedy, Schedule 1, TOLATA, and nuptial agreement proceedings."
+      title="Family Court Accountant Services"
+      subtitle="Independent forensic accounting and expert witness standards expert evidence for state family courts: financial remedy, Schedule 1, TOLATA, and nuptial agreement proceedings."
     >
       <JsonLd data={buildServicesGraph()} />
       <p className="text-body leading-relaxed">
         Family court accountants provide specialist financial analysis and expert
-        witness evidence in England and Wales family proceedings only. Select a
+        witness evidence in state family courts family proceedings only. Select a
         service below for methodology, related proceedings, and service-specific
         FAQs. See{" "}
         <Link href="/how-it-works" className="font-semibold text-accent">

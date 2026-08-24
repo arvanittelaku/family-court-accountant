@@ -13,23 +13,23 @@ function getLeadWebhookUrl(): string | undefined {
   return (
     process.env.LEAD_NOTIFICATION_URL ||
     process.env.Lead_notification_url ||
+    process.env.NEXT_PUBLIC_LEAD_NOTIFICATION_URL ||
     undefined
   );
 }
 
 async function forwardToWebhook(
   webhookUrl: string,
-  fullName: string,
-  email: string,
-  phone: string,
+  lead: ReturnType<typeof parseContactLead>,
 ): Promise<Response> {
   return fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      "Full Name": fullName,
-      Email: email,
-      "Phone Number": phone,
+      "Full Name": lead.fullName,
+      Email: lead.email,
+      "Phone Number": lead.phone,
+      Message: lead.message,
       "Brand name": BRAND_NAME,
     }),
     signal: AbortSignal.timeout(12_000),
@@ -38,7 +38,8 @@ async function forwardToWebhook(
 
 /**
  * POST /api/submit-lead
- * Appends full lead to Google Sheets (when configured) and/or n8n webhook.
+ * Appends lead to Google Sheets (when configured) and/or n8n webhook.
+ * On Netlify, netlify.toml redirects here to netlify/functions/submit-lead for webhook-only.
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -65,7 +66,7 @@ export async function POST(request: Request) {
       {
         error: "LEAD_DESTINATION_MISSING",
         message:
-          "Configure Google Sheets (GOOGLE_SHEET_ID, service account) or Lead_notification_url.",
+          "Configure Lead_notification_url or Google Sheets (GOOGLE_SHEET_ID, service account).",
       },
       { status: 503 },
     );
@@ -93,12 +94,7 @@ export async function POST(request: Request) {
 
   if (webhookUrl) {
     try {
-      const upstream = await forwardToWebhook(
-        webhookUrl,
-        lead.fullName,
-        lead.email,
-        lead.phone,
-      );
+      const upstream = await forwardToWebhook(webhookUrl, lead);
       if (!upstream.ok) {
         return NextResponse.json(
           { error: "WEBHOOK_REJECTED", status: upstream.status },

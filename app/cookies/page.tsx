@@ -142,7 +142,7 @@ export default function CookiePolicyPage() {
 
         <h2>8. Your rights (UK GDPR and PECR)</h2>
         <p>
-          Under UK GDPR you may withdraw consent at any time via Cookie
+          Under GDPR you may withdraw consent at any time via Cookie
           settings. For other privacy rights, see our{" "}
           <Link href="/privacy" className="font-medium text-accent hover:underline">
             Privacy Policy

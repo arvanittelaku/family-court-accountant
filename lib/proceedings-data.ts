@@ -14,23 +14,23 @@ export type Proceeding = {
 export const PROCEEDINGS: Proceeding[] = [
   {
     slug: "financial-remedy-divorce",
-    hubLabel: "Financial Remedy (Divorce)",
-    title: "Financial Remedy Divorce Accountant UK",
-    metaTitle: "Financial Remedy Divorce Accountant UK | Form E, Business Valuation & SJE",
+    hubLabel: "Equitable Distribution (Divorce)",
+    title: "Equitable Distribution Divorce Accountant",
+    metaTitle: "Equitable Distribution Divorce Accountant | Financial Affidavit, Business Valuation & Joint Expert",
     metaDescription:
-      "Family court accountants for divorce financial remedy proceedings. Form E analysis, business valuation, hidden assets, income assessment, and FPR Part 25 compliant expert reports.",
-    h1: "Financial Remedy Divorce: Family Court Accountant UK",
+      "Family court accountants for divorce equitable distribution proceedings. Financial affidavit analysis, business valuation, hidden assets, income assessment, and court-compliant expert reports.",
+    h1: "Equitable Distribution Divorce: Family Court Accountant",
     sections: [
       {
         heading: "What Is a Financial Remedy Order?",
         content:
-          "A financial remedy order is the court's resolution of the financial aspects of a divorce or dissolution, covering the division of assets, property, savings, pensions, business interests, and maintenance. It is governed by the Matrimonial Causes Act 1973 (s25 factors) and the Family Procedure Rules.",
+          "A financial remedy order is the court's resolution of the financial aspects of a divorce or dissolution, covering the division of assets, property, savings, pensions, business interests, and maintenance. It is governed by the equitable distribution statutes (s25 factors) and the Family Procedure Rules.",
       },
       {
-        heading: "The Financial Disclosure Process: Form E",
+        heading: "The Financial Disclosure Process: financial affidavit",
         content: [
-          "This disclosure process is normally carried out by each party completing their own financial statement, Form E, which is a detailed thirty-plus page document covering all assets, income, liabilities, and financial obligations.",
-          "Family court accountants assist with reviewing your spouse's Form E for completeness and accuracy, identifying questions to raise in the questionnaire process, reviewing business accounts and company financial statements appended to Form E, and identifying unexplained discrepancies between declared figures and known lifestyle.",
+          "This disclosure process is normally carried out by each party completing their own financial statement, financial affidavit, which is a detailed thirty-plus page document covering all assets, income, liabilities, and financial obligations.",
+          "Family court accountants assist with reviewing your spouse's financial affidavit for completeness and accuracy, identifying questions to raise in the questionnaire process, reviewing business accounts and company financial statements appended to financial affidavit, and identifying unexplained discrepancies between declared figures and known lifestyle.",
         ],
       },
       {
@@ -46,42 +46,42 @@ export const PROCEEDINGS: Proceeding[] = [
         ],
       },
       {
-        heading: "The Section 25 Factors and Accounting Evidence",
+        heading: "The equitable distribution factors Factors and Accounting Evidence",
         content:
           "Under MCA 1973 s25, the court considers financial resources (including earning capacity), financial needs, standard of living during the marriage, contributions, and conduct. Family court accountants provide the financial evidence underpinning several of these factors.",
       },
     ],
     faqs: [
       {
-        question: "Does the family court always appoint a Single Joint Expert accountant?",
+        question: "Does the family court always appoint a court-appointed joint expert accountant?",
         answer:
-          "In most cases below the highest value, the judge will only allow one expert accountant acting for both sides, producing a joint report for the court. This is the SJE appointment. In high-value or highly contested cases, particularly where the parties' financial positions diverge significantly, each party may be permitted their own expert.",
+          "In most cases below the highest value, the judge will only allow one expert accountant acting for both sides, producing a joint report for the court. This is the joint expert appointment. In high-value or highly contested cases, particularly where the parties' financial positions diverge significantly, each party may be permitted their own expert.",
       },
       {
-        question: "What is Form E and why does a forensic accountant review it?",
+        question: "What is financial affidavit and why does a forensic accountant review it?",
         answer:
-          "Form E is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews Form E and the supporting documents, particularly business accounts, to identify whether the disclosure is complete and whether the figures are accurate and consistent with other available information.",
+          "financial affidavit is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews financial affidavit and the supporting documents, particularly business accounts, to identify whether the disclosure is complete and whether the figures are accurate and consistent with other available information.",
       },
     ],
   },
   {
     slug: "schedule-1-children-act",
-    hubLabel: "Schedule 1 (Children Act)",
-    title: "Schedule 1 Children Act Accountant UK",
-    metaTitle: "Schedule 1 Children Act Accountant UK | Financial Provision for Children",
+    hubLabel: "Child Support & Provision",
+    title: "Schedule 1 Children Act Accountant",
+    metaTitle: "Schedule 1 Children Act Accountant | Financial Provision for Children",
     metaDescription:
-      "Family court accountants for Schedule 1 Children Act 1989 proceedings. Income assessment, capital provision analysis, and financial expert evidence for unmarried parents.",
-    h1: "Schedule 1 Children Act 1989: Family Court Accountant UK",
+      "Family court accountants for Schedule 1 child support statutes proceedings. Income assessment, capital provision analysis, and financial expert evidence for unmarried parents.",
+    h1: "Schedule 1 child support statutes: Family Court Accountant",
     sections: [
       {
         heading: "What Is a Schedule 1 Claim?",
         content:
-          "Schedule 1 of the Children Act 1989 allows unmarried parents (and in some cases parents who were never in a relationship) to apply to the court for financial provision for their children, including lump sum payments, property transfer orders, and periodical payments. The applicant parent (usually the primary carer) seeks financial support from the respondent parent, typically a higher earner.",
+          "Schedule 1 of the child support statutes allows unmarried parents (and in some cases parents who were never in a relationship) to apply to the court for financial provision for their children, including lump sum payments, property transfer orders, and periodical payments. The applicant parent (usually the primary carer) seeks financial support from the respondent parent, typically a higher earner.",
       },
       {
         heading: "When Is a Family Court Accountant Needed in Schedule 1?",
         content: [
-          "Schedule 1 Children Act 1989 applications can involve complex financial questions, particularly where the respondent parent is a high earner, business owner, or has complex assets, requiring expert valuations and disclosure processes.",
+          "Schedule 1 child support statutes applications can involve complex financial questions, particularly where the respondent parent is a high earner, business owner, or has complex assets, requiring expert valuations and disclosure processes.",
           "Common accounting issues include business income assessment (what is truly available for child support), business valuation for capital provision calculation, lifestyle analysis to establish the standard of living to which the child should be accustomed, and hidden income investigation where the respondent controls their own earnings.",
         ],
       },
@@ -105,12 +105,12 @@ export const PROCEEDINGS: Proceeding[] = [
   },
   {
     slug: "tolata-cohabitation",
-    hubLabel: "TOLATA (Cohabitation)",
-    title: "TOLATA Cohabitation Accountant UK",
-    metaTitle: "TOLATA Cohabitation Accountant UK | Trust of Land Financial Expert Evidence",
+    hubLabel: "Cohabitation Property",
+    title: "TOLATA Cohabitation Accountant",
+    metaTitle: "TOLATA Cohabitation Accountant | Trust of Land Financial Expert Evidence",
     metaDescription:
       "Family court accountants for TOLATA and cohabitation property disputes. Beneficial interest analysis, property valuation, and financial expert evidence for separating cohabiting couples.",
-    h1: "TOLATA & Cohabitation: Family Court Accountant UK",
+    h1: "TOLATA & Cohabitation: Family Court Accountant",
     sections: [
       {
         heading: "What Is TOLATA?",
@@ -147,26 +147,26 @@ export const PROCEEDINGS: Proceeding[] = [
       {
         question: "Do TOLATA proceedings use the same expert rules as financial remedy?",
         answer:
-          "No. TOLATA is governed by the Civil Procedure Rules (CPR) rather than FPR, so CPR Part 35 applies to expert evidence, not FPR Part 25. However, where TOLATA and Schedule 1 claims are combined, family court accountants must be familiar with both frameworks.",
+          "No. TOLATA is governed by the Civil Procedure Rules (CPR) rather than FPR, so CPR Part 35 applies to expert evidence, not expert witness standards. However, where TOLATA and Schedule 1 claims are combined, family court accountants must be familiar with both frameworks.",
       },
     ],
   },
   {
     slug: "nuptial-agreements",
-    hubLabel: "Nuptial Agreements",
-    title: "Nuptial Agreement Accountant UK",
-    metaTitle: "Nuptial Agreement Accountant UK | Pre & Post-Nuptial Financial Analysis",
+    hubLabel: "Marital Agreements",
+    title: "Nuptial Agreement Accountant",
+    metaTitle: "Nuptial Agreement Accountant | Pre & Post-Nuptial Financial Analysis",
     metaDescription:
       "Family court accountants for pre-nuptial and post-nuptial agreement financial analysis. Independent asset valuation, income assessment, and business valuation for nuptial agreements.",
-    h1: "Nuptial Agreement Financial Analysis: Family Court Accountant UK",
+    h1: "Nuptial Agreement Financial Analysis: Family Court Accountant",
     sections: [
       {
         heading: "What Is a Nuptial Agreement?",
         content:
-          "A pre-nuptial agreement is made before marriage; a post-nuptial agreement after. Both set out how the parties agree to deal with their assets if the marriage ends. Following Radmacher v Granatino [2010], nuptial agreements are given significant weight by UK courts provided they are properly entered into with full financial disclosure, independent legal advice, and no undue pressure.",
+          "A pre-nuptial agreement is made before marriage; a post-nuptial agreement after. Both set out how the parties agree to deal with their assets if the marriage ends. Following Radmacher v Granatino [2010], nuptial agreements are given significant weight by courts provided they are properly entered into with full financial disclosure, independent legal advice, and no undue pressure.",
       },
       {
-        heading: "The Family Court Accountant's Role in Nuptial Agreements",
+        heading: "The Family Court Accountant's Role in Marital Agreements",
         content: [
           "Independent valuation of business interests and assets being ring-fenced",
           "Analysis of income streams and earning capacity of both parties",
@@ -201,7 +201,7 @@ export function getProceeding(slug: string): Proceeding | undefined {
 }
 
 export const SCHEDULE1_COMPARISON = {
-  headers: ["Feature", "Financial Remedy (Divorce)", "Schedule 1"],
+  headers: ["Feature", "Equitable Distribution (Divorce)", "Schedule 1"],
   rows: [
     ["Married?", "Yes", "No"],
     ["Framework", "MCA 1973, FPR", "CA 1989 Sch 1, FPR"],

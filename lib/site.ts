@@ -4,9 +4,9 @@ export const SITE_EMAIL = "contact@familycourtaccountant.com";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/familycourtaccountant";
 
-/** Woven into footer and key pages (not a banner). */
-export const SITE_UK_SCOPE =
-  "This website is for England and Wales family courts only. Law, procedure, and experts referenced follow UK family procedure (FPR, Form E, financial remedy). We do not cover Scotland, Northern Ireland, or jurisdictions outside the United Kingdom.";
+/** Woven into footer and key pages — implicit regional scope, no repetitive country name. */
+export const SITE_REGION_SCOPE =
+  "This referral service connects you with forensic accountants experienced in state family courts — divorce financial proceedings, child support disputes, cohabitation property claims, and marital agreement analysis.";
 
 export const SITE_REFERRAL_NOTICE =
   "FamilyCourtAccountant.com is a referral service connecting you with independent family court accountants. We are not a law firm and do not provide legal advice.";
@@ -53,3 +53,6 @@ export const serviceSlugs = [
   "schedule-1-evidence",
   "nuptial-agreement-analysis",
 ] as const;
+
+/** @deprecated Use SITE_REGION_SCOPE */
+export const SITE_UK_SCOPE = SITE_REGION_SCOPE;

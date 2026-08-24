@@ -11,9 +11,9 @@ import { buildFaqSchema } from "@/lib/seo/schema";
 import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Family Court Accountant Glossary | Key UK Family Finance Terms",
+  title: "Family Court Accountant Glossary | Key Family Finance Terms",
   description:
-    "Definitions of key family court accountant and family finance terms for UK proceedings — from Form E to add-backs, lifestyle analysis, FPR Part 25, and SJE.",
+    "Definitions of key family court accountant and family finance terms for proceedings — from financial affidavit to add-backs, lifestyle analysis, expert witness standards, and joint expert.",
   path: "/glossary",
 });
 
@@ -58,7 +58,7 @@ export default function GlossaryPage() {
         { name: "Glossary", href: "/glossary" },
       ]}
       title="Family Court Accountant Glossary"
-      subtitle="Key UK family finance terms from A to Z, with links to proceedings, case types, and guides."
+      subtitle="Key family finance terms from A to Z, with links to proceedings, case types, and guides."
     >
       <JsonLd data={buildFaqSchema(buildGlossaryFaqPageItems())} />
 

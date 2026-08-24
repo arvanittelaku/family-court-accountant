@@ -18,14 +18,14 @@ export const CASE_TYPES: CaseType[] = [
     slug: "business-valuation-divorce",
     hubLabel: "Business Valuation in Divorce",
     title: "Business Valuation in Divorce",
-    metaTitle: "Business Valuation in Divorce UK | Family Court Accountant Expert",
+    metaTitle: "Business Valuation in Divorce | Family Court Accountant Expert",
     metaDescription:
-      "Matrimonial business valuation for financial remedy: personal goodwill, liquidity analysis, maintainable income, and FPR Part 25 expert reports for UK family proceedings.",
-    h1: "Business Valuation in Divorce - Family Court Accountant UK",
+      "Matrimonial business valuation for financial remedy: personal goodwill, liquidity analysis, maintainable income, and expert witness standards expert reports for family proceedings.",
+    h1: "Business Valuation in Divorce - Family Court Accountant",
     paragraphs: [
       "When a spouse owns or controls a trading company, partnership, or professional practice, the business interest is often the largest asset in financial remedy proceedings. Matrimonial business valuation uses the same core techniques as commercial valuation, typically maintainable earnings, discounted cash flow, or net asset value, but applies family-law adjustments that reflect what is genuinely available for distribution rather than a theoretical sale price on the open market.",
       "The most contested issue in owner-managed business divorces is usually the split between personal goodwill and business goodwill. Personal goodwill attaches to the individual owner, their reputation, and client relationships, and would not transfer to a third-party buyer. Business goodwill is transferable and has realisable value. Family court accountants typically exclude personal goodwill from the matrimonial pot because it is not a realisable asset, while valuing the transferable element that could be realised or reflected in a settlement structure.",
-      "Liquidity analysis sits alongside the headline valuation: the court needs to know whether the business can fund a lump sum, whether income can be extracted for maintenance, and what maintainable income the business genuinely supports. In most cases the court appoints a Single Joint Expert (SJE) under FPR Part 25 to produce one independent valuation report for both parties. We provide FPR Part 25 compliant matrimonial business valuation reports for solicitors and individuals instructing through their legal advisers.",
+      "Liquidity analysis sits alongside the headline valuation: the court needs to know whether the business can fund a lump sum, whether income can be extracted for maintenance, and what maintainable income the business genuinely supports. In most cases the court appoints a court-appointed joint expert (joint expert) under expert witness standards to produce one independent valuation report for both parties. We provide expert witness standards compliant matrimonial business valuation reports for solicitors and individuals instructing through their legal advisers.",
     ],
     faqs: [
       {
@@ -40,12 +40,12 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedServices: [
-      { href: "/services/business-valuation", label: "Business Valuation (FPR Part 25)" },
+      { href: "/services/business-valuation", label: "Business Valuation (expert witness standards)" },
       { href: "/services/nuptial-agreement-analysis", label: "Nuptial Agreement Financial Analysis" },
     ],
   },
@@ -53,20 +53,20 @@ export const CASE_TYPES: CaseType[] = [
     slug: "hidden-assets-investigation",
     hubLabel: "Hidden Assets Investigation",
     title: "Hidden Assets Investigation",
-    metaTitle: "Hidden Assets Investigation Divorce UK | Family Court Accountant",
+    metaTitle: "Hidden Assets Investigation Divorce | Family Court Accountant",
     metaDescription:
-      "Forensic hidden asset investigation in UK divorce: Form E cross-referencing, bank analysis, lifestyle gaps, overseas tracing, and trust structures.",
-    h1: "Hidden Assets Investigation - Family Court Accountant UK",
+      "Forensic hidden asset investigation in divorce: financial affidavit cross-referencing, bank analysis, lifestyle gaps, overseas tracing, and trust structures.",
+    h1: "Hidden Assets Investigation - Family Court Accountant",
     paragraphs: [
-      "Undisclosed assets undermine fair financial remedy outcomes. Spouses may understate business value, omit accounts, transfer property to connected parties, or route funds through trusts and overseas structures. Family court accountants investigate whether Form E disclosure is complete and consistent with bank statements, company records, and other available evidence.",
-      "Investigative methodology typically combines Form E review with bank and credit card analysis to identify unexplained outflows and undisclosed accounts, lifestyle comparison where declared income does not support evidenced expenditure, and tracing of transfers to family members, connected companies, trusts, and foreign jurisdictions. Overseas asset tracing and trust deed analysis often run in parallel where international elements are suspected.",
-      "The objective is a clear, evidence-based picture of resources available for distribution, suitable for questionnaire support, FDR negotiation, or expert report under FPR Part 25. We work with solicitors leading financial remedy proceedings and with individuals who suspect assets are being concealed, always through appropriate legal instruction where court proceedings are active.",
+      "Undisclosed assets undermine fair financial remedy outcomes. Spouses may understate business value, omit accounts, transfer property to connected parties, or route funds through trusts and overseas structures. Family court accountants investigate whether financial affidavit disclosure is complete and consistent with bank statements, company records, and other available evidence.",
+      "Investigative methodology typically combines financial affidavit review with bank and credit card analysis to identify unexplained outflows and undisclosed accounts, lifestyle comparison where declared income does not support evidenced expenditure, and tracing of transfers to family members, connected companies, trusts, and foreign jurisdictions. Overseas asset tracing and trust deed analysis often run in parallel where international elements are suspected.",
+      "The objective is a clear, evidence-based picture of resources available for distribution, suitable for questionnaire support, FDR negotiation, or expert report under expert witness standards. We work with solicitors leading financial remedy proceedings and with individuals who suspect assets are being concealed, always through appropriate legal instruction where court proceedings are active.",
     ],
     faqs: [
       {
         question: "How does a family court accountant find hidden assets?",
         answer:
-          "Hidden asset investigation involves cross-referencing multiple data sources: declared Form E assets against bank statements (identifying unexplained outflows); lifestyle expenditure against declared income (identifying a gap suggesting undisclosed resources); company financial records against publicly available information; and asset registers against market values. Forensic accountants can trace assets including investments moved overseas, property placed in trusts, land purchased abroad, and property transferred to friends or family members.",
+          "Hidden asset investigation involves cross-referencing multiple data sources: declared financial affidavit assets against bank statements (identifying unexplained outflows); lifestyle expenditure against declared income (identifying a gap suggesting undisclosed resources); company financial records against publicly available information; and asset registers against market values. Forensic accountants can trace assets including investments moved overseas, property placed in trusts, land purchased abroad, and property transferred to friends or family members.",
       },
       {
         question: "What are the most common ways people hide assets in divorce?",
@@ -75,25 +75,25 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedServices: [
       { href: "/services/hidden-asset-investigation", label: "Hidden Asset Investigation" },
-      { href: "/services/form-e-review", label: "Form E Financial Disclosure Review" },
+      { href: "/services/form-e-review", label: "Financial Affidavit Review" },
     ],
   },
   {
     slug: "lifestyle-analysis-income",
     hubLabel: "Lifestyle Analysis & Income",
     title: "Lifestyle Analysis and Income Assessment",
-    metaTitle: "Lifestyle Analysis Divorce UK | Family Court Accountant",
+    metaTitle: "Lifestyle Analysis Divorce | Family Court Accountant",
     metaDescription:
-      "Lifestyle analysis and income assessment in UK family proceedings: expenditure vs declared income, bank statements, Schedule 1, and notional income.",
-    h1: "Lifestyle Analysis & Income Assessment - Family Court Accountant UK",
+      "Lifestyle analysis and income assessment in family proceedings: expenditure vs declared income, bank statements, Schedule 1, and notional income.",
+    h1: "Lifestyle Analysis & Income Assessment - Family Court Accountant",
     paragraphs: [
       "Lifestyle analysis compares actual expenditure during the marriage, built from bank statements, credit card records, and other financial evidence, to the income declared by the financially stronger party. Where declared income is materially lower than the lifestyle enjoyed, that gap supports an argument that undisclosed income or capital has funded living costs.",
       "The work often includes a structured schedule of expenditure, detailed bank statement analysis, and where relevant investigation of self-employed or director-controlled income structures. It is used in financial remedy to challenge inadequate disclosure and in Schedule 1 proceedings to establish the standard of living and true resources available for child provision.",
-      "Experts may also assess notional income: income that could reasonably be earned or extracted from a business but has not been declared. Courts can draw adverse inferences from inadequate disclosure and may impute income where lifestyle evidence and expert analysis establish that higher resources were available. We provide lifestyle and income analysis reports aligned to FPR Part 25 where expert evidence is required.",
+      "Experts may also assess notional income: income that could reasonably be earned or extracted from a business but has not been declared. Courts can draw adverse inferences from inadequate disclosure and may impute income where lifestyle evidence and expert analysis establish that higher resources were available. We provide lifestyle and income analysis reports aligned to expert witness standards where expert evidence is required.",
     ],
     faqs: [
       {
@@ -108,22 +108,22 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedServices: [
       { href: "/services/income-lifestyle-analysis", label: "Income & Lifestyle Analysis" },
-      { href: "/services/form-e-review", label: "Form E Financial Disclosure Review" },
+      { href: "/services/form-e-review", label: "Financial Affidavit Review" },
     ],
   },
   {
     slug: "add-backs-financial-reconstruction",
     hubLabel: "Add-Backs & Reconstruction",
     title: "Add-Backs and Financial Reconstruction",
-    metaTitle: "Add-Backs in Divorce UK | Family Court Accountant",
+    metaTitle: "Add-Backs in Divorce | Family Court Accountant",
     metaDescription:
-      "Add-backs and financial reconstruction in UK divorce: personal spend through the business, notional income, and treatment of loans and debt in the matrimonial pot.",
-    h1: "Add-Backs & Financial Reconstruction - Family Court Accountant UK",
+      "Add-backs and financial reconstruction in divorce: personal spend through the business, notional income, and treatment of loans and debt in the matrimonial pot.",
+    h1: "Add-Backs & Financial Reconstruction - Family Court Accountant",
     paragraphs: [
       "Add-backs are adjustments that treat certain business expenditure as personal benefit to the owner, effectively increasing the capital or income available for matrimonial division. Typical examples include personal vehicles, holidays and entertainment run through the company, domestic costs paid from business accounts, and related-party transactions that benefit the controlling spouse.",
       "Financial reconstruction brings the disclosed balance sheet and profit and loss position to a fair matrimonial view by quantifying those add-backs and addressing personal expenditure routed through corporate structures. The analysis supports arguments about the true size of the matrimonial pot and whether reported business profits understate resources available to the family.",
@@ -142,8 +142,8 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/tolata-cohabitation", label: "TOLATA (Cohabitation)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/tolata-cohabitation", label: "Cohabitation Property" },
     ],
     relatedServices: [
       { href: "/services/add-backs-reconstruction", label: "Add-Backs & Financial Reconstruction" },
@@ -154,13 +154,13 @@ export const CASE_TYPES: CaseType[] = [
     slug: "self-employed-income-assessment",
     hubLabel: "Self-Employed Income",
     title: "Self-Employed Income Assessment",
-    metaTitle: "Self-Employed Spouse Income Divorce UK | Family Court Accountant",
+    metaTitle: "Self-Employed Spouse Income Divorce | Family Court Accountant",
     metaDescription:
-      "Self-employed and director income assessment for UK family proceedings: drawings, dividends, retained profits, benefits in kind, and notional income for maintenance.",
-    h1: "Self-Employed Income Assessment - Family Court Accountant UK",
+      "Self-employed and director income assessment for family proceedings: drawings, dividends, retained profits, benefits in kind, and notional income for maintenance.",
+    h1: "Self-Employed Income Assessment - Family Court Accountant",
     paragraphs: [
       "A self-employed spouse or company director can control how remuneration is taken: salary, dividends, pension contributions, benefits in kind, and timing of distributions. Declared taxable income alone may not reflect the economic benefit available for maintenance or child support.",
-      "Family court accountants assess total extractable value: salary plus dividends plus employer pension contributions plus benefits in kind plus retained profits that could reasonably have been distributed. That analysis supports periodical payments, Schedule 1 claims, and challenges to Form E income disclosure where drawings have been artificially suppressed.",
+      "Family court accountants assess total extractable value: salary plus dividends plus employer pension contributions plus benefits in kind plus retained profits that could reasonably have been distributed. That analysis supports periodical payments, Schedule 1 claims, and challenges to financial affidavit income disclosure where drawings have been artificially suppressed.",
       "Where income is understated or capacity underused, experts may opine on notional income: what could be earned by applying earning capacity, or what additional sums could be extracted from the business. Courts may attribute notional income for maintenance purposes where the expert establishes that higher income was available but not declared.",
     ],
     faqs: [
@@ -176,8 +176,8 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedServices: [
       { href: "/services/income-lifestyle-analysis", label: "Income & Lifestyle Analysis" },
@@ -188,30 +188,30 @@ export const CASE_TYPES: CaseType[] = [
     slug: "overseas-assets-trusts",
     hubLabel: "Overseas Assets & Trusts",
     title: "Overseas Assets and Trust Analysis",
-    metaTitle: "Overseas Assets Divorce UK | Family Court Accountant",
+    metaTitle: "Overseas Assets Divorce | Family Court Accountant",
     metaDescription:
-      "Overseas assets and trust analysis in UK family proceedings: foreign accounts, offshore trusts, beneficial interest, and international tracing.",
-    h1: "Overseas Assets & Trust Analysis - Family Court Accountant UK",
+      "Overseas assets and trust analysis in family proceedings: foreign accounts, offshore trusts, beneficial interest, and international tracing.",
+    h1: "Overseas Assets & Trust Analysis - Family Court Accountant",
     paragraphs: [
-      "High-value and international families often hold property abroad, foreign bank accounts, offshore companies, and trust structures. Full disclosure on Form E is mandatory, but beneficial ownership and control can be opaque without forensic review.",
-      "Investigation cross-references UK bank statements for international transfers, analyses company filings and registry data in foreign jurisdictions where available, and reviews trust deeds and distribution history to establish whether a spouse has a real beneficial interest that should enter the matrimonial pot.",
+      "High-value and international families often hold property abroad, foreign bank accounts, offshore companies, and trust structures. Full disclosure on financial affidavit is mandatory, but beneficial ownership and control can be opaque without forensic review.",
+      "Investigation cross-references bank statements for international transfers, analyses company filings and registry data in foreign jurisdictions where available, and reviews trust deeds and distribution history to establish whether a spouse has a real beneficial interest that should enter the matrimonial pot.",
       "Practical challenges include obtaining documents from overseas advisers, valuation of foreign property, and coordinating with freezing order strategy where dissipation is a risk. Family court accountants provide structured tracing and valuation support so solicitors can pursue questionnaire, injunction, or expert evidence routes with a clear factual foundation.",
     ],
     faqs: [
       {
         question: "How does a family court accountant investigate overseas assets?",
         answer:
-          "Forensic accountants can trace assets including investments moved overseas, property placed in trusts, and land purchased abroad, by cross-referencing bank statements for international transfers, analysing company structures in foreign jurisdictions, and reviewing Form E disclosures against publicly available corporate registry information.",
+          "Forensic accountants can trace assets including investments moved overseas, property placed in trusts, and land purchased abroad, by cross-referencing bank statements for international transfers, analysing company structures in foreign jurisdictions, and reviewing financial affidavit disclosures against publicly available corporate registry information.",
       },
       {
         question: "Are offshore trusts disclosed in financial remedy?",
         answer:
-          "Yes, beneficial interests in trusts must be disclosed on Form E. Where a spouse claims to have no interest in a trust structure, the family court accountant analyses the trust deed, trust accounts, and history of distributions to establish whether the spouse has a real beneficial interest that should be included in the matrimonial pot.",
+          "Yes, beneficial interests in trusts must be disclosed on financial affidavit. Where a spouse claims to have no interest in a trust structure, the family court accountant analyses the trust deed, trust accounts, and history of distributions to establish whether the spouse has a real beneficial interest that should be included in the matrimonial pot.",
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
     ],
     relatedServices: [
       { href: "/services/overseas-asset-trusts", label: "Overseas Asset & Trust Analysis" },
@@ -222,12 +222,12 @@ export const CASE_TYPES: CaseType[] = [
     slug: "cryptocurrency-digital-assets",
     hubLabel: "Cryptocurrency & Digital Assets",
     title: "Cryptocurrency and Digital Asset Valuation",
-    metaTitle: "Cryptocurrency Divorce UK | Family Court Accountant",
+    metaTitle: "Cryptocurrency Divorce | Family Court Accountant",
     metaDescription:
-      "Cryptocurrency and digital asset disclosure in UK divorce: Form E, valuation dates, NFTs, wallet tracing, and blockchain analysis.",
-    h1: "Cryptocurrency & Digital Asset Valuation - Family Court Accountant UK",
+      "Cryptocurrency and digital asset disclosure in divorce: financial affidavit, valuation dates, NFTs, wallet tracing, and blockchain analysis.",
+    h1: "Cryptocurrency & Digital Asset Valuation - Family Court Accountant",
     paragraphs: [
-      "Cryptocurrency, digital wallets, exchange accounts, and NFTs are financial assets that must be disclosed on Form E like any other investment. Valuation is not straightforward: prices are volatile, holdings may sit across multiple wallets and exchanges, and the appropriate valuation date for court purposes must be agreed or determined.",
+      "Cryptocurrency, digital wallets, exchange accounts, and NFTs are financial assets that must be disclosed on financial affidavit like any other investment. Valuation is not straightforward: prices are volatile, holdings may sit across multiple wallets and exchanges, and the appropriate valuation date for court purposes must be agreed or determined.",
       "Where disclosure is incomplete, specialists use bank statement review to identify fiat transfers to exchanges, lifestyle analysis to flag spending inconsistent with declared resources, and blockchain tracing to link wallet activity to identifiable parties. NFT and other digital collectibles require case-by-case valuation approaches with documented methodology.",
       "Digital assets are increasingly used to conceal wealth because wallets can appear anonymous without expert tracing. Family court accountants with digital asset experience support solicitors and the court with defensible valuation ranges and concealment analysis suitable for financial remedy and freezing order applications.",
     ],
@@ -235,7 +235,7 @@ export const CASE_TYPES: CaseType[] = [
       {
         question: "How is cryptocurrency disclosed and valued in divorce?",
         answer:
-          "Cryptocurrency must be disclosed on Form E as a financial asset. Valuation is complex because of price volatility: the expert must assess the date at which to value the holding and apply the appropriate exchange rate. Where a spouse is suspected of concealing cryptocurrency, blockchain analysis can trace wallet activity to identify holdings.",
+          "Cryptocurrency must be disclosed on financial affidavit as a financial asset. Valuation is complex because of price volatility: the expert must assess the date at which to value the holding and apply the appropriate exchange rate. Where a spouse is suspected of concealing cryptocurrency, blockchain analysis can trace wallet activity to identify holdings.",
       },
       {
         question: "Can cryptocurrency be hidden from divorce proceedings?",
@@ -244,21 +244,21 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedServices: [
       { href: "/services/hidden-asset-investigation", label: "Hidden Asset Investigation" },
-      { href: "/services/form-e-review", label: "Form E Financial Disclosure Review" },
+      { href: "/services/form-e-review", label: "Financial Affidavit Review" },
     ],
   },
   {
     slug: "pension-sharing-business-interests",
     hubLabel: "Pension & Business Interests",
     title: "Pension Sharing and Business Interest Valuation",
-    metaTitle: "Pension Sharing & Business Valuation Divorce UK",
+    metaTitle: "Pension Sharing & Business Valuation Divorce",
     metaDescription:
-      "Pension sharing with business interests in UK divorce: CEV, liquidity, pension offset, and coordination with pension actuaries.",
-    h1: "Pension Sharing & Business Interest Valuation - Family Court Accountant UK",
+      "Pension sharing with business interests in divorce: CEV, liquidity, pension offset, and coordination with pension actuaries.",
+    h1: "Pension Sharing & Business Interest Valuation - Family Court Accountant",
     paragraphs: [
       "Many financial remedy cases involve both a substantial pension and an owner-managed business. The court must achieve fairness across asset classes that behave differently: pensions are often illiquid until retirement while businesses may offer lump sum potential but uncertain liquidity.",
       "Family court accountants value the business, assess maintainable income and liquidity for lump sum or offset, and explain how a pension sharing order might interact with a business-based settlement. Cash equivalent value (CEV) of pensions is actuarial territory; the accountant provides the business side of the overall picture so advisers can model combined outcomes.",
@@ -277,10 +277,10 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedServices: [
-      { href: "/services/business-valuation", label: "Business Valuation (FPR Part 25)" },
+      { href: "/services/business-valuation", label: "Business Valuation (expert witness standards)" },
       { href: "/services/income-lifestyle-analysis", label: "Income & Lifestyle Analysis" },
     ],
   },
@@ -288,14 +288,14 @@ export const CASE_TYPES: CaseType[] = [
     slug: "cohabitation-property-disputes",
     hubLabel: "Cohabitation Property (TOLATA)",
     title: "Cohabitation Property Dispute Accountant",
-    metaTitle: "TOLATA Cohabitation Property Accountant UK | Financial Evidence",
+    metaTitle: "TOLATA Cohabitation Property Accountant | Financial Evidence",
     metaDescription:
       "TOLATA cohabitation property disputes: beneficial interest analysis, contribution reconstruction, CPR Part 35 expert evidence, and Schedule 1 combined claims.",
-    h1: "Cohabitation Property Dispute Accountant UK | TOLATA Financial Evidence",
+    h1: "Cohabitation Property Dispute Accountant | TOLATA Financial Evidence",
     paragraphs: [
       "Cohabiting couples who separate without marrying do not have the same automatic asset-sharing regime as divorce. TOLATA 1996 claims turn on beneficial ownership and contributions to property, requiring clear financial reconstruction rather than broad matrimonial discretion.",
       "Accountants trace deposits, mortgage payments, renovation spend, and ongoing property costs through bank statements and records to support claims of common intention or resulting trust. Beneficial interest analysis is evidence-led; length of cohabitation alone does not determine outcome, though longer relationships may yield richer documentary proof of shared financial intention.",
-      "Expert evidence in TOLATA is governed by CPR Part 35, not FPR Part 25, though the analytical skills overlap. Cases may combine TOLATA property claims with Schedule 1 child provision where children exist. We provide financial expert schedules and reports for solicitor-led TOLATA and related cohabitation disputes.",
+      "Expert evidence in TOLATA is governed by CPR Part 35, not expert witness standards, though the analytical skills overlap. Cases may combine TOLATA property claims with Schedule 1 child provision where children exist. We provide financial expert schedules and reports for solicitor-led TOLATA and related cohabitation disputes.",
     ],
     faqs: [
       {
@@ -310,30 +310,30 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/tolata-cohabitation", label: "TOLATA (Cohabitation)" },
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/tolata-cohabitation", label: "Cohabitation Property" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedServices: [
       { href: "/services/add-backs-reconstruction", label: "Add-Backs & Financial Reconstruction" },
-      { href: "/services/form-e-review", label: "Form E Financial Disclosure Review" },
+      { href: "/services/form-e-review", label: "Financial Affidavit Review" },
     ],
   },
   {
     slug: "high-net-worth-divorce",
     hubLabel: "High Net Worth Divorce",
     title: "High Net Worth Divorce Accountant",
-    metaTitle: "High Net Worth Divorce Accountant UK | Complex Assets",
+    metaTitle: "High Net Worth Divorce Accountant | Complex Assets",
     metaDescription:
       "High net worth divorce accountants: multiple businesses, international assets, trusts, private equity, complex pensions, and party-appointed experts.",
-    h1: "High Net Worth Divorce Accountant UK | Complex Assets & Business Interests",
+    h1: "High Net Worth Divorce Accountant | Complex Assets & Business Interests",
     paragraphs: [
       "High net worth financial remedy involves multiple asset classes, several business interests, international holdings, trust structures, and sophisticated pension arrangements. Disclosure volume and valuation complexity exceed typical cases, and disputes over personal goodwill, liquidity, and offshore structures are common.",
       "Private equity, venture capital, and illiquid investments lack daily market prices and may restrict access to underlying data. Experts use available fund documentation, comparable transactions, and accepted valuation frameworks to present defensible ranges for negotiation and trial.",
-      "Single Joint Expert appointment remains the default, but the highest-value and most adversarial cases may justify party-appointed forensic accountants where positions diverge materially. Early coordination on joint letters of instruction, document preservation, and parallel pension actuary instruction reduces delay and cost at the FDR and final hearing stages.",
+      "court-appointed joint expert appointment remains the default, but the highest-value and most adversarial cases may justify party-appointed forensic accountants where positions diverge materially. Early coordination on joint letters of instruction, document preservation, and parallel pension actuary instruction reduces delay and cost at the FDR and final hearing stages.",
     ],
     faqs: [
       {
-        question: "At what level do HNW cases require party-appointed experts rather than SJE?",
+        question: "At what level do HNW cases require party-appointed experts rather than joint expert?",
         answer:
           "In most cases, the judge will only allow one expert accountant acting for both sides. However, in the highest value or most complex cases, particularly where parties' financial positions diverge significantly, each party may be permitted their own expert. The threshold is not fixed; it depends on the overall asset value, the complexity of the business interests, and the degree of dispute between the parties.",
       },
@@ -344,11 +344,11 @@ export const CASE_TYPES: CaseType[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
     ],
     relatedServices: [
-      { href: "/services/business-valuation", label: "Business Valuation (FPR Part 25)" },
+      { href: "/services/business-valuation", label: "Business Valuation (expert witness standards)" },
       { href: "/services/overseas-asset-trusts", label: "Overseas Asset & Trust Analysis" },
     ],
   },

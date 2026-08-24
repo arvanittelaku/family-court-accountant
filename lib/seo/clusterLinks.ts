@@ -22,10 +22,10 @@ const qualifications: ClusterLink = {
   href: "/qualifications",
   label: "Expert qualifications",
 };
-const guidesHub: ClusterLink = { href: "/guides", label: "Solicitor guides" };
+const guidesHub: ClusterLink = { href: "/guides", label: "Attorney guides" };
 const solicitors: ClusterLink = {
   href: "/who-we-help/solicitors-barristers",
-  label: "For solicitors and barristers",
+  label: "For family law attorneys",
 };
 const individuals: ClusterLink = {
   href: "/who-we-help/individuals-going-through-divorce",
@@ -36,19 +36,19 @@ const individuals: ClusterLink = {
 export const howItWorksClusterLinks: ClusterLink[] = [
   {
     href: "/proceedings/financial-remedy-divorce",
-    label: "Financial Remedy (Divorce)",
+    label: "Equitable Distribution (Divorce)",
   },
   {
     href: "/proceedings/schedule-1-children-act",
-    label: "Schedule 1 (Children Act)",
+    label: "Child Support & Provision",
   },
   {
     href: "/proceedings/tolata-cohabitation",
-    label: "TOLATA (Cohabitation)",
+    label: "Cohabitation Property",
   },
   {
     href: "/proceedings/nuptial-agreements",
-    label: "Nuptial Agreements",
+    label: "Marital Agreements",
   },
   solicitors,
   individuals,
@@ -138,7 +138,7 @@ const caseTypeGlossaryLinks: Record<CaseTypeSlug, ClusterLink[]> = {
   ],
   "hidden-assets-investigation": [
     { href: "/glossary#hidden-assets", label: "Hidden assets" },
-    { href: "/glossary#form-e", label: "Form E" },
+    { href: "/glossary#form-e", label: "financial affidavit" },
   ],
   "lifestyle-analysis-income": [
     { href: "/glossary#lifestyle-analysis", label: "Lifestyle analysis" },
@@ -158,7 +158,7 @@ const caseTypeGlossaryLinks: Record<CaseTypeSlug, ClusterLink[]> = {
   ],
   "cryptocurrency-digital-assets": [
     { href: "/glossary#hidden-assets", label: "Hidden assets" },
-    { href: "/glossary#form-e", label: "Form E" },
+    { href: "/glossary#form-e", label: "financial affidavit" },
   ],
   "pension-sharing-business-interests": [
     { href: "/glossary#pension-sharing-order", label: "Pension sharing order" },
@@ -205,7 +205,7 @@ export function getServiceClusterLinks(slug: ServiceSlug): ClusterLink[] {
 export const solicitorsClusterLinks: ClusterLink[] = [
   {
     href: "/guides/fpr-part-25-expert-appointment",
-    label: "FPR Part 25 expert appointment guide",
+    label: "expert witness standards expert appointment guide",
   },
   { href: "/proceedings/financial-remedy-divorce", label: "Financial remedy (divorce)" },
   { href: "/services", label: "All services" },
@@ -230,7 +230,7 @@ export const individualsClusterLinks: ClusterLink[] = [
   },
   {
     href: "/guides/form-e-financial-disclosure-guide",
-    label: "Form E financial disclosure guide",
+    label: "financial affidavit financial disclosure guide",
   },
   howItWorks,
   howToInstruct,
@@ -241,7 +241,7 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
   "business-valuation-divorce-guide": [
     {
       href: "/proceedings/financial-remedy-divorce",
-      label: "Financial Remedy (Divorce)",
+      label: "Equitable Distribution (Divorce)",
     },
     {
       href: "/case-types/business-valuation-divorce",
@@ -256,7 +256,7 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
   "hidden-assets-divorce-guide": [
     {
       href: "/proceedings/financial-remedy-divorce",
-      label: "Financial Remedy (Divorce)",
+      label: "Equitable Distribution (Divorce)",
     },
     {
       href: "/case-types/hidden-assets-investigation",
@@ -271,7 +271,7 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
   "form-e-financial-disclosure-guide": [
     {
       href: "/proceedings/financial-remedy-divorce",
-      label: "Financial Remedy (Divorce)",
+      label: "Equitable Distribution (Divorce)",
     },
     {
       href: "/case-types/hidden-assets-investigation",
@@ -279,14 +279,14 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
     },
     {
       href: "/services/form-e-review",
-      label: "Form E review service",
+      label: "financial affidavit review service",
     },
     individuals,
   ],
   "schedule-1-children-act-financial-guide": [
     {
       href: "/proceedings/schedule-1-children-act",
-      label: "Schedule 1 (Children Act)",
+      label: "Child Support & Provision",
     },
     {
       href: "/case-types/self-employed-income-assessment",
@@ -301,7 +301,7 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
   "tolata-cohabitation-financial-guide": [
     {
       href: "/proceedings/tolata-cohabitation",
-      label: "TOLATA (Cohabitation)",
+      label: "Cohabitation Property",
     },
     {
       href: "/case-types/cohabitation-property-disputes",
@@ -312,7 +312,7 @@ const guideExtras: Record<GuideSlug, ClusterLink[]> = {
   "fpr-part-25-expert-appointment": [
     {
       href: "/proceedings/financial-remedy-divorce",
-      label: "Financial Remedy (Divorce)",
+      label: "Equitable Distribution (Divorce)",
     },
     {
       href: "/case-types/business-valuation-divorce",

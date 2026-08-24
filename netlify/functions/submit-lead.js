@@ -1,7 +1,6 @@
 /**
  * POST /api/submit-lead (via netlify.toml redirect) → n8n / webhook.
- * Env: Lead_notification_url or LEAD_NOTIFICATION_URL.
- * Outbound JSON uses exactly four keys (see project docs).
+ * Env: Lead_notification_url, LEAD_NOTIFICATION_URL, or NEXT_PUBLIC_LEAD_NOTIFICATION_URL.
  */
 const BRAND_NAME = "FamilyCourtAccountant";
 
@@ -9,6 +8,7 @@ function getLeadWebhookUrl() {
   return (
     process.env.Lead_notification_url ||
     process.env.LEAD_NOTIFICATION_URL ||
+    process.env.NEXT_PUBLIC_LEAD_NOTIFICATION_URL ||
     ""
   );
 }
@@ -47,6 +47,12 @@ exports.handler = async (event) => {
   const fullName = String(body.fullName || body.full_name || "").trim();
   const email = String(body.email || "").trim();
   const phone = body.phone != null ? String(body.phone).trim() : "";
+  const message =
+    body.message != null
+      ? String(body.message).trim()
+      : body.description != null
+        ? String(body.description).trim()
+        : "";
 
   if (!fullName || !email) {
     return {
@@ -63,7 +69,8 @@ exports.handler = async (event) => {
       headers: jsonHeaders,
       body: JSON.stringify({
         error: "WEBHOOK_MISSING",
-        message: "Lead_notification_url / LEAD_NOTIFICATION_URL is not set.",
+        message:
+          "Lead_notification_url / LEAD_NOTIFICATION_URL is not set in Netlify.",
       }),
     };
   }
@@ -72,6 +79,7 @@ exports.handler = async (event) => {
     "Full Name": fullName,
     Email: email,
     "Phone Number": phone,
+    Message: message,
     "Brand name": BRAND_NAME,
   };
 

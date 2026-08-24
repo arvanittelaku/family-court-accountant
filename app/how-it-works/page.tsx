@@ -10,9 +10,9 @@ import { buildArticleSchema } from "@/lib/seo/schema";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "How a Family Court Accountant Works | Step-by-Step UK Guide",
+  title: "How a Family Court Accountant Works | Step-by-Step Guide",
   description:
-    "Step-by-step guide to what a family court accountant does in UK proceedings: from Form E disclosure to SJE appointment, expert report, and oral evidence.",
+    "Step-by-step guide to what a family court accountant does in proceedings: from financial affidavit disclosure to joint expert appointment, expert report, and oral evidence.",
   path: "/how-it-works",
 });
 
@@ -26,10 +26,10 @@ const phaseOverviewRows = [
 
 const fprAppointmentRows = [
   ["Identify need for expert", "Solicitor", "Early in proceedings"],
-  ["Agree SJE or party-appointed", "Both solicitors", "MIAM or Directions stage"],
+  ["Agree joint expert or party-appointed", "Both solicitors", "MIAM or Directions stage"],
   ["Apply for court permission", "Applicant solicitor", "First Directions Appointment"],
   ["Court grants permission", "Court", "At or after FDA"],
-  ["Joint letter of instruction", "Both solicitors (SJE)", "Within 14 days of permission"],
+  ["Joint letter of instruction", "Both solicitors (joint expert)", "Within 14 days of permission"],
   ["Conflict check and engagement", "Expert", "Within 7 days of letter"],
   ["Expert confirms instructions", "Expert", "Before work begins"],
 ];
@@ -79,9 +79,9 @@ const timelineRows = [
 
 export default function HowItWorksPage() {
   const articleLd = buildArticleSchema({
-    headline: "How a Family Court Accountant Works: Step-by-Step UK Guide",
+    headline: "How a Family Court Accountant Works: Step-by-Step Guide",
     description:
-      "Step-by-step guide to what a family court accountant does in UK proceedings: from Form E disclosure to SJE appointment, expert report, and oral evidence.",
+      "Step-by-step guide to what a family court accountant does in proceedings: from financial affidavit disclosure to joint expert appointment, expert report, and oral evidence.",
     url: `${SITE_URL}/how-it-works`,
     aboutId: "business-valuation",
   });
@@ -92,8 +92,8 @@ export default function HowItWorksPage() {
         { name: "Home", href: "/" },
         { name: "How It Works", href: "/how-it-works" },
       ]}
-      title="How a Family Court Accountant Works: Step-by-Step UK Guide"
-      subtitle="Definition-first guide for solicitors and individuals: appointment, analysis, reporting, and court attendance in UK family financial proceedings."
+      title="How a Family Court Accountant Works: Step-by-Step Guide"
+      subtitle="Definition-first guide for solicitors and individuals: appointment, analysis, reporting, and court attendance in family financial proceedings."
     >
       <JsonLd data={articleLd} />
       <div className="prose-content">
@@ -102,9 +102,9 @@ export default function HowItWorksPage() {
           A family court accountant is a forensic accountant who provides
           independent financial analysis and expert witness evidence in family
           proceedings. They bridge accounting and family law: reviewing{" "}
-          <Link href="/guides/form-e-financial-disclosure-guide">Form E</Link>{" "}
+          <Link href="/guides/form-e-financial-disclosure-guide">financial affidavit</Link>{" "}
           disclosure, valuing businesses, investigating hidden assets, and
-          preparing FPR Part 25 compliant reports the court can rely on. Unlike
+          preparing expert witness standards compliant reports the court can rely on. Unlike
           a regular accountant who prepares accounts, a family court accountant
           forensically tests whether disclosures are complete, traces
           concealed resources, and explains findings in plain language for
@@ -126,7 +126,7 @@ export default function HowItWorksPage() {
           <Link href="/proceedings/tolata-cohabitation">TOLATA</Link>, or{" "}
           <Link href="/proceedings/nuptial-agreements">nuptial agreement</Link>{" "}
           work, the same core phases apply, though TOLATA uses CPR Part 35
-          rather than FPR Part 25 for expert evidence.
+          rather than expert witness standards for expert evidence.
         </p>
         <DataTable
           caption="Five-phase process overview"
@@ -136,10 +136,10 @@ export default function HowItWorksPage() {
 
         <h2>Two tracks: solicitors and individuals</h2>
         <p>
-          <strong>For solicitors and barristers:</strong> you identify the need
+          <strong>For family law attorneys:</strong> you identify the need
           for expert evidence, agree scope and appointment type, obtain court
-          permission where required, and jointly instruct under FPR Part 25.
-          You provide Form E bundles, company accounts, and bank statements,
+          permission where required, and jointly instruct under expert witness standards.
+          You provide financial affidavit bundles, company accounts, and bank statements,
           then manage written questions and hearing attendance. See{" "}
           <Link href="/how-to-instruct">how to instruct</Link> and{" "}
           <Link href="/qualifications">qualifications</Link> for practical
@@ -148,7 +148,7 @@ export default function HowItWorksPage() {
         <p>
           <strong>For individuals going through divorce:</strong> you do not
           instruct the expert directly. Your family law solicitor appoints the
-          accountant, usually as a Single Joint Expert (SJE) shared with your
+          accountant, usually as a court-appointed joint expert (joint expert) shared with your
           spouse. You experience the process as document requests, a waiting
           period while analysis runs, and eventually a report that supports
           negotiation or court. If you suspect hidden assets or need a business
@@ -157,31 +157,31 @@ export default function HowItWorksPage() {
             guide for individuals
           </Link>{" "}
           explains signs you may need accountant evidence.{" "}
-          <Link href="/contact">Contact us</Link> to discuss indicative costs.
+          <Link href="/contact">Contact us</Link> to discuss scope and timeline.
         </p>
 
-        <h2>Phase 1: getting the expert appointed (FPR Part 25)</h2>
+        <h2>Phase 1: getting the expert appointed (expert witness standards)</h2>
         <p>
           In financial remedy and most family finance cases, court permission is
           required before a forensic accountant is formally instructed. Solicitors
-          first agree whether a Single Joint Expert or party-appointed experts
+          first agree whether a court-appointed joint expert or party-appointed experts
           are appropriate. In most cases below the highest value, the court
-          directs a Single Joint Expert: one accountant, one report, costs
+          directs a court-appointed joint expert: one accountant, one report, costs
           usually shared equally. See our{" "}
           <Link href="/guides/fpr-part-25-expert-appointment">
-            FPR Part 25 guide
+            expert witness standards guide
           </Link>{" "}
           for full detail on permission, joint letters, and written questions.
         </p>
         <DataTable
-          caption="FPR Part 25 expert appointment process"
+          caption="expert witness standards expert appointment process"
           headers={["Step", "Who", "Timeline"]}
           rows={fprAppointmentRows}
         />
 
-        <h3>Single Joint Expert vs party-appointed expert</h3>
+        <h3>court-appointed joint expert vs party-appointed expert</h3>
         <p>
-          The court favours a Single Joint Expert to control cost and avoid
+          The court favours a court-appointed joint expert to control cost and avoid
           duelling opinions. Party-appointed experts may be permitted where
           asset values are very high, structures are complex, or positions are
           irreconcilable. Both appointment types require experts who owe their
@@ -189,15 +189,15 @@ export default function HowItWorksPage() {
           party.
         </p>
         <DataTable
-          caption="SJE vs party-appointed comparison"
-          headers={["Feature", "Single Joint Expert (SJE)", "Party-appointed"]}
+          caption="joint expert vs party-appointed comparison"
+          headers={["Feature", "court-appointed joint expert (joint expert)", "Party-appointed"]}
           rows={sjeComparisonRows}
         />
 
         <h2>Phase 2: document review</h2>
         <p>
           The expert&apos;s analysis depends on complete disclosure. Standard
-          bundles include Form E and all exhibits, three years of audited or
+          bundles include financial affidavit and all exhibits, three years of audited or
           filed business accounts, management accounts for the last twelve
           months, personal and company tax returns, twelve or more months of
           bank statements (personal and business), shareholding documents, and
@@ -205,9 +205,9 @@ export default function HowItWorksPage() {
           expert can conclude and should be flagged in the report.
         </p>
         <p>
-          Form E review often starts before full expert appointment: a focused
+          financial affidavit review often starts before full expert appointment: a focused
           review can identify gaps for the questionnaire stage. See{" "}
-          <Link href="/services/form-e-review">Form E review</Link> and{" "}
+          <Link href="/services/form-e-review">financial affidavit review</Link> and{" "}
           <Link href="/case-types/hidden-assets-investigation">
             hidden assets investigation
           </Link>{" "}
@@ -248,7 +248,7 @@ export default function HowItWorksPage() {
 
         <h2>Phase 4: expert report</h2>
         <p>
-          FPR Part 25 compliant reports include a statement of truth,
+          expert witness standards compliant reports include a statement of truth,
           qualifications and experience, summary of instructions and documents
           reviewed, assumptions, analysis, opinion, limitations where disclosure
           was incomplete, and a declaration of independence. Reports must be
@@ -258,28 +258,25 @@ export default function HowItWorksPage() {
           cross-examination.
         </p>
         <p>
-          Typical business valuation reports range from £2,000 for straightforward
-          owner-managed companies to £15,000 or more for multiple entities.
-          Standard turnaround is three to
-          six weeks once documents are complete, though urgent timetables can
-          compress this at additional cost.
+          Standard turnaround is three to six weeks once documents are complete, though
+          urgent timetables may compress this when the court schedule requires it.
         </p>
 
         <h2>Phase 5: written questions and court attendance</h2>
         <p>
           After the report is served, parties may put written questions under
-          FPR Part 25 to clarify methodology, data, or calculations. Answers
+          expert witness standards to clarify methodology, data, or calculations. Answers
           form part of the evidence bundle. Experts may attend Financial
           Dispute Resolution hearings indirectly through their figures, and
           final hearings for oral evidence or hot-tubbing where ordered.
           Preparation includes familiarity with both parties&apos; positions
-          and adherence to Ikarian Reefer duties: independent, transparent, and
+          and adherence to Daubert duties: independent, transparent, and
           within expertise.
         </p>
         <p>
           Solicitors remain responsible for case strategy and settlement
           structure. The accountant supplies technical value, liquidity, and
-          adjustment figures that anchor negotiation under Section 25 Matrimonial
+          adjustment figures that anchor negotiation under equitable distribution factors Matrimonial
           Causes Act 1973 factors in financial remedy, or child-focused analysis
           in Schedule 1.
         </p>
@@ -299,7 +296,7 @@ export default function HowItWorksPage() {
 
         <h2>When to instruct and next steps</h2>
         <p>
-          Instruct when business interests need independent valuation, Form E
+          Instruct when business interests need independent valuation, financial affidavit
           raises red flags, lifestyle does not match declared income, or
           add-backs and reconstruction are in dispute. Solicitors should review{" "}
           <Link href="/how-to-instruct">how to instruct</Link>, verify{" "}

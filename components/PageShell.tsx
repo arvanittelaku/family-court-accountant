@@ -16,19 +16,22 @@ export function PageShell({
 }) {
   return (
     <>
-      <PageHero>
+      <PageHero
+        aside={
+          subtitle ? (
+            <p className="max-w-xl text-base leading-relaxed text-body sm:text-lg">
+              {subtitle}
+            </p>
+          ) : undefined
+        }
+      >
         <SeoBreadcrumbs items={breadcrumbs} tone="inverse" />
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-4 font-serif text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {title}
         </h1>
-        {subtitle ? (
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/80 sm:text-lg">
-            {subtitle}
-          </p>
-        ) : null}
       </PageHero>
-      <div className="mx-auto max-w-3xl min-w-0 px-4 py-12 sm:px-6 lg:max-w-4xl lg:py-16">
-        {children}
+      <div className="mx-auto w-full max-w-[var(--max-width-content)] min-w-0 px-4 py-12 sm:px-6 lg:py-16">
+        <div className="max-w-3xl">{children}</div>
       </div>
       <PageBottomCta />
     </>

@@ -4,9 +4,9 @@ import { PageShell } from "@/components/PageShell";
 import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Who We Help | Family Court Accountants for Solicitors & Individuals UK",
+  title: "Who We Help | Family Court Accountants for Solicitors & Individuals",
   description:
-    "Family court accountants for UK family law solicitors needing expert witnesses — and for individuals going through divorce who need financial investigation or business valuation help.",
+    "Family court accountants for family law attorneys needing expert witnesses — and for individuals going through divorce who need financial investigation or business valuation help.",
   path: "/who-we-help",
 });
 
@@ -20,13 +20,13 @@ export default function WhoWeHelpPage() {
     <PageShell
       breadcrumbs={breadcrumbs}
       title="Who We Help"
-      subtitle="FamilyCourtAccountant.com serves family law solicitors and barristers in England and Wales who need forensic accountant expert witnesses, and individuals going through UK divorce or separation who need independent financial analysis."
+      subtitle="FamilyCourtAccountant.com serves family law attorneys and barristers in state family courts who need forensic accountant expert witnesses, and individuals going through divorce or separation who need independent financial analysis."
     >
       <div className="grid gap-5 md:grid-cols-2">
         <ContentCard
           href="/who-we-help/solicitors-barristers"
-          title="Solicitors & Barristers"
-          description="You need a forensic accountant who produces FPR Part 25 compliant expert reports, acts as SJE where directed, and gives credible evidence in the Family Court or High Court."
+          title="Family Law Attorneys"
+          description="You need a forensic accountant who produces expert witness standards compliant expert reports, acts as joint expert where directed, and gives credible evidence in the Family Court or High Court."
         />
         <ContentCard
           href="/who-we-help/individuals-going-through-divorce"

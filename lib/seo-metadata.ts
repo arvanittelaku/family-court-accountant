@@ -18,7 +18,7 @@ export function buildAlternates(path: string): NonNullable<Metadata["alternates"
   return {
     canonical: pageUrl,
     languages: {
-      "en-GB": pageUrl,
+      "en-US": pageUrl,
       "x-default": pageUrl,
     },
   };
@@ -43,7 +43,7 @@ export function buildPageMetadata({
       url: pageUrl,
       siteName: SITE_NAME,
       type: "website",
-      locale: "en_GB",
+      locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
@@ -60,79 +60,79 @@ export const PAGE_SEO_MANIFEST: Record<
 > = {
   "/": {
     title:
-      "Family Court Accountant UK | Forensic Accountants for Divorce & Financial Remedy",
+      "Family Court Accountant | Forensic Accountants for Divorce & Family Finance",
     description:
-      "Find a qualified family court accountant in the UK. Forensic accountants for divorce financial remedy, hidden assets, business valuation, Schedule 1, and TOLATA proceedings. Solicitors and individuals welcome.",
+      "Find a qualified family court forensic accountant. Business valuation, hidden asset investigation, financial affidavit review, and expert witness support for divorce and family financial proceedings.",
   },
   "/what-is-a-family-court-accountant": {
     title:
-      "What Is a Family Court Accountant? | UK Role, FPR Part 25 & When You Need One",
+      "What Is a Family Court Accountant? | Role, Expert Standards & When You Need One",
     description:
-      "A family court accountant is a forensic accountant who provides expert evidence in divorce and family financial proceedings. Form E analysis, business valuation, hidden assets, and FPR Part 25 explained.",
+      "A family court accountant is a forensic accountant who provides expert evidence in divorce and family financial proceedings. Financial affidavit analysis, business valuation, hidden assets, and expert witness standards explained.",
   },
   "/services": {
-    title: "Family Court Accountant Services UK | Full Service List",
+    title: "Family Court Accountant Services | Full Service List",
     description:
-      "UK family court accountant services: business valuation, hidden asset investigation, Form E analysis, income assessment, lifestyle analysis, add-backs, and FPR Part 25 compliant expert reports.",
+      "Family court accountant services: business valuation, hidden asset investigation, financial affidavit review, income assessment, lifestyle analysis, add-backs, and court-compliant expert reports.",
   },
   "/how-it-works": {
-    title: "How a Family Court Accountant Works | Step-by-Step UK Guide",
+    title: "How a Family Court Accountant Works | Step-by-Step Guide",
     description:
-      "Step-by-step guide to what a family court accountant does in UK proceedings — from Form E disclosure to SJE appointment, expert report, and oral evidence.",
+      "Step-by-step guide to what a family court accountant does — from financial disclosure to court-appointed expert appointment, expert report, and testimony.",
   },
   "/who-we-help": {
-    title: "Who We Help | Family Court Accountants for Solicitors & Individuals UK",
+    title: "Who We Help | Family Court Accountants for Attorneys & Individuals",
     description:
-      "Family court accountants for UK family law solicitors needing expert witnesses — and for individuals going through divorce who need financial investigation or business valuation help.",
+      "Family court accountants for family law attorneys needing expert witnesses — and for individuals going through divorce who need financial investigation or business valuation help.",
   },
   "/who-we-help/solicitors-barristers": {
     title:
-      "Family Court Accountants for Solicitors & Barristers UK | FPR Part 25 Expert Witnesses",
+      "Family Court Accountants for Family Law Attorneys | Expert Witnesses",
     description:
-      "Forensic accountants and family court expert witnesses for UK family law solicitors. FPR Part 25 compliant reports, SJE appointments, business valuation, and hidden asset investigation.",
+      "Forensic accountants and family court expert witnesses for family law attorneys. Court-compliant reports, joint expert appointments, business valuation, and hidden asset investigation.",
   },
   "/who-we-help/individuals-going-through-divorce": {
     title:
-      "Going Through Divorce? Family Court Accountant Help UK | Hidden Assets & Business Valuation",
+      "Going Through Divorce? Family Court Accountant Help | Hidden Assets & Business Valuation",
     description:
       "If your spouse owns a business, you suspect hidden assets, or their declared income doesn't match their lifestyle, a family court accountant can help. Get independent expert financial analysis.",
   },
   "/proceedings": {
-    title: "Family Court Proceedings | Financial Remedy, Schedule 1, TOLATA & Nuptial",
+    title: "Family Court Proceedings | Equitable Distribution, Child Support & More",
     description:
-      "Family court accountant support for financial remedy divorce, Schedule 1 Children Act, TOLATA cohabitation, and nuptial agreement proceedings across the UK.",
+      "Family court accountant support for equitable distribution, child support provision, cohabitation property, and marital agreement proceedings.",
   },
   "/case-types": {
-    title: "Case Types Requiring a Family Court Accountant | UK Guide",
+    title: "Case Types Requiring a Family Court Accountant",
     description:
       "Which family proceedings need a family court accountant? Business valuation, hidden assets, lifestyle analysis, add-backs, overseas assets, and more explained.",
   },
   "/qualifications": {
     title:
-      "Family Court Accountant Qualifications UK | ACA, ICAEW & FPR Part 25 Standards",
+      "Family Court Accountant Qualifications | CPA, CFF & Expert Witness Standards",
     description:
-      "What credentials should a UK family court accountant hold? ACA, FCA, ICAEW forensic accreditation, Resolution membership, and FPR Part 25 compliance explained.",
+      "What credentials should a family court accountant hold? CPA, CFF, ABV, and court expert witness standards explained.",
   },
   "/how-to-instruct": {
     title:
-      "How to Instruct a Family Court Accountant UK | Solicitors & Individuals Guide",
+      "How to Instruct a Family Court Accountant | Attorneys & Individuals Guide",
     description:
-      "How solicitors and individuals instruct a family court accountant in the UK — SJE vs party-appointed, FPR Part 25, letter of instruction, and documents needed.",
+      "How attorneys and individuals instruct a family court accountant — joint vs party-appointed experts, expert witness rules, letter of instruction, and documents needed.",
   },
   "/guides": {
     title:
-      "Guides: Family Court Accountants UK | Divorce Finance, Hidden Assets & Business Valuation",
+      "Guides: Family Court Accountants | Divorce Finance, Hidden Assets & Business Valuation",
     description:
-      "In-depth guides on family court accountants for UK solicitors and individuals — Form E analysis, hidden assets, business valuation in divorce, and more.",
+      "In-depth guides on family court accountants for attorneys and individuals — financial affidavit analysis, hidden assets, business valuation in divorce, and more.",
   },
   "/glossary": {
-    title: "Family Court Accountant Glossary | Key UK Family Finance Terms",
+    title: "Family Court Accountant Glossary | Key Family Finance Terms",
     description:
-      "Definitions of key family court accountant and family finance terms for UK proceedings — from Form E to add-backs, lifestyle analysis, FPR Part 25, and SJE.",
+      "Definitions of key family court accountant and family finance terms — from financial affidavits to add-backs, lifestyle analysis, and court-appointed experts.",
   },
   "/contact": {
-    title: "Instruct a Family Court Accountant | FamilyCourtAccountant.com UK",
+    title: "Contact a Family Court Accountant",
     description:
-      "Submit your case details to be matched with a qualified UK family court accountant. Solicitors and individuals welcome. Response within 1 business day.",
+      "Submit a brief enquiry to be matched with a qualified family court forensic accountant. Family law attorneys and individuals welcome.",
   },
 };

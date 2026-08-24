@@ -17,22 +17,22 @@ export type Service = {
 export const SERVICES: Service[] = [
   {
     id: "business-valuation",
-    title: "Business Valuation (FPR Part 25)",
-    metaTitle: "Business Valuation Divorce UK | Family Court Accountant FPR Part 25",
+    title: "Business Valuation",
+    metaTitle: "Business Valuation in Divorce | Family Court Accountant",
     metaDescription:
-      "Matrimonial business valuation for UK financial remedy: maintainable earnings, personal goodwill, liquidity analysis, and FPR Part 25 compliant expert reports.",
-    h1: "Business Valuation (FPR Part 25) - Family Court Accountant UK",
+      "Matrimonial business valuation for financial remedy: maintainable earnings, personal goodwill, liquidity analysis, and expert witness standards compliant expert reports.",
+    h1: "Business Valuation — Family Court Accountant",
     shortDescription:
       "Independent matrimonial business valuation using maintainable earnings, DCF, or NAV methods with personal goodwill and liquidity analysis.",
     paragraphs: [
       "When a spouse owns or controls a trading company, partnership, or professional practice, the business interest is often the largest asset in financial remedy proceedings. A family court accountant applies commercial valuation techniques in a matrimonial context, focusing on what is genuinely available for distribution rather than a theoretical open-market price alone.",
-      "Personal goodwill versus business goodwill is typically the most contested issue in owner-managed business divorces. Family court accountants assess maintainable income, liquidity for lump-sum or maintenance orders, and produce FPR Part 25 compliant reports suitable for SJE or party-appointed appointment.",
+      "Personal goodwill versus business goodwill is typically the most contested issue in owner-managed business divorces. Family court accountants assess maintainable income, liquidity for lump-sum or maintenance orders, and produce expert witness standards compliant reports suitable for joint expert or party-appointed appointment.",
     ],
     methodology: [
       { step: "Document review", detail: "Audited accounts, management accounts, and shareholding structure" },
       { step: "Valuation method", detail: "Maintainable earnings, DCF, or net asset value as appropriate" },
       { step: "Matrimonial adjustments", detail: "Personal goodwill exclusion and liquidity assessment" },
-      { step: "Expert report", detail: "FPR Part 25 compliant report with statement of truth" },
+      { step: "Expert report", detail: "expert witness standards compliant report with statement of truth" },
     ],
     faqs: [
       {
@@ -46,9 +46,9 @@ export const SERVICES: Service[] = [
           "Personal goodwill is the value attributable to the individual owner, their reputation, client relationships, and skills, that would be lost on a sale to a third party. Business goodwill is transferable and has realisable value. In financial remedy, courts typically exclude personal goodwill from the matrimonial pot as it is not a realisable asset available for distribution.",
       },
       {
-        question: "What is FPR Part 25 and how does it apply?",
+        question: "What is expert witness standards and how does it apply?",
         answer:
-          "Part 25 of the Family Procedure Rules 2010 governs expert appointment in family proceedings. FPR 25.3 states that the duty of experts is to help the court on matters within their expertise, and this duty overrides any obligation to the instructing party. Expert reports must comply with FPR Part 25 Practice Direction and include a statement of truth.",
+          "Part 25 of the Family Procedure Rules 2010 governs expert appointment in family proceedings. FPR 25.3 states that the duty of experts is to help the court on matters within their expertise, and this duty overrides any obligation to the instructing party. Expert reports must comply with expert witness standards Practice Direction and include a statement of truth.",
       },
       {
         question: "How long does a business valuation expert report take?",
@@ -57,8 +57,8 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/business-valuation-divorce", label: "Business Valuation in Divorce" },
@@ -68,18 +68,18 @@ export const SERVICES: Service[] = [
   {
     id: "hidden-asset-investigation",
     title: "Hidden Asset Investigation",
-    metaTitle: "Hidden Asset Investigation Divorce UK | Family Court Accountant",
+    metaTitle: "Hidden Asset Investigation Divorce | Family Court Accountant",
     metaDescription:
-      "Forensic hidden asset investigation in UK divorce: Form E cross-referencing, bank analysis, lifestyle gaps, overseas tracing, and trust structures.",
-    h1: "Hidden Asset Investigation - Family Court Accountant UK",
+      "Forensic hidden asset investigation in divorce: Financial affidavit cross-referencing, bank analysis, lifestyle gaps, overseas tracing, and trust structures.",
+    h1: "Hidden Asset Investigation - Family Court Accountant",
     shortDescription:
-      "Forensic tracing of undisclosed assets through Form E cross-referencing, bank statement analysis, and lifestyle comparison.",
+      "Forensic tracing of undisclosed assets through Financial affidavit cross-referencing, bank statement analysis, and lifestyle comparison.",
     paragraphs: [
-      "Undisclosed assets undermine fair financial remedy outcomes. Family court accountants investigate whether Form E disclosure is complete and consistent with bank statements, company records, and other available evidence.",
-      "Investigative work typically combines Form E review with bank and credit card analysis, lifestyle comparison where declared income does not support evidenced expenditure, and tracing of transfers to connected parties, trusts, and overseas jurisdictions.",
+      "Undisclosed assets undermine fair financial remedy outcomes. Family court accountants investigate whether Financial affidavit disclosure is complete and consistent with bank statements, company records, and other available evidence.",
+      "Investigative work typically combines Financial affidavit review with bank and credit card analysis, lifestyle comparison where declared income does not support evidenced expenditure, and tracing of transfers to connected parties, trusts, and overseas jurisdictions.",
     ],
     methodology: [
-      { step: "Form E review", detail: "Cross-reference declared assets against supporting documents" },
+      { step: "Financial affidavit review", detail: "Cross-reference declared assets against supporting documents" },
       { step: "Bank analysis", detail: "Identify unexplained outflows and undisclosed accounts" },
       { step: "Lifestyle comparison", detail: "Compare declared income against evidenced expenditure" },
       { step: "Asset tracing", detail: "Overseas transfers, trust structures, and connected-party transactions" },
@@ -88,12 +88,12 @@ export const SERVICES: Service[] = [
       {
         question: "How does a family court accountant investigate hidden assets?",
         answer:
-          "Hidden asset investigation involves cross-referencing declared Form E assets against bank statements, comparing lifestyle expenditure against declared income, analysing company financial records against publicly available information, and tracing asset transfers including investments moved overseas, property placed in trusts, and transfers to friends or family members.",
+          "Hidden asset investigation involves cross-referencing declared Financial affidavit assets against bank statements, comparing lifestyle expenditure against declared income, analysing company financial records against publicly available information, and tracing asset transfers including investments moved overseas, property placed in trusts, and transfers to friends or family members.",
       },
       {
-        question: "What is Form E and why does a forensic accountant review it?",
+        question: "What is Financial affidavit and why does a forensic accountant review it?",
         answer:
-          "Form E is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews Form E and supporting documents to identify whether disclosure is complete and whether figures are accurate and consistent with other available information.",
+          "Financial affidavit is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews Financial affidavit and supporting documents to identify whether disclosure is complete and whether figures are accurate and consistent with other available information.",
       },
       {
         question: "What is lifestyle analysis in divorce proceedings?",
@@ -102,7 +102,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/hidden-assets-investigation", label: "Hidden Assets Investigation" },
@@ -111,33 +111,33 @@ export const SERVICES: Service[] = [
   },
   {
     id: "form-e-review",
-    title: "Form E Financial Disclosure Review",
-    metaTitle: "Form E Review UK | Family Court Accountant Financial Disclosure",
+    title: "Financial Affidavit Review",
+    metaTitle: "Financial Affidavit Review | Family Court Accountant",
     metaDescription:
-      "Expert Form E financial disclosure review for UK financial remedy: completeness checks, exhibit analysis, inconsistency identification, and questionnaire support.",
-    h1: "Form E Financial Disclosure Review - Family Court Accountant UK",
+      "Expert Financial affidavit financial disclosure review for financial remedy: completeness checks, exhibit analysis, inconsistency identification, and questionnaire support.",
+    h1: "Financial Affidavit Review — Family Court Accountant",
     shortDescription:
-      "Expert review of Form E financial statements for completeness, accuracy, and questionnaire support.",
+      "Expert review of Financial affidavit financial statements for completeness, accuracy, and questionnaire support.",
     paragraphs: [
-      "Form E is the foundation of financial remedy disclosure. A family court accountant reviews the financial statement and exhibits to identify gaps, inconsistencies, and areas requiring further investigation before FDR or trial.",
-      "Review work supports solicitors drafting disclosure questionnaires and scoping whether a full forensic investigation or business valuation is needed under FPR Part 25.",
+      "Financial affidavit is the foundation of financial remedy disclosure. A family court accountant reviews the financial statement and exhibits to identify gaps, inconsistencies, and areas requiring further investigation before FDR or trial.",
+      "Review work supports solicitors drafting disclosure questionnaires and scoping whether a full forensic investigation or business valuation is needed under expert witness standards.",
     ],
     methodology: [
-      { step: "Form E analysis", detail: "Review all sections of the financial statement" },
+      { step: "Financial affidavit analysis", detail: "Review all sections of the financial statement" },
       { step: "Exhibit review", detail: "Business accounts, bank statements, and property valuations" },
       { step: "Inconsistency identification", detail: "Flag discrepancies between sections and exhibits" },
       { step: "Questionnaire support", detail: "Draft questions for the disclosure questionnaire process" },
     ],
     faqs: [
       {
-        question: "What is Form E and why does a forensic accountant review it?",
+        question: "What is Financial affidavit and why does a forensic accountant review it?",
         answer:
-          "Form E is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews Form E and supporting documents to identify whether disclosure is complete and whether figures are accurate and consistent with other available information.",
+          "Financial affidavit is the mandatory financial disclosure document in financial remedy proceedings, covering all assets, income, pensions, liabilities, and outgoings of both parties. A forensic accountant reviews Financial affidavit and supporting documents to identify whether disclosure is complete and whether figures are accurate and consistent with other available information.",
       },
       {
         question: "How does a family court accountant investigate hidden assets?",
         answer:
-          "Hidden asset investigation involves cross-referencing declared Form E assets against bank statements, comparing lifestyle expenditure against declared income, analysing company financial records, and tracing asset transfers including overseas investments and trust structures.",
+          "Hidden asset investigation involves cross-referencing declared Financial affidavit assets against bank statements, comparing lifestyle expenditure against declared income, analysing company financial records, and tracing asset transfers including overseas investments and trust structures.",
       },
       {
         question: "Do I need a solicitor to instruct a family court accountant?",
@@ -146,7 +146,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/hidden-assets-investigation", label: "Hidden Assets Investigation" },
@@ -156,10 +156,10 @@ export const SERVICES: Service[] = [
   {
     id: "income-lifestyle-analysis",
     title: "Income & Lifestyle Analysis",
-    metaTitle: "Lifestyle Analysis Divorce UK | Family Court Accountant Income Expert",
+    metaTitle: "Lifestyle Analysis Divorce | Family Court Accountant Income Expert",
     metaDescription:
-      "Income and lifestyle analysis in UK divorce: expenditure versus declared income, undisclosed resources, notional income, and earning capacity assessment.",
-    h1: "Income & Lifestyle Analysis - Family Court Accountant UK",
+      "Income and lifestyle analysis in divorce: expenditure versus declared income, undisclosed resources, notional income, and earning capacity assessment.",
+    h1: "Income & Lifestyle Analysis - Family Court Accountant",
     shortDescription:
       "Expenditure versus declared income analysis to identify undisclosed resources and establish true standard of living.",
     paragraphs: [
@@ -181,17 +181,17 @@ export const SERVICES: Service[] = [
       {
         question: "How does a family court accountant investigate hidden assets?",
         answer:
-          "Lifestyle gaps often trigger wider investigation: cross-referencing Form E against bank statements, analysing company drawings, and tracing unexplained inflows or asset transfers that fund expenditure above declared income.",
+          "Lifestyle gaps often trigger wider investigation: cross-referencing Financial affidavit against bank statements, analysing company drawings, and tracing unexplained inflows or asset transfers that fund expenditure above declared income.",
       },
       {
-        question: "What is the difference between a Single Joint Expert and a party-appointed expert in family proceedings?",
+        question: "What is the difference between a court-appointed joint expert and a party-appointed expert in family proceedings?",
         answer:
-          "A Single Joint Expert (SJE) is appointed by the court and jointly instructed by both parties, producing one report for the court. A party-appointed expert is instructed by one side only, typically reserved for very high-value or highly contested cases.",
+          "A court-appointed joint expert (joint expert) is appointed by the court and jointly instructed by both parties, producing one report for the court. A party-appointed expert is instructed by one side only, typically reserved for very high-value or highly contested cases.",
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/lifestyle-analysis-income", label: "Lifestyle Analysis & Income" },
@@ -201,10 +201,10 @@ export const SERVICES: Service[] = [
   {
     id: "add-backs-reconstruction",
     title: "Add-Backs & Financial Reconstruction",
-    metaTitle: "Add-Backs Divorce UK | Family Court Accountant Financial Reconstruction",
+    metaTitle: "Add-Backs Divorce | Family Court Accountant Financial Reconstruction",
     metaDescription:
-      "Add-backs and financial reconstruction in UK divorce: personal expenditure through the business, debt analysis, and adjusted matrimonial pot calculations.",
-    h1: "Add-Backs & Financial Reconstruction - Family Court Accountant UK",
+      "Add-backs and financial reconstruction in divorce: personal expenditure through the business, debt analysis, and adjusted matrimonial pot calculations.",
+    h1: "Add-Backs & Financial Reconstruction - Family Court Accountant",
     shortDescription:
       "Identification of personal expenditure run through the business and financial reconstruction of the matrimonial pot.",
     paragraphs: [
@@ -229,13 +229,13 @@ export const SERVICES: Service[] = [
           "Add-backs analysis often runs alongside business valuation. The court needs both the headline value of the business interest and an adjusted view of capital that has been diverted through the company for personal use.",
       },
       {
-        question: "What is FPR Part 25 and how does it apply?",
+        question: "What is expert witness standards and how does it apply?",
         answer:
-          "Part 25 of the Family Procedure Rules 2010 governs expert appointment in family proceedings. Add-backs and reconstruction reports must comply with FPR Part 25 Practice Direction and include a statement of truth.",
+          "Part 25 of the Family Procedure Rules 2010 governs expert appointment in family proceedings. Add-backs and reconstruction reports must comply with expert witness standards Practice Direction and include a statement of truth.",
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/add-backs-financial-reconstruction", label: "Add-Backs & Financial Reconstruction" },
@@ -244,18 +244,18 @@ export const SERVICES: Service[] = [
   {
     id: "overseas-asset-trusts",
     title: "Overseas Asset & Trust Analysis",
-    metaTitle: "Overseas Assets Divorce UK | Family Court Accountant Trust Analysis",
+    metaTitle: "Overseas Assets Divorce | Family Court Accountant Trust Analysis",
     metaDescription:
-      "Overseas asset and trust analysis in UK family proceedings: foreign accounts, offshore structures, beneficial interest, and international property valuation.",
-    h1: "Overseas Asset & Trust Analysis - Family Court Accountant UK",
+      "Overseas asset and trust analysis in family proceedings: foreign accounts, offshore structures, beneficial interest, and international property valuation.",
+    h1: "Overseas Asset & Trust Analysis - Family Court Accountant",
     shortDescription:
       "Investigation of foreign bank accounts, offshore trusts, and international property holdings in family proceedings.",
     paragraphs: [
-      "International structures can obscure beneficial ownership in financial remedy. Family court accountants analyse Form E trust declarations, trace cross-border transfers, and assess trust deeds for who ultimately benefits.",
+      "International structures can obscure beneficial ownership in financial remedy. Family court accountants analyse Financial affidavit trust declarations, trace cross-border transfers, and assess trust deeds for who ultimately benefits.",
       "Work often runs alongside hidden asset investigation and may involve coordinating with foreign property or investment valuations to establish what is available for distribution.",
     ],
     methodology: [
-      { step: "Disclosure review", detail: "Form E trust and overseas asset declarations" },
+      { step: "Disclosure review", detail: "Financial affidavit trust and overseas asset declarations" },
       { step: "Transfer tracing", detail: "International bank transfer analysis" },
       { step: "Trust deed analysis", detail: "Beneficial interest assessment in trust structures" },
       { step: "Valuation", detail: "Foreign property and investment valuation" },
@@ -264,12 +264,12 @@ export const SERVICES: Service[] = [
       {
         question: "How does a family court accountant investigate hidden assets?",
         answer:
-          "Overseas investigation cross-references Form E declarations against bank transfer trails, identifies assets moved to foreign jurisdictions or trust structures, and assesses whether beneficial interest has been properly disclosed.",
+          "Overseas investigation cross-references Financial affidavit declarations against bank transfer trails, identifies assets moved to foreign jurisdictions or trust structures, and assesses whether beneficial interest has been properly disclosed.",
       },
       {
-        question: "What is Form E and why does a forensic accountant review it?",
+        question: "What is Financial affidavit and why does a forensic accountant review it?",
         answer:
-          "Form E requires disclosure of trust interests and overseas assets. A forensic accountant checks whether declarations match supporting documents and whether structures have been used to place assets beyond the matrimonial pot.",
+          "Financial affidavit requires disclosure of trust interests and overseas assets. A forensic accountant checks whether declarations match supporting documents and whether structures have been used to place assets beyond the matrimonial pot.",
       },
       {
         question: "How long does a family court accountant report take?",
@@ -278,7 +278,7 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
+      { href: "/proceedings/financial-remedy-divorce", label: "Equitable Distribution (Divorce)" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/overseas-assets-trusts", label: "Overseas Assets & Trusts" },
@@ -288,15 +288,15 @@ export const SERVICES: Service[] = [
   {
     id: "schedule-1-evidence",
     title: "Schedule 1 Financial Evidence",
-    metaTitle: "Schedule 1 Children Act Accountant UK | Family Court Financial Evidence",
+    metaTitle: "Schedule 1 Children Act Accountant | Family Court Financial Evidence",
     metaDescription:
-      "Schedule 1 Children Act financial evidence: income assessment, capital provision, business valuation, and lifestyle analysis for unmarried parents in the UK.",
-    h1: "Schedule 1 Financial Evidence - Family Court Accountant UK",
+      "Schedule 1 Children Act financial evidence: income assessment, capital provision, business valuation, and lifestyle analysis for unmarried parents.",
+    h1: "Schedule 1 Financial Evidence - Family Court Accountant",
     shortDescription:
-      "Income assessment and capital provision analysis for Schedule 1 Children Act 1989 proceedings involving unmarried parents.",
+      "Income assessment and capital provision analysis for Schedule 1 child support statutes proceedings involving unmarried parents.",
     paragraphs: [
       "Schedule 1 claims require clear evidence of the paying parent's true resources for child support, housing, and other provision. Family court accountants assess income, business interests, and standard of living.",
-      "Reports support solicitors acting for either parent in establishing what financial provision the court should order under the Children Act 1989 Schedule 1.",
+      "Reports support solicitors acting for either parent in establishing what financial provision the court should order under the child support statutes Schedule 1.",
     ],
     methodology: [
       { step: "Income assessment", detail: "True available income for child support purposes" },
@@ -311,18 +311,18 @@ export const SERVICES: Service[] = [
           "In Schedule 1 cases, lifestyle analysis establishes the standard of living to which the child should be accustomed, by comparing evidenced expenditure and resources against declared income of the paying parent.",
       },
       {
-        question: "What is the difference between a Single Joint Expert and a party-appointed expert in family proceedings?",
+        question: "What is the difference between a court-appointed joint expert and a party-appointed expert in family proceedings?",
         answer:
-          "Schedule 1 financial evidence may be provided by SJE or party-appointed experts depending on court directions and case complexity. SJE appointments produce one report for the court; party-appointed experts are instructed by one side.",
+          "Schedule 1 financial evidence may be provided by joint expert or party-appointed experts depending on court directions and case complexity. joint expert appointments produce one report for the court; party-appointed experts are instructed by one side.",
       },
       {
-        question: "What is FPR Part 25 and how does it apply?",
+        question: "What is expert witness standards and how does it apply?",
         answer:
-          "Expert accountants in Schedule 1 proceedings follow FPR Part 25 duties: to help the court on matters within their expertise, with reports compliant with the Practice Direction and including a statement of truth.",
+          "Expert accountants in Schedule 1 proceedings follow expert witness standards duties: to help the court on matters within their expertise, with reports compliant with the Practice Direction and including a statement of truth.",
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
+      { href: "/proceedings/schedule-1-children-act", label: "Child Support & Provision" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/self-employed-income-assessment", label: "Self-Employed Income Assessment" },
@@ -331,10 +331,10 @@ export const SERVICES: Service[] = [
   {
     id: "nuptial-agreement-analysis",
     title: "Nuptial Agreement Financial Analysis",
-    metaTitle: "Nuptial Agreement Accountant UK | Pre & Post-Nuptial Financial Analysis",
+    metaTitle: "Nuptial Agreement Accountant | Pre & Post-Nuptial Financial Analysis",
     metaDescription:
-      "Independent financial analysis for UK pre-nuptial and post-nuptial agreements: asset valuation, income assessment, and contested agreement review.",
-    h1: "Nuptial Agreement Financial Analysis - Family Court Accountant UK",
+      "Independent financial analysis for pre-nuptial and post-nuptial agreements: asset valuation, income assessment, and contested agreement review.",
+    h1: "Nuptial Agreement Financial Analysis - Family Court Accountant",
     shortDescription:
       "Independent asset valuation and financial schedule preparation for pre-nuptial and post-nuptial agreements.",
     paragraphs: [
@@ -359,13 +359,13 @@ export const SERVICES: Service[] = [
           "When valuing a business for a nuptial schedule, distinguishing personal goodwill from transferable business goodwill ensures the financial baseline reflects realisable value rather than owner-dependent reputation.",
       },
       {
-        question: "What is FPR Part 25 and how does it apply?",
+        question: "What is expert witness standards and how does it apply?",
         answer:
-          "If nuptial agreement terms are challenged in financial remedy, expert accountants may be appointed under FPR Part 25 to provide independent valuation and financial analysis to the court.",
+          "If nuptial agreement terms are challenged in financial remedy, expert accountants may be appointed under expert witness standards to provide independent valuation and financial analysis to the court.",
       },
     ],
     relatedProceedings: [
-      { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
+      { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
     ],
     relatedCaseTypes: [
       { href: "/case-types/business-valuation-divorce", label: "Business Valuation in Divorce" },

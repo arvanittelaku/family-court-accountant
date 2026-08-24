@@ -8,7 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   title:
     "Family Court Proceedings | Financial Remedy, Schedule 1, TOLATA & Nuptial",
   description:
-    "Family court accountant support for financial remedy divorce, Schedule 1 Children Act, TOLATA cohabitation, and nuptial agreement proceedings across the UK.",
+    "Family court accountant support for financial remedy divorce, Schedule 1 Children Act, TOLATA cohabitation, and nuptial agreement proceedings across the.",
   path: "/proceedings",
 });
 
@@ -22,7 +22,7 @@ export default function ProceedingsHubPage() {
     <PageShell
       breadcrumbs={breadcrumbs}
       title="Family Court Proceedings"
-      subtitle="Four distinct proceedings where a qualified family court accountant provides forensic accounting and expert witness evidence across the UK."
+      subtitle="Four distinct proceedings where a qualified family court accountant provides forensic accounting and expert witness evidence across the."
     >
       <div className="grid gap-5 sm:grid-cols-2">
         {PROCEEDINGS.map((proceeding) => (

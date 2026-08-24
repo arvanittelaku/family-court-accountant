@@ -26,8 +26,8 @@ export default function PrivacyPage() {
 
         <h2>Who we are</h2>
         <p>
-          {SITE_NAME} ({SITE_EMAIL}) operates a UK referral service connecting
-          family law solicitors, barristers, and individuals in England and Wales
+          {SITE_NAME} ({SITE_EMAIL}) operates a referral service connecting
+          family law attorneys, barristers, and individuals in state family courts
           with independent family court accountants and forensic accounting experts.
           We are the data controller for personal information submitted through
           this website. {SITE_UK_SCOPE}
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
           suitable family court accountants, manage referrals, and improve our
           service (legitimate interests and steps prior to entering a contract).
           Where we send marketing communications, we rely on consent where
-          required by UK GDPR.
+          required by GDPR.
         </p>
 
         <h2>Retention and sharing</h2>
@@ -81,8 +81,8 @@ export default function PrivacyPage() {
 
         <h2>International transfers</h2>
         <p>
-          Where processors are outside the UK, we ensure appropriate safeguards
-          such as the UK International Data Transfer Agreement or adequacy
+          Where processors are outside the, we ensure appropriate safeguards
+          such as the International Data Transfer Agreement or adequacy
           regulations.
         </p>
 

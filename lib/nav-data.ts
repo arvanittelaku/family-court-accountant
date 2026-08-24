@@ -4,23 +4,32 @@ import { SERVICES } from "@/lib/services-data";
 export type NavLink = { href: string; label: string };
 
 export const whoWeHelpLinks: NavLink[] = [
-  { href: "/who-we-help/solicitors-barristers", label: "Solicitors & Barristers" },
+  { href: "/who-we-help/solicitors-barristers", label: "Family Law Attorneys" },
   {
     href: "/who-we-help/individuals-going-through-divorce",
-    label: "Individuals Going Through Divorce",
+    label: "Individuals in Divorce",
   },
 ];
 
 export const proceedingsLinks: NavLink[] = [
-  { href: "/proceedings", label: "All Proceedings" },
-  { href: "/proceedings/financial-remedy-divorce", label: "Financial Remedy (Divorce)" },
-  { href: "/proceedings/schedule-1-children-act", label: "Schedule 1 (Children Act)" },
-  { href: "/proceedings/tolata-cohabitation", label: "TOLATA (Cohabitation)" },
-  { href: "/proceedings/nuptial-agreements", label: "Nuptial Agreements" },
+  { href: "/proceedings", label: "All proceedings" },
+  {
+    href: "/proceedings/financial-remedy-divorce",
+    label: "Equitable Distribution",
+  },
+  {
+    href: "/proceedings/schedule-1-children-act",
+    label: "Child Support & Provision",
+  },
+  {
+    href: "/proceedings/tolata-cohabitation",
+    label: "Cohabitation Property",
+  },
+  { href: "/proceedings/nuptial-agreements", label: "Marital Agreements" },
 ];
 
 export const servicesNavLinks: NavLink[] = [
-  { href: "/services", label: "All Services" },
+  { href: "/services", label: "All services" },
   ...SERVICES.map((s) => ({
     href: `/services/${s.id}`,
     label: s.title,
@@ -28,7 +37,7 @@ export const servicesNavLinks: NavLink[] = [
 ];
 
 export const caseTypesNavLinks: NavLink[] = [
-  { href: "/case-types", label: "All Case Types" },
+  { href: "/case-types", label: "All case types" },
   ...CASE_TYPES.map((c) => ({
     href: `/case-types/${c.slug}`,
     label: c.hubLabel,
@@ -37,12 +46,12 @@ export const caseTypesNavLinks: NavLink[] = [
 
 export const resourcesNavLinks: NavLink[] = [
   { href: "/guides", label: "Guides" },
-  { href: "/how-to-instruct", label: "How to Instruct" },
+  { href: "/how-to-instruct", label: "How to instruct" },
   { href: "/qualifications", label: "Qualifications" },
 ];
 
 /** Secondary sections shown after primary nav items in the mobile menu. */
 export const mobileNavGroups = [
-  { heading: "Case Types", links: caseTypesNavLinks },
+  { heading: "Case types", links: caseTypesNavLinks },
   { heading: "Resources", links: resourcesNavLinks },
 ];

@@ -5,9 +5,9 @@ import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Family Court Accountant Qualifications UK | ACA, ICAEW and FPR Part 25 Standards",
+    "Family Court Accountant Qualifications | CPA, CFF and expert witness standards Standards",
   description:
-    "What credentials should a UK family court accountant hold? ACA, FCA, ICAEW forensic accreditation, Resolution membership, and FPR Part 25 compliance explained.",
+    "What credentials should a family court accountant hold? ACA, FCA, ICAEW forensic accreditation, Resolution membership, and expert witness standards compliance explained.",
   path: "/qualifications",
 });
 
@@ -19,7 +19,7 @@ export default function QualificationsPage() {
         { name: "Qualifications", href: "/qualifications" },
       ]}
       title="Family Court Accountant Qualifications & Credentials"
-      subtitle="Core credentials, family court experience, FPR Part 25 compliance, and red flags when selecting a forensic accountant for UK family proceedings."
+      subtitle="Core credentials, family court experience, expert witness standards compliance, and red flags when selecting a forensic accountant for family proceedings."
     >
       <div className="prose-content">
         <h2>Core credentials</h2>
@@ -29,7 +29,7 @@ export default function QualificationsPage() {
           Chartered accountancy is the essential baseline for a family court
           forensic accountant. ACA (Associate) and FCA (Fellow) qualifications
           through ICAEW demonstrate rigorous technical training, professional
-          ethics, and ongoing CPD. For matrimonial business valuation and Form E
+          ethics, and ongoing CPD. For matrimonial business valuation and financial affidavit
           analysis, the expert should hold or have held an active practising
           certificate where audit or reporting opinions are involved.
         </p>
@@ -47,7 +47,7 @@ export default function QualificationsPage() {
 
         <h3>ACCA / FCCA</h3>
         <p>
-          ACCA and FCCA (Fellow) qualifications are widely recognised in UK
+          ACCA and FCCA (Fellow) qualifications are widely recognised in
           forensic and family work. Solicitors should confirm the expert has
           family court report samples and matrimonial valuation experience, not
           only general audit or tax practice.
@@ -78,15 +78,15 @@ export default function QualificationsPage() {
         </p>
         <ul>
           <li>Active practice in financial remedy and related family proceedings</li>
-          <li>History of FPR Part 25 expert reports accepted by the Family Court</li>
-          <li>Prior Single Joint Expert appointments and joint instruction experience</li>
+          <li>History of expert witness standards expert reports accepted by the Family Court</li>
+          <li>Prior court-appointed joint expert appointments and joint instruction experience</li>
           <li>
             Knowledge of matrimonial valuation principles, including personal
             versus business goodwill and liquidity analysis
           </li>
           <li>
-            Familiarity with Form E, financial disclosure questionnaires, and
-            Section 25 Matrimonial Causes Act 1973 factors
+            Familiarity with financial affidavit, financial disclosure questionnaires, and
+            equitable distribution factors equitable distribution statutes factors
           </li>
           <li>
             Experience in Schedule 1, TOLATA (CPR Part 35), or nuptial agreement
@@ -99,7 +99,7 @@ export default function QualificationsPage() {
           practical appointment steps.
         </p>
 
-        <h2>FPR Part 25 compliance</h2>
+        <h2>expert witness standards compliance</h2>
         <p>
           Part 25 of the Family Procedure Rules 2010 governs expert evidence in
           family proceedings. FPR 25.3 states that the expert&apos;s duty is to
@@ -110,13 +110,13 @@ export default function QualificationsPage() {
         </p>
         <p>
           Key requirements include: court permission before instruction where
-          directed; clear identification as SJE or party-appointed at the
+          directed; clear identification as joint expert or party-appointed at the
           outset; transparent assumptions and limitations; readiness to answer
           written questions; and attendance at hearing if ordered. Experts must
-          follow the Ikarian Reefer duties: independent, objective, and willing
+          follow the Daubert duties: independent, objective, and willing
           to change opinion if new data requires it. See our{" "}
           <Link href="/guides/fpr-part-25-expert-appointment">
-            FPR Part 25 guide
+            expert witness standards guide
           </Link>{" "}
           and <Link href="/glossary#the-ikarian-reefer-duties">glossary</Link>{" "}
           for further detail.
@@ -134,10 +134,10 @@ export default function QualificationsPage() {
             in a divorce valuation
           </li>
           <li>
-            No knowledge of add-backs, lifestyle analysis, or Form E disclosure
+            No knowledge of add-backs, lifestyle analysis, or financial affidavit disclosure
             framework
           </li>
-          <li>No prior FPR Part 25 report experience or court acceptance</li>
+          <li>No prior expert witness standards report experience or court acceptance</li>
           <li>
             Full-time expert witness with no active accounting practice and
             outdated technical knowledge

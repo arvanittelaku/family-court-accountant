@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo-metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms of Use | FamilyCourtAccountant",
   description:
-    "Terms of use for FamilyCourtAccountant.com referral service in England and Wales.",
+    "Terms of use for FamilyCourtAccountant.com referral service in state family courts.",
   path: "/terms",
   robots: { index: false, follow: true },
 });
@@ -25,8 +25,8 @@ export default function TermsPage() {
 
         <h2>About this service</h2>
         <p>
-          {SITE_NAME}.com is a UK referral service connecting family law
-          solicitors, barristers, and individuals in England and Wales with
+          {SITE_NAME}.com is a referral service connecting family law
+          solicitors, barristers, and individuals in state family courts with
           independent family court accountants and forensic accounting expert
           witnesses. We are not a law firm, we are not regulated as solicitors,
           and we do not provide legal advice. {SITE_UK_SCOPE}
@@ -53,15 +53,14 @@ export default function TermsPage() {
         <p>
           Website content is for general information on family finance and
           forensic accounting topics. It is not advice on any specific case,
-          court outcome, or settlement. Figures, fees, and timelines are
-          indicative only.
+          court outcome, or settlement. Timelines and scope vary by case.
         </p>
 
-        <h2>Referrals and fees</h2>
+        <h2>Referrals</h2>
         <p>
-          We may receive a referral fee or introduction arrangement with
-          experts where permitted. Expert fees are agreed separately between you
-          and the expert. Contact us for indicative fee ranges when you enquire.
+          We may receive a referral arrangement with experts where permitted.
+          Expert engagement terms are agreed separately between you and the
+          expert.
         </p>
 
         <h2>Acceptable use</h2>
@@ -82,8 +81,8 @@ export default function TermsPage() {
 
         <h2>Governing law</h2>
         <p>
-          These terms are governed by the laws of England and Wales. The courts
-          of England and Wales have exclusive jurisdiction, subject to mandatory
+          These terms are governed by the laws of state family courts. The courts
+          of state family courts have exclusive jurisdiction, subject to mandatory
           consumer protections where applicable.
         </p>
 

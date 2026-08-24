@@ -1,7 +1,15 @@
-export function navItemClasses(active: boolean): string {
-  return `inline-flex min-h-[44px] shrink-0 items-center gap-1 whitespace-nowrap rounded px-1.5 py-2 text-xs font-semibold leading-none transition lg:px-2 xl:px-2.5 xl:text-sm ${
+export function navLinkClasses(active: boolean): string {
+  return `inline-flex min-h-[44px] items-center px-1 text-sm font-medium transition ${
     active
-      ? "bg-section-alt text-heading"
-      : "text-body hover:bg-section-alt hover:text-heading"
+      ? "text-heading underline decoration-accent decoration-2 underline-offset-[6px]"
+      : "text-body hover:text-heading hover:underline hover:decoration-border hover:underline-offset-[6px]"
+  }`;
+}
+
+export function navTriggerClasses(active: boolean, open: boolean): string {
+  return `inline-flex min-h-[44px] items-center gap-1 px-1 text-sm font-medium transition ${
+    active || open
+      ? "text-heading underline decoration-accent decoration-2 underline-offset-[6px]"
+      : "text-body hover:text-heading hover:underline hover:decoration-border hover:underline-offset-[6px]"
   }`;
 }

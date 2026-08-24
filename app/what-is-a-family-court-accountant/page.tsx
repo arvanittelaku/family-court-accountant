@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "What Is a Family Court Accountant? | UK Role, FPR Part 25 & When You Need One",
+    "What Is a Family Court Accountant? | Role, expert witness standards & When You Need One",
   description:
-    "A family court accountant is a forensic accountant who provides expert evidence in divorce and family financial proceedings. Form E analysis, business valuation, hidden assets, and FPR Part 25 explained.",
+    "A family court accountant is a forensic accountant who provides expert evidence in divorce and family financial proceedings. financial affidavit analysis, business valuation, hidden assets, and expert witness standards explained.",
   path: "/what-is-a-family-court-accountant",
 });
 
@@ -25,7 +25,7 @@ export default function WhatIsFamilyCourtAccountantPage() {
     <PageShell
       breadcrumbs={breadcrumbs}
       title="What Is a Family Court Accountant?"
-      subtitle="A forensic accountant who specialises in independent financial analysis and expert witness evidence in UK family proceedings."
+      subtitle="A forensic accountant who specialises in independent financial analysis and expert witness evidence in family proceedings."
     >
       <article className="space-y-10 text-body">
         <section>
@@ -57,15 +57,15 @@ export default function WhatIsFamilyCourtAccountantPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-heading">
-            The Two Roles: SJE and Party-Appointed
+            The Two Roles: joint expert and Party-Appointed
           </h2>
           <p className="mt-4 leading-relaxed">
             In most cases below the highest value, the judge will only allow one expert
             accountant acting for both sides, producing a joint report for the court,
-            called a Single Joint Expert (SJE).
+            called a court-appointed joint expert (joint expert).
           </p>
           <h3 className="mt-6 text-lg font-semibold text-heading">
-            Single Joint Expert (SJE)
+            court-appointed joint expert (joint expert)
           </h3>
           <p className="mt-2 leading-relaxed">
             Appointed by the court and jointly instructed by both parties. Owes duty to
@@ -84,7 +84,7 @@ export default function WhatIsFamilyCourtAccountantPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-heading">
-            FPR Part 25: The Legal Framework
+            expert witness standards: The Legal Framework
           </h2>
           <p className="mt-4 leading-relaxed">
             Part 25 of the Family Procedure Rules (FPR) 2010 governs expert appointment
@@ -93,15 +93,15 @@ export default function WhatIsFamilyCourtAccountantPage() {
             obligation to the instructing party or the party paying their fees.
           </p>
           <p className="mt-4 font-semibold text-heading">
-            Key FPR Part 25 requirements:
+            Key expert witness standards requirements:
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed">
             <li>
               Court permission required before expert is formally instructed in some
               cases
             </li>
-            <li>Expert must be identified as SJE or party-appointed at outset</li>
-            <li>Expert report must comply with FPR Part 25 Practice Direction</li>
+            <li>Expert must be identified as joint expert or party-appointed at outset</li>
+            <li>Expert report must comply with expert witness standards Practice Direction</li>
             <li>Expert must be prepared to attend hearing and give oral evidence</li>
             <li>Expert must include a statement of truth in their report</li>
           </ul>
@@ -136,7 +136,7 @@ export default function WhatIsFamilyCourtAccountantPage() {
               Your lifestyle during the marriage was substantially higher than what
               your spouse now declares
             </li>
-            <li>You want to understand and challenge the Form E disclosure</li>
+            <li>You want to understand and challenge the financial affidavit disclosure</li>
           </ul>
         </section>
 
@@ -178,7 +178,7 @@ export default function WhatIsFamilyCourtAccountantPage() {
             Proceedings Where Family Court Accountants Are Instructed
           </h2>
           <p className="mt-4 leading-relaxed">
-            Family court accountants are instructed across four main types of UK family
+            Family court accountants are instructed across four main types of family
             and property proceedings. Explore each area below or visit our{" "}
             <Link href="/proceedings" className="font-semibold text-accent">
               proceedings hub

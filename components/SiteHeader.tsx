@@ -2,17 +2,21 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { NavDropdown } from "@/components/NavDropdown";
-import { navItemClasses } from "@/components/nav-classes";
+import { useCallback, useId, useState, type ReactNode } from "react";
 import {
-  caseTypesNavLinks,
+  NavDropdown,
+  NavDropdownPanel,
+  navLinkClasses,
+} from "@/components/NavDropdown";
+import {
   mobileNavGroups,
   proceedingsLinks,
   servicesNavLinks,
   whoWeHelpLinks,
 } from "@/lib/nav-data";
 import { SITE_NAME } from "@/lib/site";
+
+type OpenPanel = "services" | "clients" | "proceedings" | null;
 
 function isActive(pathname: string | null, href: string): boolean {
   if (!pathname) return false;
@@ -24,149 +28,234 @@ function isActive(pathname: string | null, href: string): boolean {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openPanel, setOpenPanel] = useState<OpenPanel>(null);
+  const servicesPanelId = useId();
+  const clientsPanelId = useId();
+  const proceedingsPanelId = useId();
+  const servicesTriggerId = useId();
+  const clientsTriggerId = useId();
+  const proceedingsTriggerId = useId();
+
+  const closePanels = useCallback(() => setOpenPanel(null), []);
+
+  const togglePanel = (panel: OpenPanel) => {
+    setOpenPanel((current) => (current === panel ? null : panel));
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white">
-      <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:px-6 lg:gap-3 lg:px-8">
-        <Link
-          href="/"
-          className="min-w-0 shrink truncate text-sm font-bold text-heading sm:text-base lg:max-w-[11rem] xl:max-w-none xl:text-lg"
-        >
-          {SITE_NAME}
-        </Link>
+    <header className="relative z-40 border-b border-border bg-surface">
+      {/* Registry masthead — not sticky, not centered-only, not left-rail */}
+      <div className="border-b border-border bg-background">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <Link
+              href="/"
+              className="group min-w-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            >
+              <span className="flex items-baseline gap-3">
+                <span
+                  className="font-serif text-4xl font-light leading-none text-accent sm:text-5xl"
+                  aria-hidden
+                >
+                  {"{"}
+                </span>
+                <span className="min-w-0">
+                  <span className="block font-serif text-2xl font-semibold leading-tight text-heading sm:text-[1.75rem]">
+                    {SITE_NAME}
+                  </span>
+                  <span className="mt-1 block text-sm text-muted">
+                    Forensic accounting for family court proceedings
+                  </span>
+                </span>
+                <span
+                  className="font-serif text-4xl font-light leading-none text-accent sm:text-5xl"
+                  aria-hidden
+                >
+                  {"}"}
+                </span>
+              </span>
+            </Link>
 
-        <nav
-          aria-label="Primary"
-          className="hidden min-w-0 flex-1 flex-nowrap items-center justify-center gap-0 lg:flex xl:gap-0.5"
-        >
-          <Link href="/" className={navItemClasses(isActive(pathname, "/"))}>
-            Home
-          </Link>
-          <NavDropdown label="Services" items={servicesNavLinks} />
-          <Link
-            href="/how-it-works"
-            className={navItemClasses(isActive(pathname, "/how-it-works"))}
+            <p className="max-w-xs text-right text-xs leading-relaxed text-muted sm:text-sm">
+              Expert witness referral service for attorneys and individuals in
+              divorce and family financial matters.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Sentence-case nav row — not boxed table, not dark rail, not uppercase pills */}
+      <div className="mx-auto max-w-[var(--max-width-content)] px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-4 py-3">
+          <nav
+            aria-label="Primary"
+            className="hidden flex-wrap items-center gap-x-5 gap-y-1 lg:flex"
           >
-            How It Works
-          </Link>
-          <NavDropdown label="Who We Help" items={whoWeHelpLinks} />
-          <NavDropdown label="Proceedings" items={proceedingsLinks} />
-        </nav>
+            <Link href="/" className={navLinkClasses(isActive(pathname, "/"))}>
+              Home
+            </Link>
+            <NavDropdown
+              label="Services"
+              items={servicesNavLinks}
+              panelId={servicesPanelId}
+              triggerId={servicesTriggerId}
+              open={openPanel === "services"}
+              onToggle={() => togglePanel("services")}
+              onClose={closePanels}
+            />
+            <Link
+              href="/how-it-works"
+              className={navLinkClasses(isActive(pathname, "/how-it-works"))}
+            >
+              Process
+            </Link>
+            <NavDropdown
+              label="Clients"
+              items={whoWeHelpLinks}
+              panelId={clientsPanelId}
+              triggerId={clientsTriggerId}
+              open={openPanel === "clients"}
+              onToggle={() => togglePanel("clients")}
+              onClose={closePanels}
+            />
+            <NavDropdown
+              label="Proceedings"
+              items={proceedingsLinks}
+              panelId={proceedingsPanelId}
+              triggerId={proceedingsTriggerId}
+              open={openPanel === "proceedings"}
+              onToggle={() => togglePanel("proceedings")}
+              onClose={closePanels}
+            />
+          </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-0">
           <Link
             href="/contact"
-            className="hidden min-h-[44px] items-center rounded bg-accent px-3 py-2 text-xs font-semibold text-white transition hover:bg-accent/90 lg:inline-flex xl:px-4 xl:text-sm"
+            className="hidden text-sm font-medium text-accent hover:text-primary lg:inline-flex lg:min-h-[44px] lg:items-center"
           >
-            Contact us
+            Contact →
           </Link>
+
           <button
             type="button"
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-border lg:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            onClick={() => setOpen(!open)}
+            className="ml-auto inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-body lg:hidden"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-index"
+            onClick={() => setMobileOpen((v) => !v)}
           >
-            <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-            <span className="flex flex-col gap-1.5 p-1">
-              <span
-                className={`block h-0.5 w-5 bg-heading transition ${open ? "translate-y-2 rotate-45" : ""}`}
-              />
-              <span
-                className={`block h-0.5 w-5 bg-heading transition ${open ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block h-0.5 w-5 bg-heading transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
-              />
+            <span aria-hidden className="text-accent">
+              {mobileOpen ? "×" : "☰"}
             </span>
+            Index
           </button>
         </div>
       </div>
 
-      {open ? (
+      {/* Inline expand panels — full width, push layout (not floating popovers) */}
+      <NavDropdownPanel
+        id={servicesPanelId}
+        labelledBy={servicesTriggerId}
+        items={servicesNavLinks}
+        open={openPanel === "services"}
+      />
+      <NavDropdownPanel
+        id={clientsPanelId}
+        labelledBy={clientsTriggerId}
+        items={whoWeHelpLinks}
+        open={openPanel === "clients"}
+      />
+      <NavDropdownPanel
+        id={proceedingsPanelId}
+        labelledBy={proceedingsTriggerId}
+        items={proceedingsLinks}
+        open={openPanel === "proceedings"}
+      />
+
+      {/* Mobile index — two-column sheet below header, not slide overlay */}
+      {mobileOpen ? (
         <nav
-          id="mobile-nav"
+          id="mobile-index"
           aria-label="Mobile"
-          className="max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-border bg-white px-4 pb-6 lg:hidden"
+          className="border-t border-border bg-section-alt lg:hidden"
         >
-          <Link
-            href="/"
-            onClick={() => setOpen(false)}
-            className="flex min-h-[44px] items-center font-semibold text-heading"
-          >
-            Home
-          </Link>
-          <MobileNavGroup
-            heading="Services"
-            links={servicesNavLinks}
-            onNavigate={() => setOpen(false)}
-          />
-          <Link
-            href="/how-it-works"
-            onClick={() => setOpen(false)}
-            className="flex min-h-[44px] items-center text-sm font-medium text-body hover:text-heading"
-          >
-            How It Works
-          </Link>
-          <MobileNavGroup
-            heading="Who We Help"
-            links={whoWeHelpLinks}
-            onNavigate={() => setOpen(false)}
-          />
-          <MobileNavGroup
-            heading="Proceedings"
-            links={proceedingsLinks}
-            onNavigate={() => setOpen(false)}
-          />
-          {mobileNavGroups.map((group) => (
-            <MobileNavGroup
-              key={group.heading}
-              heading={group.heading}
-              links={group.links}
-              onNavigate={() => setOpen(false)}
-            />
-          ))}
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="mt-4 flex min-h-[44px] w-full items-center justify-center rounded bg-accent text-sm font-semibold text-white"
-          >
-            Contact us
-          </Link>
+          <div className="mx-auto grid max-w-[var(--max-width-content)] gap-6 px-4 py-6 sm:grid-cols-2 sm:px-6">
+            <MobileSection title="Site">
+              <MobileLink href="/" onNavigate={() => setMobileOpen(false)}>
+                Home
+              </MobileLink>
+              <MobileLink
+                href="/how-it-works"
+                onNavigate={() => setMobileOpen(false)}
+              >
+                Process
+              </MobileLink>
+              <MobileLink href="/contact" onNavigate={() => setMobileOpen(false)}>
+                Contact
+              </MobileLink>
+            </MobileSection>
+            <MobileSection title="Services" links={servicesNavLinks} onNavigate={() => setMobileOpen(false)} />
+            <MobileSection title="Clients" links={whoWeHelpLinks} onNavigate={() => setMobileOpen(false)} />
+            <MobileSection title="Proceedings" links={proceedingsLinks} onNavigate={() => setMobileOpen(false)} />
+            {mobileNavGroups.map((group) => (
+              <MobileSection
+                key={group.heading}
+                title={group.heading}
+                links={group.links}
+                onNavigate={() => setMobileOpen(false)}
+              />
+            ))}
+          </div>
         </nav>
       ) : null}
     </header>
   );
 }
 
-function MobileNavGroup({
-  heading,
+function MobileSection({
+  title,
   links,
+  children,
   onNavigate,
 }: {
-  heading: string;
-  links: { href: string; label: string }[];
-  onNavigate: () => void;
+  title: string;
+  links?: { href: string; label: string }[];
+  children?: ReactNode;
+  onNavigate?: () => void;
 }) {
   return (
-    <div className="mt-4">
-      <p className="text-xs font-bold uppercase tracking-wide text-body/60">
-        {heading}
-      </p>
-      <ul className="mt-1 space-y-0">
-        {links.map((link) => (
+    <div>
+      <p className="mb-2 font-serif text-base font-medium text-heading">{title}</p>
+      <ul className="space-y-1">
+        {links?.map((link) => (
           <li key={link.href}>
-            <Link
-              href={link.href}
-              onClick={onNavigate}
-              className="flex min-h-[44px] items-center text-sm font-medium text-body hover:text-heading"
-            >
+            <MobileLink href={link.href} onNavigate={onNavigate}>
               {link.label}
-            </Link>
+            </MobileLink>
           </li>
         ))}
+        {children}
       </ul>
     </div>
+  );
+}
+
+function MobileLink({
+  href,
+  children,
+  onNavigate,
+}: {
+  href: string;
+  children: ReactNode;
+  onNavigate?: () => void;
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onNavigate}
+      className="flex min-h-[40px] items-center text-sm text-body hover:text-accent"
+    >
+      {children}
+    </Link>
   );
 }

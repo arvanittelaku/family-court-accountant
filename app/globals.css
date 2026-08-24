@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #2c3e50;
-  --accent: #16a085;
-  --highlight: #e67e22;
-  --background: #ffffff;
-  --section-alt: #f8f9f7;
-  --border: #d5dbdb;
-  --heading: #2c3e50;
-  --body: #374151;
+  --primary: #1a2744;
+  --accent: #b8922a;
+  --highlight: #5c4d7a;
+  --background: #faf9f6;
+  --section-alt: #f0ece4;
+  --surface: #ffffff;
+  --border: #d8d0c4;
+  --heading: #1a2744;
+  --body: #3d4554;
+  --muted: #6b7280;
 }
 
 @theme inline {
@@ -16,24 +18,41 @@
   --color-accent: var(--accent);
   --color-highlight: var(--highlight);
   --color-section-alt: var(--section-alt);
+  --color-surface: var(--surface);
   --color-border: var(--border);
   --color-heading: var(--heading);
   --color-body: var(--body);
-  --font-sans: var(--font-inter);
-  --radius-card: 10px;
-  --radius-sm: 4px;
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 20px rgba(0, 0, 0, 0.06);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-work);
+  --font-serif: var(--font-fraunces);
+  --radius-card: 2px;
+  --radius-sm: 2px;
+  --shadow-card: none;
+  --max-width-content: 68rem;
 }
 
 html {
   overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--body);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-work), system-ui, sans-serif;
   overflow-x: clip;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
 }
 
 .prose-content {
@@ -50,7 +69,7 @@ svg {
 .prose-content h2 {
   color: var(--heading);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -65,7 +84,7 @@ svg {
 
 .prose-content p {
   margin-bottom: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .prose-content ul {
@@ -76,13 +95,13 @@ svg {
 
 .prose-content li {
   margin-bottom: 0.5rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .prose-content a {
   color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 .prose-content a:hover {
@@ -108,4 +127,41 @@ svg {
   background: var(--section-alt);
   font-weight: 600;
   color: var(--heading);
+}
+
+/* Minimal contact form — underline fields, distinct from sibling sites */
+.form-minimal input,
+.form-minimal select,
+.form-minimal textarea {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0.75rem 0;
+  color: var(--body);
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.form-minimal input:focus,
+.form-minimal select:focus,
+.form-minimal textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.form-minimal textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-minimal label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
 }

@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Going Through Divorce? Family Court Accountant Help UK | Hidden Assets & Business Valuation",
+    "Going Through Divorce? Family Court Accountant Help | Hidden Assets & Business Valuation",
   description:
     "If your spouse owns a business, you suspect hidden assets, or their declared income doesn't match their lifestyle, a family court accountant can help. Get independent expert financial analysis.",
   path: "/who-we-help/individuals-going-through-divorce",
@@ -32,7 +32,7 @@ export default function IndividualsGoingThroughDivorcePage() {
         <p>
           Divorce is stressful enough without wondering whether the financial figures you
           have been given are accurate. In financial remedy proceedings, both parties must
-          complete a Form E, a detailed financial statement disclosing all assets, income,
+          complete a financial affidavit, a detailed financial statement disclosing all assets, income,
           liabilities, and outgoings.
         </p>
         <p>
@@ -67,7 +67,7 @@ export default function IndividualsGoingThroughDivorcePage() {
         <h2>What a Family Court Accountant Can Do For You</h2>
         <ul>
           <li>
-            Review your spouse&apos;s Form E and business accounts to identify
+            Review your spouse&apos;s financial affidavit and business accounts to identify
             inconsistencies and missing information
           </li>
           <li>
@@ -94,17 +94,6 @@ export default function IndividualsGoingThroughDivorcePage() {
           process. See{" "}
           <Link href="/how-to-instruct">how to instruct a family court accountant</Link>{" "}
           for the individual pathway.
-        </p>
-
-        <h2>How Much Will It Cost?</h2>
-        <p>
-          Costs depend on the complexity of your case and the work required. Business
-          valuation reports typically range from £2,000 to £15,000 or more for complex
-          cases. Hourly rates for forensic review work are commonly £150 to £500 per hour.
-          In many cases, costs are shared between parties when the court directs a Single
-          Joint Expert (SJE) appointment. Your solicitor can advise whether an SJE or
-          party-appointed expert is appropriate in your case.{" "}
-          <Link href="/contact">Contact us</Link> to discuss your matter.
         </p>
 
         <div className="mt-10 rounded-[var(--radius-card)] border border-border bg-section-alt p-6">

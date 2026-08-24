@@ -9,22 +9,21 @@ export function buildOrganizationSchema() {
     url: SITE_URL,
     email: SITE_EMAIL,
     description:
-      "Referral service for family court accountants in England and Wales, United Kingdom only.",
+      "Referral service for family court forensic accountants in state family courts.",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
       email: SITE_EMAIL,
-      areaServed: "GB",
-      availableLanguage: ["en-GB"],
+      areaServed: "US",
+      availableLanguage: ["en-US"],
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "GB",
-      addressRegion: "England and Wales",
+      addressCountry: "US",
     },
     areaServed: {
-      "@type": "AdministrativeArea",
-      name: "England and Wales",
+      "@type": "Country",
+      name: "United States",
     },
     sameAs: [LINKEDIN_URL],
   };
@@ -52,7 +51,7 @@ export function buildProfessionalServiceSchema() {
     name: "Family Court Accountant",
     serviceType: "Family Court Accountant",
     provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: { "@type": "Country", name: "United Kingdom" },
+    areaServed: { "@type": "Country", name: "" },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Family Court Accountant Services",
@@ -157,7 +156,7 @@ export function buildServicesGraph() {
         name: s.title,
         description: s.shortDescription,
         provider: { "@id": `${SITE_URL}/#organization` },
-        areaServed: { "@type": "Country", name: "United Kingdom" },
+        areaServed: { "@type": "Country", name: "" },
       })),
     ],
   };

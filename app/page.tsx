@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactEmail } from "@/components/ContactEmail";
 import { ContentCard } from "@/components/ContentCard";
-import { DataTable } from "@/components/DataTable";
 import { JsonLd } from "@/components/JsonLd";
 import { PageBottomCta } from "@/components/PageBottomCta";
 import { PageHero } from "@/components/PageHero";
@@ -13,98 +12,60 @@ import { SERVICES } from "@/lib/services-data";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Family Court Accountant UK | Forensic Accountants for Divorce & Financial Remedy",
+    "Family Court Accountant | Forensic Accountants for Divorce & Family Finance",
   description:
-    "Find a qualified family court accountant in the UK. Forensic accountants for divorce financial remedy, hidden assets, business valuation, Schedule 1, and TOLATA proceedings. Solicitors and individuals welcome.",
+    "Find a qualified family court forensic accountant. Business valuation, hidden asset investigation, financial affidavit review, and expert witness support for divorce and family financial proceedings.",
   path: "/",
 });
-
-const statsTable = {
-  headers: ["Fact", "Figure", "Source"],
-  rows: [
-    [
-      "Contested financial remedy cases 2025",
-      "Notable spike vs prior years",
-      "Family Law Week 2026",
-    ],
-    [
-      "TOLATA litigation costs (typical range)",
-      "£10,000–£50,000+",
-      "Family law practice",
-    ],
-    [
-      "FPR Part 25: expert duty",
-      "Duty to court over instructing party",
-      "FPR 25.3",
-    ],
-    [
-      "SJE: when ordered",
-      "Most cases below highest value",
-      "Family court practice",
-    ],
-    [
-      "Business valuation: typical cost",
-      "£2,000–£15,000+",
-      "Industry average",
-    ],
-    [
-      "Form E financial disclosure",
-      "Mandatory in financial remedy",
-      "FPR Part 9",
-    ],
-    [
-      "Report turnaround (standard)",
-      "3–6 weeks",
-      "Case-dependent",
-    ],
-  ],
-};
 
 export default function HomePage() {
   return (
     <>
       <JsonLd data={buildHomeGraph()} />
-      <PageHero>
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-          Family Court Accountant Services for UK Solicitors & Individuals
+      <PageHero
+        aside={
+          <>
+            <p className="max-w-xl text-base leading-relaxed text-body sm:text-lg">
+              Whether you are a family law attorney needing a forensic accountant
+              expert witness, or an individual going through divorce who suspects
+              hidden assets or needs a business valued, we connect you with
+              qualified family court accountants.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/who-we-help/solicitors-barristers"
+                className="inline-flex min-h-[44px] w-full items-center justify-center border border-primary bg-primary px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-primary/90 sm:w-auto"
+              >
+                I&apos;m a family law attorney
+              </Link>
+              <Link
+                href="/who-we-help/individuals-going-through-divorce"
+                className="inline-flex min-h-[44px] w-full items-center justify-center border border-border bg-surface px-6 py-3 text-xs font-bold uppercase tracking-wider text-heading transition hover:border-primary sm:w-auto"
+              >
+                I&apos;m going through divorce
+              </Link>
+            </div>
+            <p className="mt-6 text-sm text-muted">
+              Questions? Email{" "}
+              <ContactEmail className="text-accent hover:underline" />
+            </p>
+          </>
+        }
+      >
+        <h1 className="font-serif text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+          Family court accountant services
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/80">
-          Whether you&apos;re a family law solicitor needing a forensic accountant
-          expert witness for financial remedy proceedings, or an individual going
-          through divorce who suspects hidden assets or needs a business valued,
-          we connect you with qualified family court accountants in England and
-          Wales.
-        </p>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/70">
-          UK-only service: English and Welsh family courts (FPR, Form E, financial
-          remedy). We do not cover Scotland, Northern Ireland, or other countries.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-          <Link
-            href="/who-we-help/solicitors-barristers"
-            className="inline-flex min-h-[44px] w-full items-center justify-center rounded bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent/90 sm:w-auto"
-          >
-            I&apos;m a Solicitor or Barrister
-          </Link>
-          <Link
-            href="/who-we-help/individuals-going-through-divorce"
-            className="inline-flex min-h-[44px] w-full items-center justify-center rounded border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20 sm:w-auto"
-          >
-            I&apos;m Going Through Divorce
-          </Link>
-        </div>
-        <p className="mt-6 text-sm text-white/80">
-          Questions? Email{" "}
-          <ContactEmail className="text-white underline decoration-white/40 hover:decoration-white" />
+        <p className="mt-4 text-sm uppercase tracking-[0.16em] text-accent">
+          Forensic accounting · Expert witnesses
         </p>
       </PageHero>
 
-      <section className="bg-white py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-heading md:text-3xl">
-            What Our Family Court Accountants Cover
+      <section className="border-b border-border bg-surface py-14 md:py-20">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-2xl font-medium text-heading md:text-3xl">
+            What our family court accountants cover
           </h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-1 sm:grid-cols-2 lg:grid-cols-2">
             {SERVICES.map((service) => (
               <ContentCard
                 key={service.id}
@@ -114,58 +75,43 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <p className="mt-8 text-center">
-            <Link href="/services" className="font-semibold text-accent">
-              View all services
+          <p className="mt-8">
+            <Link
+              href="/services"
+              className="text-sm font-semibold uppercase tracking-wider text-accent hover:text-primary"
+            >
+              View all services →
             </Link>
           </p>
         </div>
       </section>
 
-      <section className="bg-section-alt py-14 md:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-heading md:text-3xl">
-            Family Court Accounting: Key UK Facts
+      <section className="border-b border-border bg-section-alt py-14 md:py-20">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-2xl font-medium text-heading md:text-3xl">
+            Who needs a family court accountant?
           </h2>
-          <DataTable headers={statsTable.headers} rows={statsTable.rows} />
-          <p className="mt-4 text-xs text-body/70">
-            Sources: Family Procedure Rules 2010 (FPR); Family Law Week Financial
-            Remedy 2026 Conference; industry practice data.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-white py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-heading md:text-3xl">
-            Who Needs a Family Court Accountant?
-          </h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-1 md:grid-cols-2">
             <ContentCard
               href="/who-we-help/solicitors-barristers"
-              title="Solicitors & Barristers"
-              description="You need a forensic accountant who produces FPR Part 25 compliant expert reports, acts as SJE where directed, and gives credible evidence in the Family Court or High Court."
+              title="Family law attorneys"
+              description="You need a forensic accountant who produces court-compliant expert reports, serves as a court-appointed joint expert where directed, and gives credible testimony in family court."
             />
             <ContentCard
               href="/who-we-help/individuals-going-through-divorce"
-              title="Individuals Going Through Divorce"
+              title="Individuals going through divorce"
               description="Your spouse owns a business. Their declared income doesn't match their lifestyle. You suspect assets have been hidden or transferred. You need independent expert help."
             />
           </div>
-          <p className="mt-8 text-center">
-            <Link href="/who-we-help" className="font-semibold text-accent">
-              Learn more about who we help
-            </Link>
-          </p>
         </div>
       </section>
 
-      <section className="bg-section-alt py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-heading md:text-3xl">
-            Which Proceedings Do You Need Help With?
+      <section className="border-b border-border bg-surface py-14 md:py-20">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-2xl font-medium text-heading md:text-3xl">
+            Proceedings we support
           </h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-1 sm:grid-cols-2">
             {PROCEEDINGS.map((proceeding) => (
               <ContentCard
                 key={proceeding.slug}
@@ -176,50 +122,37 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-8 text-body">
-            Not sure what a family court accountant does? Read our guide on{" "}
+            Not sure what a family court accountant does? Read{" "}
             <Link
               href="/what-is-a-family-court-accountant"
-              className="font-semibold text-accent"
+              className="font-semibold text-accent hover:underline"
             >
               what is a family court accountant
             </Link>
             .
           </p>
-          <p className="mt-4 text-center">
-            <Link href="/proceedings" className="font-semibold text-accent">
-              View all proceedings
-            </Link>
-          </p>
         </div>
       </section>
 
-      <section className="bg-white py-14 md:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-heading md:text-3xl">
-            Explore Family Court Accounting
+      <section className="bg-section-alt py-14 md:py-16">
+        <div className="mx-auto max-w-[var(--max-width-content)] px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-2xl font-medium text-heading">
+            Explore further
           </h2>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <li>
-              <Link href="/how-it-works" className="font-semibold text-accent hover:underline">
-                How a family court accountant works
+              <Link href="/how-it-works" className="text-accent hover:underline">
+                How the process works
               </Link>
             </li>
             <li>
-              <Link href="/guides" className="font-semibold text-accent hover:underline">
-                Solicitor guides
+              <Link href="/guides" className="text-accent hover:underline">
+                Attorney guides
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="font-semibold text-accent hover:underline">
-                Contact us
-              </Link>
-            </li>
-            <li className="sm:col-span-2">
-              <Link
-                href="/what-is-a-family-court-accountant"
-                className="font-semibold text-accent hover:underline"
-              >
-                What is a family court accountant?
+              <Link href="/contact" className="text-accent hover:underline">
+                Contact
               </Link>
             </li>
           </ul>

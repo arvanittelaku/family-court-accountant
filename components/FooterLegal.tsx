@@ -5,7 +5,10 @@ import { CookieSettingsFooterLink } from "@/components/cookies/CookieSettingsFoo
 
 export function FooterLegal() {
   return (
-    <p className="mx-auto mt-3 flex max-w-7xl flex-wrap justify-center gap-x-4 gap-y-2 text-xs">
+    <nav
+      aria-label="Legal"
+      className="flex flex-col gap-2 text-xs sm:items-end"
+    >
       <Link href="/privacy" className="text-body hover:text-accent">
         Privacy
       </Link>
@@ -16,6 +19,6 @@ export function FooterLegal() {
         Terms
       </Link>
       <CookieSettingsFooterLink />
-    </p>
+    </nav>
   );
 }
