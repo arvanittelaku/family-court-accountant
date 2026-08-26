@@ -1,45 +1,18 @@
 import { NextResponse } from "next/server";
-import {
-  BRAND_NAME,
-  contactLeadToSheetRow,
-  parseContactLead,
-} from "@/lib/contact-lead";
+import { contactLeadToSheetRow, parseContactLead } from "@/lib/contact-lead";
 import {
   appendRowWithRetry,
   isGoogleSheetsConfigured,
 } from "@/lib/google-sheets";
-
-function getLeadWebhookUrl(): string | undefined {
-  return (
-    process.env.LEAD_NOTIFICATION_URL ||
-    process.env.Lead_notification_url ||
-    process.env.NEXT_PUBLIC_LEAD_NOTIFICATION_URL ||
-    undefined
-  );
-}
-
-async function forwardToWebhook(
-  webhookUrl: string,
-  lead: ReturnType<typeof parseContactLead>,
-): Promise<Response> {
-  return fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      "Full Name": lead.fullName,
-      Email: lead.email,
-      "Phone Number": lead.phone,
-      Message: lead.message,
-      "Brand name": BRAND_NAME,
-    }),
-    signal: AbortSignal.timeout(12_000),
-  });
-}
+import {
+  getLeadWebhookUrl,
+  notifyLeadWebhook,
+} from "@/lib/leadNotification";
 
 /**
  * POST /api/submit-lead
- * Appends lead to Google Sheets (when configured) and/or n8n webhook.
- * On Netlify, netlify.toml redirects here to netlify/functions/submit-lead for webhook-only.
+ * Webhook: five-key JSON via notifyLeadWebhook (Lead_notification_setup.md).
+ * Optional Google Sheets append when configured (local / non-redirect deploys).
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -93,18 +66,24 @@ export async function POST(request: Request) {
   }
 
   if (webhookUrl) {
-    try {
-      const upstream = await forwardToWebhook(webhookUrl, lead);
-      if (!upstream.ok) {
-        return NextResponse.json(
-          { error: "WEBHOOK_REJECTED", status: upstream.status },
-          { status: 502 },
-        );
-      }
-    } catch {
+    const result = await notifyLeadWebhook({
+      fullName: lead.fullName,
+      email: lead.email,
+      phone: lead.phone,
+      formType: lead.formType,
+    });
+
+    if (!result.ok) {
       return NextResponse.json(
-        { error: "WEBHOOK_UNREACHABLE" },
-        { status: 502 },
+        { error: result.error, status: result.status },
+        {
+          status:
+            result.error === "WEBHOOK_MISSING"
+              ? 503
+              : result.error === "WEBHOOK_REJECTED"
+                ? 502
+                : 502,
+        },
       );
     }
   }

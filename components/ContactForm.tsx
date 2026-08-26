@@ -7,8 +7,8 @@ import { PUBLIC_SITE_URL, SITE_EMAIL } from "@/lib/site";
 const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
 
 /**
- * Minimal contact intake: POST JSON to `/api/submit-lead`.
- * Netlify: set Lead_notification_url (or LEAD_NOTIFICATION_URL) and optional Google Sheets vars.
+ * POST JSON to `/api/submit-lead` → n8n webhook (Lead_notification_setup.md).
+ * Netlify: Lead_notification_url + NEXT_PUBLIC_SITE_URL.
  */
 export function ContactForm() {
   const router = useRouter();
@@ -42,6 +42,7 @@ export function ContactForm() {
             fullName: String(fd.get("full_name") ?? "").trim(),
             email: String(fd.get("email") ?? "").trim(),
             phone: String(fd.get("phone") ?? "").trim(),
+            formType: "contact" as const,
             message: String(fd.get("message") ?? "").trim(),
           };
 

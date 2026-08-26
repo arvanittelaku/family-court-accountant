@@ -1,16 +1,36 @@
 /**
  * POST /api/submit-lead (via netlify.toml redirect) → n8n / webhook.
- * Env: Lead_notification_url, LEAD_NOTIFICATION_URL, or NEXT_PUBLIC_LEAD_NOTIFICATION_URL.
+ * Outbound JSON: Full Name, Email, Phone Number, Brand name, domain (5 keys).
+ * Env: Lead_notification_url or LEAD_NOTIFICATION_URL; NEXT_PUBLIC_SITE_URL for domain.
  */
 const BRAND_NAME = "FamilyCourtAccountant";
+const FALLBACK_SITE_URL = "https://www.familycourtaccountant.com";
 
 function getLeadWebhookUrl() {
   return (
     process.env.Lead_notification_url ||
     process.env.LEAD_NOTIFICATION_URL ||
-    process.env.NEXT_PUBLIC_LEAD_NOTIFICATION_URL ||
     ""
   );
+}
+
+function getSiteDomain() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || FALLBACK_SITE_URL;
+  try {
+    return new URL(raw).hostname.replace(/^www\./i, "");
+  } catch {
+    return new URL(FALLBACK_SITE_URL).hostname.replace(/^www\./i, "");
+  }
+}
+
+function buildPayload({ fullName, email, phone }) {
+  return {
+    "Full Name": fullName,
+    Email: email,
+    "Phone Number": phone,
+    "Brand name": BRAND_NAME,
+    domain: getSiteDomain(),
+  };
 }
 
 exports.handler = async (event) => {
@@ -47,12 +67,6 @@ exports.handler = async (event) => {
   const fullName = String(body.fullName || body.full_name || "").trim();
   const email = String(body.email || "").trim();
   const phone = body.phone != null ? String(body.phone).trim() : "";
-  const message =
-    body.message != null
-      ? String(body.message).trim()
-      : body.description != null
-        ? String(body.description).trim()
-        : "";
 
   if (!fullName || !email) {
     return {
@@ -69,26 +83,17 @@ exports.handler = async (event) => {
       headers: jsonHeaders,
       body: JSON.stringify({
         error: "WEBHOOK_MISSING",
-        message:
-          "Lead_notification_url / LEAD_NOTIFICATION_URL is not set in Netlify.",
+        message: "Lead_notification_url / LEAD_NOTIFICATION_URL is not set.",
       }),
     };
   }
-
-  const outbound = {
-    "Full Name": fullName,
-    Email: email,
-    "Phone Number": phone,
-    Message: message,
-    "Brand name": BRAND_NAME,
-  };
 
   let res;
   try {
     res = await fetch(webhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(outbound),
+      body: JSON.stringify(buildPayload({ fullName, email, phone })),
     });
   } catch {
     return {
