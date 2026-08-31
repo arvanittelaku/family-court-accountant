@@ -1,18 +1,12 @@
 import { NextResponse } from "next/server";
-import { contactLeadToSheetRow, parseContactLead } from "@/lib/contact-lead";
-import {
-  appendRowWithRetry,
-  isGoogleSheetsConfigured,
-} from "@/lib/google-sheets";
-import {
-  getLeadWebhookUrl,
-  notifyLeadWebhook,
-} from "@/lib/leadNotification";
+import { parseContactLead } from "@/lib/contact-lead";
+import { notifyLeadWebhook } from "@/lib/leadNotification";
 
 /**
  * POST /api/submit-lead
- * Webhook: five-key JSON via notifyLeadWebhook (Lead_notification_setup.md).
- * Optional Google Sheets append when configured (local / non-redirect deploys).
+ * Webhook primary (hard-fail if webhook fails).
+ * Sheets are written by /api/contact and /api/instruct (shared tab + Form Type)
+ * so we do not double-append here.
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -31,61 +25,25 @@ export async function POST(request: Request) {
     );
   }
 
-  const webhookUrl = getLeadWebhookUrl();
-  const sheetsConfigured = isGoogleSheetsConfigured();
+  const result = await notifyLeadWebhook({
+    fullName: lead.fullName,
+    email: lead.email,
+    phone: lead.phone,
+    formType: lead.formType,
+  });
 
-  if (!webhookUrl && !sheetsConfigured) {
+  if (!result.ok) {
     return NextResponse.json(
+      { error: result.error, status: result.status },
       {
-        error: "LEAD_DESTINATION_MISSING",
-        message:
-          "Configure Lead_notification_url or Google Sheets (GOOGLE_SHEET_ID, service account).",
+        status:
+          result.error === "WEBHOOK_MISSING"
+            ? 503
+            : result.error === "WEBHOOK_REJECTED"
+              ? 502
+              : 502,
       },
-      { status: 503 },
     );
-  }
-
-  if (sheetsConfigured) {
-    try {
-      await appendRowWithRetry(contactLeadToSheetRow(lead));
-    } catch (error: unknown) {
-      const err = error as { message?: string; code?: number };
-      console.error("Google Sheets write failed:", {
-        message: err?.message,
-        code: err?.code,
-        timestamp: new Date().toISOString(),
-      });
-      return NextResponse.json(
-        {
-          error: "SHEETS_WRITE_FAILED",
-          message: "Could not save your submission.",
-        },
-        { status: 502 },
-      );
-    }
-  }
-
-  if (webhookUrl) {
-    const result = await notifyLeadWebhook({
-      fullName: lead.fullName,
-      email: lead.email,
-      phone: lead.phone,
-      formType: lead.formType,
-    });
-
-    if (!result.ok) {
-      return NextResponse.json(
-        { error: result.error, status: result.status },
-        {
-          status:
-            result.error === "WEBHOOK_MISSING"
-              ? 503
-              : result.error === "WEBHOOK_REJECTED"
-                ? 502
-                : 502,
-        },
-      );
-    }
   }
 
   return NextResponse.json({ ok: true });

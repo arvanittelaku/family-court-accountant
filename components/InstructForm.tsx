@@ -5,9 +5,9 @@ import { useState } from "react";
 import { SITE_EMAIL } from "@/lib/site";
 
 /**
- * POST /api/contact (Sheets soft-fail), then fire-and-forget /api/submit-lead.
+ * POST /api/instruct (Sheets soft-fail), then fire-and-forget /api/submit-lead.
  */
-export function ContactForm() {
+export function InstructForm() {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -35,7 +35,8 @@ export function ContactForm() {
             fullName: String(fd.get("full_name") ?? "").trim(),
             email: String(fd.get("email") ?? "").trim(),
             phone: String(fd.get("phone") ?? "").trim(),
-            formType: "contact" as const,
+            organization: String(fd.get("organization") ?? "").trim(),
+            formType: "instruct" as const,
             message: String(fd.get("message") ?? "").trim(),
           };
 
@@ -46,15 +47,15 @@ export function ContactForm() {
           }
 
           try {
-            const contactRes = await fetch("/api/contact", {
+            const instructRes = await fetch("/api/instruct", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(payload),
             });
 
-            if (!contactRes.ok) {
+            if (!instructRes.ok) {
               setError(
-                `Could not submit your enquiry. Please try again or email ${SITE_EMAIL}.`,
+                `Could not submit your instruction. Please try again or email ${SITE_EMAIL}.`,
               );
               return;
             }
@@ -66,11 +67,11 @@ export function ContactForm() {
                 fullName: payload.fullName,
                 email: payload.email,
                 phone: payload.phone,
-                formType: "contact",
+                formType: "instruct",
               }),
             }).catch(() => {
               console.warn(
-                "Lead webhook notification failed; inquiry was still logged.",
+                "Lead webhook notification failed; instruction was still logged.",
               );
             });
 
@@ -104,16 +105,26 @@ export function ContactForm() {
 
         <label className="block">
           Phone
+          <input name="phone" type="tel" autoComplete="tel" />
+        </label>
+
+        <label className="block">
+          Firm / Organisation
           <input
-            name="phone"
-            type="tel"
-            autoComplete="tel"
+            name="organization"
+            type="text"
+            autoComplete="organization"
           />
         </label>
 
         <label className="block">
-          Brief description
-          <textarea name="message" rows={4} />
+          Case brief *
+          <textarea
+            required
+            name="message"
+            rows={4}
+            placeholder="Matter type, stage, deadlines, and documents available"
+          />
         </label>
 
         <button
@@ -121,12 +132,12 @@ export function ContactForm() {
           disabled={pending}
           className="inline-flex min-h-[44px] w-full items-center justify-center border border-primary bg-primary px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-primary/90 disabled:opacity-60 sm:w-auto"
         >
-          {pending ? "Sending…" : "Send enquiry"}
+          {pending ? "Sending…" : "Submit instruction"}
         </button>
 
         <p className="text-xs leading-relaxed text-muted">
-          All enquiries are confidential. We do not share your information with
-          third parties.
+          All instructions are confidential. We do not share your information
+          with third parties.
         </p>
       </form>
     </div>

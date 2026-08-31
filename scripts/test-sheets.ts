@@ -14,21 +14,16 @@ async function test() {
   }
 
   try {
+    // Timestamp | Brand | Form Type | Full Name | Email | Phone | Organisation | Message
     const result = await appendRow([
       new Date().toISOString(),
+      BRAND_NAME,
+      "Contact",
       "Test Entry",
       "test@example.com",
-      "+441234567890",
+      "'+441234567890",
       "Test Firm",
-      "Family Law Solicitor / Barrister",
-      "Equitable Distribution (Divorce)",
-      "Business Valuation",
-      "joint expert",
-      "Under £500k",
-      "Yes",
-      "Standard",
       "Test row from scripts/test-sheets.ts",
-      BRAND_NAME,
     ]);
     console.log("Row written:", result.updatedRange);
   } catch (error) {

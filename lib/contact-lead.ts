@@ -8,6 +8,7 @@ export type ContactLead = {
   phone: string;
   message: string;
   formType: "contact" | "instruct";
+  organization?: string;
 };
 
 export { BRAND_NAME };
@@ -22,7 +23,7 @@ export function sanitize(str: string): string {
 }
 
 /** Prevent Sheets from treating +phone or = as formulas. */
-function sheetCell(value: string): string {
+export function sheetCell(value: string): string {
   const s = sanitize(value);
   if (s.startsWith("+") || s.startsWith("=") || s.startsWith("-")) {
     return `'${s}`;
@@ -36,25 +37,14 @@ export function parseContactLead(body: Record<string, unknown>): ContactLead {
     formTypeRaw === "instruct" ? "instruct" : ("contact" as const);
 
   return {
-    fullName: trimStr(body.fullName ?? body.full_name, 300),
+    fullName: trimStr(body.fullName ?? body.full_name ?? body.name, 300),
     email: trimStr(body.email, 320).toLowerCase(),
     phone: trimStr(body.phone, 80),
     message: trimStr(body.message ?? body.description, 8000),
+    organization: trimStr(
+      body.organization ?? body.organisation ?? body.firm,
+      300,
+    ),
     formType,
   };
-}
-
-/**
- * Row order for Sheet16 (row 1 headers should match):
- * Timestamp | Full Name | Email | Phone | Message | Brand
- */
-export function contactLeadToSheetRow(lead: ContactLead): string[] {
-  return [
-    new Date().toISOString(),
-    sanitize(lead.fullName),
-    lead.email,
-    sheetCell(lead.phone),
-    sanitize(lead.message),
-    BRAND_NAME,
-  ];
 }

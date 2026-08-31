@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { InstructForm } from "@/components/InstructForm";
 import { PageShell } from "@/components/PageShell";
 import { buildPageMetadata } from "@/lib/seo-metadata";
 
@@ -155,13 +156,23 @@ export default function HowToInstructPage() {
           </li>
         </ul>
         <p>
-          Ready to instruct?{" "}
-          <Link href="/contact">Submit your case details</Link> or read our{" "}
+          Ready to instruct? Use the form below, or{" "}
+          <Link href="/contact">contact us</Link> for a general enquiry. Read our{" "}
           <Link href="/guides/fpr-part-25-expert-appointment">
             expert witness standards guide
           </Link>{" "}
           for appointment detail.
         </p>
+
+        <h2 id="instruct-form">Submit an instruction</h2>
+        <p>
+          Solicitors can send a short instruction brief here. We respond with
+          scope, conflicts check timing, and next steps.
+        </p>
+      </div>
+
+      <div className="mt-10 max-w-lg">
+        <InstructForm />
       </div>
     </PageShell>
   );
