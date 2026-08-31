@@ -7,11 +7,13 @@
 [functions]
   directory = "netlify/functions"
 
-[[redirects]]
-  from = "/api/submit-lead"
-  to = "/.netlify/functions/submit-lead"
-  status = 200
-  force = true
+# submit-lead is handled by app/api/submit-lead/route.ts (webhook + soft-fail Sheets).
+# Do not force-redirect to the Netlify function — that skipped Sheets entirely.
+# [[redirects]]
+#   from = "/api/submit-lead"
+#   to = "/.netlify/functions/submit-lead"
+#   status = 200
+#   force = true
 
 [[headers]]
   for = "/sitemap.xml"

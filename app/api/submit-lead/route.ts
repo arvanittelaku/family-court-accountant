@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
 import { parseContactLead } from "@/lib/contact-lead";
 import { notifyLeadWebhook } from "@/lib/leadNotification";
+import {
+  appendContactToSheet,
+  appendInstructToSheet,
+  writeSubmissionToSheetSafely,
+} from "@/lib/sheetSubmissions";
 
 /**
  * POST /api/submit-lead
- * Webhook primary (hard-fail if webhook fails).
- * Sheets are written by /api/contact and /api/instruct (shared tab + Form Type)
- * so we do not double-append here.
+ * Webhook primary + soft-fail Sheets on the same request.
+ * (Live /api/contact and /api/instruct were 404; force-redirect to the
+ * Netlify function also skipped Sheets.)
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -32,19 +37,42 @@ export async function POST(request: Request) {
     formType: lead.formType,
   });
 
-  if (!result.ok) {
+  let webhookOk = result.ok;
+  if (!webhookOk && result.error !== "WEBHOOK_MISSING") {
     return NextResponse.json(
       { error: result.error, status: result.status },
-      {
-        status:
-          result.error === "WEBHOOK_MISSING"
-            ? 503
-            : result.error === "WEBHOOK_REJECTED"
-              ? 502
-              : 502,
-      },
+      { status: 502 },
     );
   }
 
-  return NextResponse.json({ ok: true });
+  if (!webhookOk) {
+    console.warn(
+      "[submit-lead] Lead_notification_url missing — continuing with Sheets fallback",
+    );
+  }
+
+  const writtenToSheet = await writeSubmissionToSheetSafely(
+    () =>
+      lead.formType === "instruct"
+        ? appendInstructToSheet(lead)
+        : appendContactToSheet(lead),
+    `submit-lead-${lead.formType}`,
+  );
+
+  if (!webhookOk && !writtenToSheet) {
+    return NextResponse.json(
+      {
+        error: "Lead storage is not configured",
+        message:
+          "Set Lead_notification_url and/or Google Sheets env vars on Netlify.",
+      },
+      { status: 503 },
+    );
+  }
+
+  return NextResponse.json({
+    ok: true,
+    forwarded: webhookOk,
+    writtenToSheet,
+  });
 }

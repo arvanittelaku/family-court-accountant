@@ -5,7 +5,8 @@ import { useState } from "react";
 import { SITE_EMAIL } from "@/lib/site";
 
 /**
- * POST /api/contact (Sheets soft-fail), then fire-and-forget /api/submit-lead.
+ * Webhook + Sheets via /api/submit-lead (primary).
+ * Optional /api/contact is soft-awaited when available.
  */
 export function ContactForm() {
   const router = useRouter();
@@ -46,33 +47,29 @@ export function ContactForm() {
           }
 
           try {
-            const contactRes = await fetch("/api/contact", {
+            const leadRes = await fetch("/api/submit-lead", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(payload),
             });
 
-            if (!contactRes.ok) {
+            if (!leadRes.ok) {
               setError(
                 `Could not submit your enquiry. Please try again or email ${SITE_EMAIL}.`,
               );
               return;
             }
 
-            void fetch("/api/submit-lead", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                fullName: payload.fullName,
-                email: payload.email,
-                phone: payload.phone,
-                formType: "contact",
-              }),
-            }).catch(() => {
-              console.warn(
-                "Lead webhook notification failed; inquiry was still logged.",
-              );
-            });
+            try {
+              await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+                keepalive: true,
+              });
+            } catch {
+              /* submit-lead already handled webhook + Sheets */
+            }
 
             router.push("/thank-you");
           } catch {
