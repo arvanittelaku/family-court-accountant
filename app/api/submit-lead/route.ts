@@ -7,11 +7,13 @@ import {
   writeSubmissionToSheetSafely,
 } from "@/lib/sheetSubmissions";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 /**
  * POST /api/submit-lead
- * Webhook primary + soft-fail Sheets on the same request.
- * (Live /api/contact and /api/instruct were 404; force-redirect to the
- * Netlify function also skipped Sheets.)
+ * Webhook + Google Sheets — both soft-fail independently.
+ * Succeeds when at least one destination works.
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -30,27 +32,6 @@ export async function POST(request: Request) {
     );
   }
 
-  const result = await notifyLeadWebhook({
-    fullName: lead.fullName,
-    email: lead.email,
-    phone: lead.phone,
-    formType: lead.formType,
-  });
-
-  let webhookOk = result.ok;
-  if (!webhookOk && result.error !== "WEBHOOK_MISSING") {
-    return NextResponse.json(
-      { error: result.error, status: result.status },
-      { status: 502 },
-    );
-  }
-
-  if (!webhookOk) {
-    console.warn(
-      "[submit-lead] Lead_notification_url missing — continuing with Sheets fallback",
-    );
-  }
-
   const writtenToSheet = await writeSubmissionToSheetSafely(
     () =>
       lead.formType === "instruct"
@@ -59,12 +40,36 @@ export async function POST(request: Request) {
     `submit-lead-${lead.formType}`,
   );
 
-  if (!webhookOk && !writtenToSheet) {
+  const webhookResult = await notifyLeadWebhook({
+    fullName: lead.fullName,
+    email: lead.email,
+    phone: lead.phone,
+    formType: lead.formType,
+  });
+
+  const webhookOk = webhookResult.ok;
+  const webhookMissing =
+    !webhookOk && webhookResult.error === "WEBHOOK_MISSING";
+
+  if (!webhookOk && !webhookMissing) {
+    console.error("[submit-lead] webhook failed:", {
+      error: webhookResult.error,
+      status: webhookResult.status,
+      email: lead.email,
+      writtenToSheet,
+    });
+  }
+
+  if (!webhookOk && webhookMissing) {
+    console.warn("[submit-lead] Lead_notification_url not set");
+  }
+
+  if (!writtenToSheet && !webhookOk) {
     return NextResponse.json(
       {
-        error: "Lead storage is not configured",
+        error: "LEAD_DESTINATION_MISSING",
         message:
-          "Set Lead_notification_url and/or Google Sheets env vars on Netlify.",
+          "Could not save your submission. Check Lead_notification_url and Google Sheets env vars on Netlify.",
       },
       { status: 503 },
     );

@@ -4,9 +4,21 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { SITE_EMAIL } from "@/lib/site";
 
+async function parseSubmitError(res: Response): Promise<string> {
+  const data = (await res.json().catch(() => null)) as {
+    message?: string;
+    error?: string;
+  } | null;
+
+  if (data?.message) return data.message;
+  if (data?.error === "LEAD_DESTINATION_MISSING") {
+    return `We could not save your instruction. Please email ${SITE_EMAIL} directly.`;
+  }
+  return `Could not submit your instruction. Please try again or email ${SITE_EMAIL}.`;
+}
+
 /**
- * Webhook + Sheets via /api/submit-lead (primary).
- * Optional /api/instruct is soft-awaited when available.
+ * Instruct form → /api/submit-lead (webhook + Google Sheets).
  */
 export function InstructForm() {
   const router = useRouter();
@@ -29,9 +41,8 @@ export function InstructForm() {
           e.preventDefault();
           setError(null);
           setPending(true);
-          const form = e.currentTarget;
-          const fd = new FormData(form);
 
+          const fd = new FormData(e.currentTarget);
           const payload = {
             fullName: String(fd.get("full_name") ?? "").trim(),
             email: String(fd.get("email") ?? "").trim(),
@@ -48,28 +59,15 @@ export function InstructForm() {
           }
 
           try {
-            const leadRes = await fetch("/api/submit-lead", {
+            const res = await fetch("/api/submit-lead", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(payload),
             });
 
-            if (!leadRes.ok) {
-              setError(
-                `Could not submit your instruction. Please try again or email ${SITE_EMAIL}.`,
-              );
+            if (!res.ok) {
+              setError(await parseSubmitError(res));
               return;
-            }
-
-            try {
-              await fetch("/api/instruct", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload),
-                keepalive: true,
-              });
-            } catch {
-              /* submit-lead already handled webhook + Sheets */
             }
 
             router.push("/thank-you");

@@ -5,10 +5,10 @@ import {
   writeSubmissionToSheetSafely,
 } from "@/lib/sheetSubmissions";
 
-/**
- * POST /api/contact
- * Soft-fail Sheets + soft-fail email (log only; no Resend on this site).
- */
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+/** POST /api/contact — Sheets backup endpoint (forms use /api/submit-lead). */
 export async function POST(request: Request) {
   try {
     let body: Record<string, unknown>;
@@ -27,20 +27,12 @@ export async function POST(request: Request) {
       );
     }
 
-    // Soft-fail Sheets — never 500/502 because Sheets failed
-    await writeSubmissionToSheetSafely(
+    const written = await writeSubmissionToSheetSafely(
       () => appendContactToSheet(lead),
       "contact",
     );
 
-    // Soft-fail email: no Resend configured; log for ops
-    console.log("Contact submission received:", {
-      fullName: lead.fullName,
-      email: lead.email,
-      formType: "Contact",
-    });
-
-    return NextResponse.json({ ok: true, success: true });
+    return NextResponse.json({ ok: true, writtenToSheet: written });
   } catch (error) {
     console.error("contact error:", error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });

@@ -65,17 +65,21 @@ export async function writeSubmissionToSheetSafely(
     const err = error as {
       message?: string;
       code?: number;
-      response?: { status?: number };
+      response?: { status?: number; data?: { error?: { message?: string } } };
     };
+    const apiMessage = err?.response?.data?.error?.message;
     console.error("Google Sheets error:", {
       context,
-      message: err?.message,
+      message: apiMessage || err?.message,
       code: err?.code,
       status: err?.response?.status,
       spreadsheetId: process.env.GOOGLE_SHEET_ID
         ? `${process.env.GOOGLE_SHEET_ID.slice(0, 8)}...`
         : "missing",
       tab: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
+      serviceAccount: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL
+        ? `${process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL.slice(0, 12)}...`
+        : "missing",
       timestamp: new Date().toISOString(),
     });
     return false;

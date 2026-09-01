@@ -18,10 +18,14 @@ export type ReadResult = {
 };
 
 function getSheetsConfigured(): boolean {
+  const hasKey = Boolean(
+    process.env.GOOGLE_PRIVATE_KEY?.trim() ||
+      process.env.GOOGLE_PRIVATE_KEY_BASE64?.trim(),
+  );
   return Boolean(
-    process.env.GOOGLE_SHEET_ID &&
-      process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
-      process.env.GOOGLE_PRIVATE_KEY,
+    process.env.GOOGLE_SHEET_ID?.trim() &&
+      process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL?.trim() &&
+      hasKey,
   );
 }
 
@@ -30,7 +34,17 @@ export function isGoogleSheetsConfigured(): boolean {
 }
 
 function normalizePrivateKey(raw: string | undefined): string | undefined {
+  const base64 = process.env.GOOGLE_PRIVATE_KEY_BASE64?.trim();
+  if (base64) {
+    try {
+      return Buffer.from(base64, "base64").toString("utf8").replace(/\\n/g, "\n");
+    } catch {
+      console.error("[sheets] GOOGLE_PRIVATE_KEY_BASE64 is not valid base64");
+    }
+  }
+
   if (!raw) return undefined;
+
   let key = raw.trim();
   if (
     (key.startsWith('"') && key.endsWith('"')) ||
@@ -38,14 +52,30 @@ function normalizePrivateKey(raw: string | undefined): string | undefined {
   ) {
     key = key.slice(1, -1);
   }
-  return key.replace(/\\n/g, "\n");
+
+  key = key.replace(/\\n/g, "\n");
+
+  if (!key.includes("\n") && key.includes("-----BEGIN PRIVATE KEY-----")) {
+    key = key
+      .replace("-----BEGIN PRIVATE KEY-----", "-----BEGIN PRIVATE KEY-----\n")
+      .replace("-----END PRIVATE KEY-----", "\n-----END PRIVATE KEY-----");
+  }
+
+  return key;
 }
 
 function getAuthClient() {
+  const privateKey = normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY);
+  if (!privateKey) {
+    throw new Error(
+      "Missing GOOGLE_PRIVATE_KEY or GOOGLE_PRIVATE_KEY_BASE64",
+    );
+  }
+
   return new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key: normalizePrivateKey(process.env.GOOGLE_PRIVATE_KEY),
+      private_key: privateKey,
     },
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
