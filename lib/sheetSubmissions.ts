@@ -1,6 +1,7 @@
 import {
   appendRowWithRetry,
   isGoogleSheetsConfigured,
+  DEFAULT_SHEET_TAB_NAME,
   type SheetTarget,
 } from "@/lib/google-sheets";
 import {
@@ -12,7 +13,7 @@ import {
 
 function sharedTab(): SheetTarget {
   return {
-    sheetName: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
+    sheetName: (process.env.GOOGLE_SHEET_TAB_NAME || DEFAULT_SHEET_TAB_NAME).trim(),
   };
 }
 
@@ -76,7 +77,7 @@ export async function writeSubmissionToSheetSafely(
       spreadsheetId: process.env.GOOGLE_SHEET_ID
         ? `${process.env.GOOGLE_SHEET_ID.slice(0, 8)}...`
         : "missing",
-      tab: process.env.GOOGLE_SHEET_TAB_NAME || "Sheet1",
+      tab: (process.env.GOOGLE_SHEET_TAB_NAME || DEFAULT_SHEET_TAB_NAME).trim(),
       serviceAccount: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL
         ? `${process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL.slice(0, 12)}...`
         : "missing",
