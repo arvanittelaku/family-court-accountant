@@ -9,7 +9,15 @@
 
 # submit-lead is handled by app/api/submit-lead/route.ts (webhook + soft-fail Sheets).
 # Do not force-redirect to the Netlify function — that skipped Sheets entirely.
-# [[redirects]]
+# # AHREFS_WWW_APEX_REDIRECT — flatten https://www → apex (reduces Ahrefs redirect-chain)
+[[redirects]]
+  from = "/*"
+  to = "https://familycourtaccountant.com/:splat"
+  status = 301
+  force = true
+  conditions = {Host = ["www.familycourtaccountant.com"]}
+
+[[redirects]]
 #   from = "/api/submit-lead"
 #   to = "/.netlify/functions/submit-lead"
 #   status = 200
