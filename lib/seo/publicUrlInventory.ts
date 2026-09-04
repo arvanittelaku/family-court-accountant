@@ -14,9 +14,7 @@ import {
 
 
 
-export const CANONICAL_HOST =
-
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || SITE_URL;
+export const CANONICAL_HOST = SITE_URL;
 
 
 

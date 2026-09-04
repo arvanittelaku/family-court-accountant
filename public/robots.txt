@@ -8,4 +8,4 @@ Disallow: /private/
 Disallow: /.netlify/
 Disallow: /thank-you
 
-Sitemap: https://www.familycourtaccountant.com/sitemap.xml
+Sitemap: https://familycourtaccountant.com/sitemap.xml

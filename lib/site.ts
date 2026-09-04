@@ -1,4 +1,27 @@
-export const SITE_URL = "https://www.familycourtaccountant.com";
+const DEFAULT_SITE_URL = "https://familycourtaccountant.com";
+
+/** Canonical origin for SEO — strips www; ignores localhost/netlify preview env. */
+export function getPublicSiteUrl(): string {
+  const fallback = DEFAULT_SITE_URL;
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!raw) return fallback;
+  try {
+    const u = new URL(/^https?:\/\//i.test(raw) ? raw : `https://${raw}`);
+    if (
+      u.hostname === "localhost" ||
+      u.hostname === "127.0.0.1" ||
+      u.hostname.endsWith(".netlify.app")
+    ) {
+      return fallback;
+    }
+    u.hostname = u.hostname.replace(/^www\./i, "");
+    return u.origin.replace(/\/$/, "");
+  } catch {
+    return fallback;
+  }
+}
+
+export const SITE_URL = getPublicSiteUrl();
 export const SITE_NAME = "FamilyCourtAccountant";
 export const SITE_EMAIL = "contact@familycourtaccountant.com";
 export const LINKEDIN_URL =
@@ -11,8 +34,7 @@ export const SITE_REGION_SCOPE =
 export const SITE_REFERRAL_NOTICE =
   "FamilyCourtAccountant.com is a referral service connecting you with independent family court accountants. We are not a law firm and do not provide legal advice.";
 
-export const PUBLIC_SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL;
+export const PUBLIC_SITE_URL = getPublicSiteUrl();
 
 export const proceedingSlugs = [
   "financial-remedy-divorce",

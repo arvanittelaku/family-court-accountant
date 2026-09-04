@@ -4,7 +4,7 @@
  * Env: Lead_notification_url or LEAD_NOTIFICATION_URL; NEXT_PUBLIC_SITE_URL for domain.
  */
 const BRAND_NAME = "FamilyCourtAccountant";
-const FALLBACK_SITE_URL = "https://www.familycourtaccountant.com";
+const FALLBACK_SITE_URL = "https://familycourtaccountant.com";
 
 function getLeadWebhookUrl() {
   return (
