@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ContactEmail } from "@/components/ContactEmail";
 import { FooterLegal } from "@/components/FooterLegal";
+import { PreferredSourceButton } from "@/components/PreferredSourceButton";
 import { SERVICES } from "@/lib/services-data";
 import { PROCEEDINGS } from "@/lib/proceedings-data";
 import { SITE_NAME, SITE_REFERRAL_NOTICE } from "@/lib/site";
@@ -130,7 +131,10 @@ export function SiteFooter() {
                 © {new Date().getFullYear()} {SITE_NAME}
               </p>
             </div>
-            <FooterLegal />
+            <div className="flex flex-col gap-3 sm:items-end">
+              <FooterLegal />
+              <PreferredSourceButton theme="light" />
+            </div>
           </div>
         </div>
       </div>
