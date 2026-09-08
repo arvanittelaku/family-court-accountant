@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { SITE_EMAIL } from "@/lib/site";
+import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 async function parseSubmitError(res: Response): Promise<string> {
   const data = (await res.json().catch(() => null)) as {
@@ -36,6 +37,9 @@ export function ContactForm() {
         </div>
       ) : null}
       <form
+        name="contact"
+        method="POST"
+        action="/__forms.html"
         className="form-minimal max-w-lg space-y-6"
         onSubmit={async (e) => {
           e.preventDefault();
@@ -69,6 +73,17 @@ export function ContactForm() {
               return;
             }
 
+            try {
+              await submitNetlifyForm("contact", {
+                full_name: payload.fullName,
+                email: payload.email,
+                phone: payload.phone,
+                message: payload.message,
+              });
+            } catch {
+              // Webhook/Sheets already stored the enquiry; don't block the visitor.
+            }
+
             router.push("/thank-you");
           } catch {
             setError("Network error. Please try again.");
@@ -77,6 +92,12 @@ export function ContactForm() {
           }
         }}
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <p className="hidden" aria-hidden="true">
+          <label>
+            Do not fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          </label>
+        </p>
         <label className="block">
           Full name *
           <input
